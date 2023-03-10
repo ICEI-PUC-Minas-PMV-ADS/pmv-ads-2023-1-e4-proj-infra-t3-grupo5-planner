@@ -1,23 +1,26 @@
-# TÍTULO DO PROJETO
+# Planner
 
-`Análise e desenvolvimento de sistemas`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`4° Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Este projeto propõe trazer o famoso "planner de papel" ao mundo digital. O app é um livro aberto para escrever os planejamentos diários, mensais, anuais e utilizar diversos widgets para personalização.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Arthur Alves Rocha de Souza
+* Brunna Alves Lage Silva
+* Davison Cavalcante Barros
+* Mateus Cunha Melo
+* Paloma Chaves Silva
+* Pedro Thiago Rodrigues Santos
+* Sabrina Chaves Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
