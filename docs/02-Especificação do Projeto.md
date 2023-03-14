@@ -148,26 +148,79 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+Observando o cronograma geral do projeto de software de arquitetura distribuida, conforme a imagem abaixo, e os requisitos do projeto, é possível traçar um plano de gestão que contempla os pilares de gerenciamento para nosso projeto, segundo o PMBok, nos próximos tópicos serão observados os principais pontos abordados sobre gerenciamento de Tempo, Equipe e Orçamento.
+
+![Cronograma Geral](img/cronograma-geral.PNG)
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+O prazo total para a entrega do projeto é de 864 horas a partir do dia 01/02/2022, descontando os finais de semana, assim seguindo o cronograma geral, foi possível elaborar uma tabela com os marcos de início e fim das tarefas planejadas, conforme abaixo:
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+![Cronograma de atividades](img/cronograma-geral.PNG)
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
+Dentro do cronograma haverão dois tipos de reunião, uma reunião semanal com o nosso stakeholder(Orientador do Projeto) e uma também semanal de alinhamento de sprints com todos os membros da equipe. para facilitar o entendimento do cronograma de atividades, foi elaborado um gráfico de Gantt para demonstrar as atividades.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![Gráfico de Gantt](img/Diagrama-Gantt.PNG)
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+A equipe será separada em quatro frentes: E. Back-end, E. Front-end: Web, E. Front-end: Mobile e E. Design UX, essas quatro equipes são responsáveis pela programação de backend em ambiente C#.net, Programação das funcionalidades em ambiente React JS, Programação das funcionalidades em ambiente React Native e design das telas, assim como, a elaboração da documentação e dos testes da plataforma. Sendo essas equipes gerenciadas pelo Scrum Master e pelo Product Owner.
 
-![Simple Project Timeline](img/02-project-timeline.png)
+Com base nas equipes e cronograma de gestão de tempo, as responsabilidades de cada equipe foram atribuidas de acordo com a imagem abaixo:
+
+![Gerenciamento de Equipe](img/gerenciamento-equipe.PNG)
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Observando os custos médios no site Glassdoor, foi encontrado os salários médios para os cargos atribuidos ao projeto, com a tabela de gestão de equipe foi possivel observar a quantidade de horas atribuído a cada uma das equipes, conforme a tabela abaixo:
 
-![Orçamento](img/02-orcamento.png)
+|Equipe              | Horas em Projeto |
+|--------------------|------------------|
+|E. Back-End         |  308             |
+|E. Front-end: Web   |  351             |
+|E. Front-end: Mobile|  417             |
+|E. Design UX        |  220             |
+|Scrum Master        |  297             |
+|Product Owner       |  285             |
+
+As atribuições para o Scrum master e do PO estão associadas ao início e fim do projeto, assim como nas reuniões semanais com o nosso stakeholder e as reuniões semanais das sprints. As equipes atribuidas ao projeto serão compostas por:
+
+|Nível/Tec.      | E. Back-End | E. Front-end: Web |E. Front-end: Mobile |E. Design UX|
+|----------------|-------------|-------------------|---------------------|------------|
+|D. C#/.net      | 4           | 1                 | 1                   | 0          | 
+|D. React Js     | 1           | 2                 | 0                   | 0          |
+|D. React Native | 1           | 0                 | 2                   | 0          |
+|Design UX       | 0           | 1                 | 1                   | 2          |
+
+Os valores médios da hora para profissionais atribuídos ao projeto foram de:
+
+|Equipe         | H-h (R$/hora)|
+|---------------|--------------|
+|D. C#/.net     |  31,64       |
+|D. React Js    |  22,78       |
+|D. React Native|  22,78       |
+|E. Design UX   |  18,75       |
+|Product Owner  |  60,61       |
+|Scrum Master   |  60,61       |
+
+Dessa forma podemos calcular o custo de recurso humano para a elaboração do projeto, sendo de:
+
+|Equipe              | Custo de RH (R$) |
+|--------------------|------------------|
+|E. Back-End         |  9745,12         |
+|E. Front-end: Web   |  7995,78         |
+|E. Front-end: Mobile|  9499,26         |
+|E. Design UX        |  4125,00         |
+|Scrum Master        |  18.001,17       |
+|Product Owner       |  17.273,85       |
+
+Com equipamentos, foram atribuidos os custos de notebooks entre outros para o auxílio do trabalho. Os custos de software foi computado os custos de software para o auxílio a programação dos membros e desenvolvimento de software, como licenças de IDE's, utilização de API's entre outros, já os custos de operação são ligados aos custos com servidor web que comporte a aplicação, nesse caso foi escolhido a utilização do Microsoft Azure. Ao final foi acresentado um adicional de 10% aos custos para comportar possíveis oscilações de custos durante a elaboração do projeto. 
+
+|Recursos            | Custo (R$)       |
+|--------------------|------------------|
+|Humano              |  66.640,18       |
+|Equipamentos        |  31.493,00       |
+|Software            |  20.512,56       |
+|Operação            |  15.197,76       |
+|Custo Total         |  133.843,50      |
+|Custo Aplicado      |  147.227,87      |
