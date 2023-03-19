@@ -1,6 +1,6 @@
 # Introdução
 
-Em um mundo com rotinas cada vez mais aceleradas, é nítido o aumento da necessidade de ferramentas que auxiliem no gerenciamento organizacional, seja para formar ideias, planejar tarefas, listar metas, aliviar a sobrecarga mental, aumentar a disciplina, a produtividade, entre outras funções. Esse tipo de ferramenta pode ser utilizado tanto com foco pessoal quanto profissional, a depender das necessidades e das experiências de cada um. Os planners tradicionais de papel ajudam nessa função, mas por ser físico dificultam o acesso e a gestão em qualquer lugar, abrindo espaço para que as plataformas digitais entrem no mercado como um produto de substituição.  
+Com as rotinas do dia-a-dia cada vez mais aceleradas, é nítido o aumento da necessidade de ferramentas que auxiliem no gerenciamento organizacional, seja para formar ideias, planejar tarefas, listar metas, aliviar a sobrecarga mental, aumentar a disciplina, a produtividade, entre outras funções. Esse tipo de ferramenta pode ser utilizado tanto com foco pessoal quanto profissional, a depender das necessidades e das experiências de cada um. Os planners tradicionais de papel ajudam nessa função, mas por ser físico dificultam o acesso e a gestão em qualquer lugar, abrindo espaço para que as plataformas digitais entrem no mercado como um produto de substituição.  
 
 ## Problema
 
