@@ -120,48 +120,51 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                  | Prioridade |
-| ------ | --------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês   | MÉDIA      |
+| ID     | Descrição do Requisito                                                           | Prioridade |
+|--------|----------------------------------------------------------------------------------|------------|
+| RF-001 | Permitir que um novo usuário se cadastre na plataforma.                          | ALTA       | 
+| RF-002 | Permitir que um usuário faça login na plataforma.                                | ALTA       |
+| RF-003 | Permitir que um usuário recupere sua senha.                                      | ALTA       |
+| RF-004 | Permitir que um usuário crie, edite e apague páginas de texto.                   | ALTA       |
+| RF-005 | Permitir que um usuário crie, edite e apague um template a partir de uma página. | MÉDIA      |
+| RF-006 | Permitir que um usuário anexe ou remova widgets de uma página.                   | ALTA       |
+| RF-007 | Permitir que um usuário crie, edite e apague um checklist dentro de um widget.   | ALTA       |
+| RF-008 | Permitir que um usuário crie, edite e apague lembretes dentro de um widget.      | ALTA       |
+| RF-009 | Permitir que um usuário crie, edite e apague metas dentro de um widget.          | MÉDIA      |
+| RF-010 | Permitir que um usuário crie, edite e hábitos dentro de um widget.               | ALTA       |
+| RF-011 | Permitir que um usuário escolha seu humor (smileys) dentro de um widget.         | BAIXA      |
+| RF-012 | Permitir que um usuário crie, edite e apague despesas dentro de um widget.       | ALTA       |
+| RF-013 | Permitir que um usuário escolha quantos copos d'água tomou dentro de um widget.  | BAIXA      |
+| RF-014 | Permitir que um usuário stickers disponíveis dentro de um widget.                | BAIXA      |
+| RF-015 | Permitir que um usuário edite os próprios dados cadastrais.                      | MÉDIA      |
+
 
 ### Requisitos não Funcionais
 
-| ID      | Descrição do Requisito                                            | Prioridade |
-| ------- | ----------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA      |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s             | BAIXA      |
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
-  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-  Lembre-se que cada requisito deve corresponder à uma e somente uma
-  característica alvo da sua solução. Além disso, certifique-se de que
-  todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| ID      | Descrição do Requisito                                                                                                                                        | Prioridade |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| RNF-001 | O sistema deve oferecer uma página web e um aplicativo nativo.                                                                                                | ALTA       | 
+| RNF-002 | O aplicativo deve ser compatível com as versões mais recentes do sistema Android e iOS.                                                                       | ALTA       | 
+| RNF-003 | O aplicativo deve estar disponível 99,9% do tempo.                                                                                                            | MÉDIA      |
+| RNF-004 | O webapp deve ser compatível com as versões mais recentes do Chrome, Edge e Safari.                                                                           | ALTA       |
+| RNF-005 | O sistema disponibilizará as funcionalidades ao usuário de maneira simples e intuitiva, com foco na UX.                                                       | ALTA       |
+| RNF-006 | O back-end deve ser hospedado utilizando os serviços de cloud da Azure.                                                                                       | ALTA       |
+| RNF-007 | A aplicação deverá informar ao usuário sobre erros que impeçam o funcionamento correto do aplicativo, como falta de conexão, erros do servidor, entre outros. | ALTA       |
+| RNF-008 | Cada widget deverá ter um limite de utilizações por página para evitar sobrecarga do sistema.                                                                 | ALTA       |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                             |
-| --- | ----------------------------------------------------- |
-| 01  | O projeto deverá ser entregue até o final do semestre |
-| 02  | Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| ID  | Restrição                                                                                                               |
+|-----|-------------------------------------------------------------------------------------------------------------------------|
+| 01  | A plataforma funcionará apenas com conexão à internet.                                                                  |
+| 02  | A equipe não poderá subcontratar o desenvolvimento do projeto.                                                          |
+| 03  | A stack do aplicativo limita-se às linguagens C#, Javascript e seus respectivos frameworks.                             |
+| 04  | As fontes de dados limitam-se ao Postgres, Mongo e Redis.                                                               |
+| 05  | O uso da plataforma na íntegra está condicionado ao pagamento de um plano (modelo freemium).                            |
+| 06  | Todos os widgets possuem limitação de uso dentro de um documento, cujos valores são condicionados à natureza do widget. |
+| 07  | Usuários do plano free podem criar apenas um documento por dia.                                                         |
 
 ## Diagrama de Casos de Uso
 
