@@ -14,12 +14,11 @@ Como objetivos específicos, a plataforma busca permitir que os usuários possam
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Em uma sociedade cada vez mais dinâmica e imediatista, com execesso de informações e distrações, muitas pessoas sentem dificuldade em gerenciar seu tempo. Uma solução distribuída de gestão de tempo pode ajudar os usuários a organizar suas tarefas diárias, semanais e mensais, garantindo que eles tenham tempo suficiente para fazer tudo o que precisam fazer, de forma fácil de usar e acessível em qualquer lugar, desde que o usuário tenha um dispositivo móvel ou computador com acesso à Internet. Ainda, permit que os usuários personalizem sua experiência de acordo com suas necessidades individuais. Eles podem definir lembretes para tarefas importantes, adicionar notas e comentários às tarefas, estabelecer metas e prazos específicos e criar listas de tarefas personalizadas, com intensidade similar ao que faria no planner de papel. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Algumas vantangens em relação ao planner físico é que a aplicação pode permitir que os usuários monitorem seu progresso em relação às suas metas e tarefas. Isso pode ajudá-los a manter o foco e a motivação, além de permitir que eles façam ajustes se necessário, com uso de gamificação que torna a experiência mais interessante que riscar uma folha e papel. A aplicação também pode permitir que os usuários compartilhem suas conquistas com outras pessoas e aumentar a motivação. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A solução se bem-sucedida pode oferecer oportunidades para gerar receita, se por meio de assinaturas premium, acesso à recursos extras ou com anúncios e publicidade.
 
 ## Público-Alvo
 
