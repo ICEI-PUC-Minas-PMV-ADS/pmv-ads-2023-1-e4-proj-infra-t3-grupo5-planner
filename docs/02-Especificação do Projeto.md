@@ -181,15 +181,18 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio.
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
+![Matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
 
-> **Links Úteis**:
->
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+**Explicação**:
+
+- A repetição do RF-002 se dá pelo fato de para acessar o aplicativo é necessário possuir login.
+- (RF-003) Para recuperar a senha é necessário possuir cadastro (RF-001).
+- RF-006 Permite o usuário anexar ou remover widgets de uma página, com isso os requisitos RF-007 ao RF-014 interagem com esses widgets referente ao RF-006.
+- RNF-001 O sistema deve oferecer uma página web com as versões mais recentes do Chrome, Edge e Safari (RNF-004) e um aplicativo nativo compatível com as versões mais recentes do sistema Android e iOS (RNF-002).
+- A repetição do RNF-007 se dá pelo fato de a aplicação informar ao usuário sobre erros que impeçam o funcionamento correto do aplicativo.
+- A repetição do RNF-008 se dá pelo fato de cada widget ter um limite de utilizações por página para evitar sobrecarga do sistema.
 
 # Gerenciamento de Projeto
 
