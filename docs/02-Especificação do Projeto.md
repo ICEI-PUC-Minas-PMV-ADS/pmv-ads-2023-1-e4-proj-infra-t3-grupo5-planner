@@ -1,4 +1,4 @@
- # Especificações do Projeto
+# Especificações do Projeto
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
@@ -103,12 +103,16 @@ Para inserir widgets, conforme apresentado no Processo 5, o usuário cria a pág
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores.
+Para análise e monitoramento do desempenho do negócio, com o intuito de auxiliar na tomada de decisões e planejamentos estratégicos, os seguintes indicadores foram definidos:
 
-Usar o seguinte modelo:
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori.
+| Indicador | Objetivos  | Descrição | Cálculo  | Fonte dos Dados  | Perspectiva |
+| - | - | - | -| - | - |
+| Novos clientes | Monitorar a quantidade de clientes novos no mês para desenvolver estratégias de captação	|Número absoluto de clientes novos |	-	| Tabela de Users |	Aumentar a captação de clientes |
+|Uso por categoria (share) |	Identificar as categorias mais utilizadas pelos usuários | Porcentagem de eventos registrados por categoria em relação a quantidade total de eventos gerados no aplicativo |	Registros da categoria X / Total de registros	| Tabela de Events |	Identificar features mais utilizadas pelos clientes |
+| Usuátios ativos no mês (MAU - Monthly Active Users) |	Identificar a quantidade de clientes ativos no mês |	Porcentagem de clientes ativos no mês em relação a quantidade de clientes cadastrados na plataforma |	Clientes ativos no mês / Total de clientes cadastrados | Tabela de Users e Events	| Aumentar o percentual de clientes cadastrados que utilizam a plataforma |
+| Churn dos clientes	| Analisar os clientes que deixaram a plataforma, a fim de reduzir este número	| Clientes que não utilizam o planner há mais de 30 dias e clientes que excluíram a conta	| Clientes que não usam o planner há mais de 30 dias / Clientes ativos	| Tabela de Users e Events	| Diminuir o churn e aumentar a retenção |
+| Receita mensal |	Monitorar a receita mensal para criar estratégias de rentabilidade |	Receita resultante das features premium disponíveis na plataforma |	Soma das compras realizadas pelos usuários |	Tabela de Payments	| Aumentar a receita mensal |
+| Perguntas mais acessadas no FAQ |	Analisar possíveis gaps na plataforma |	Identificar os assuntos mais acessados no FAQ |	Acessos por categoria / Total de acessos | Tabela de Events	| Melhorar a experiência do usuário |
 
 ## Requisitos
 
