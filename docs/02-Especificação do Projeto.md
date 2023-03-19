@@ -71,12 +71,12 @@ Usar o seguinte modelo:
 ![Indicadores de Desempenho]
 | Indicador | Objetivos  | Descrição | Cálculo  | Fonte dos Dados  | Perspectiva |
 | - | - | - | -| - | - |
-| Novos clientes | Monitorar a quantidade de clientes novos no mês para desenvolver estratégias de captação	|Número absoluto de clientes novos |	-	| - |	Aumentar a captação de clientes |
-|Uso por categoria (share) |	Identificar as categorias mais utilizadas pelos usuários | Porcentagem de eventos registrados por categoria em relação a quantidade total de eventos gerados no aplicativo |	Registros da categoria X / Total de registros	| - |	Identificar features mais utilizadas pelos clientes |
-| Usuátios ativos no mês (MAU - Monthly Active Users) |	Identificar a quantidade de clientes ativos no mês |	Porcentagem de clientes ativos no mês em relação a quantidade de clientes cadastrados na plataforma |	Clientes ativos no mês / Total de clientes cadastrados | -	| Aumentar o percentual de clientes cadastrados que utilizam a plataforma |
-| Churn dos clientes	| Analisar os clientes que deixaram a plataforma, a fim de reduzir este número	| Clientes que não utilizam o planner há mais de 30 dias e clientes que excluíram a conta	| Clientes que não usam o planner há mais de 30 dias / Clientes ativos	| -	| Diminuir o churn e aumentar a retenção |
-| Receita mensal |	Monitorar a receita mensal para criar estratégias de rentabilidade |	Receita resultante das features premium disponíveis na plataforma |	Soma das compras realizadas pelos usuários |	-	| Aumentar a receita mensal |
-| Perguntas mais acessadas no FAQ |	Analisar possíveis gaps na plataforma |	Identificar os assuntos mais acessados no FAQ |	Acessos por categoria / Total de acessos |	-	| Melhorar a experiência do usuário |
+| Novos clientes | Monitorar a quantidade de clientes novos no mês para desenvolver estratégias de captação	|Número absoluto de clientes novos |	-	| Tabela de Users |	Aumentar a captação de clientes |
+|Uso por categoria (share) |	Identificar as categorias mais utilizadas pelos usuários | Porcentagem de eventos registrados por categoria em relação a quantidade total de eventos gerados no aplicativo |	Registros da categoria X / Total de registros	| Tabela de Events |	Identificar features mais utilizadas pelos clientes |
+| Usuátios ativos no mês (MAU - Monthly Active Users) |	Identificar a quantidade de clientes ativos no mês |	Porcentagem de clientes ativos no mês em relação a quantidade de clientes cadastrados na plataforma |	Clientes ativos no mês / Total de clientes cadastrados | Tabela de Users e Events	| Aumentar o percentual de clientes cadastrados que utilizam a plataforma |
+| Churn dos clientes	| Analisar os clientes que deixaram a plataforma, a fim de reduzir este número	| Clientes que não utilizam o planner há mais de 30 dias e clientes que excluíram a conta	| Clientes que não usam o planner há mais de 30 dias / Clientes ativos	| Tabela de Users e Events	| Diminuir o churn e aumentar a retenção |
+| Receita mensal |	Monitorar a receita mensal para criar estratégias de rentabilidade |	Receita resultante das features premium disponíveis na plataforma |	Soma das compras realizadas pelos usuários |	Tabela de Payments	| Aumentar a receita mensal |
+| Perguntas mais acessadas no FAQ |	Analisar possíveis gaps na plataforma |	Identificar os assuntos mais acessados no FAQ |	Acessos por categoria / Total de acessos | Tabela de Events	| Melhorar a experiência do usuário |
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
