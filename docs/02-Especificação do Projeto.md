@@ -64,11 +64,8 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em segu
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Para análise e monitoramento do desempenho do negócio, com o intuito de auxiliar na tomada de decisões e planejamentos estratégicos, os seguintes indicadores foram definidos:
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho]
 | Indicador | Objetivos  | Descrição | Cálculo  | Fonte dos Dados  | Perspectiva |
 | - | - | - | -| - | - |
 | Novos clientes | Monitorar a quantidade de clientes novos no mês para desenvolver estratégias de captação	|Número absoluto de clientes novos |	-	| Tabela de Users |	Aumentar a captação de clientes |
