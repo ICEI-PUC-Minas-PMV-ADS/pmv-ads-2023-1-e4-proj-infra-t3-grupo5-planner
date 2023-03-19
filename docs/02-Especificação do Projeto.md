@@ -1,4 +1,4 @@
-# Especificações do Projeto
+ # Especificações do Projeto
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
@@ -199,7 +199,7 @@ O prazo total para a entrega do projeto é de 864 horas a partir do dia 01/02/20
 
 ![Cronograma de atividades](img/cronograma-geral.PNG)
 
-Dentro do cronograma haverão dois tipos de reunião, uma reunião semanal com o nosso stakeholder(Orientador do Projeto) e uma também semanal de alinhamento de sprints com todos os membros da equipe. para facilitar o entendimento do cronograma de atividades, foi elaborado um gráfico de Gantt para demonstrar as atividades.
+Dentro do cronograma haverão dois tipos de reunião, uma reunião semanal com o nosso stakeholder (Orientador do Projeto) e uma também semanal de alinhamento de sprints com todos os membros da equipe. Para facilitar o entendimento do cronograma de atividades, foi elaborado um gráfico de Gantt para demonstrar as atividades.
 
 ![Gráfico de Gantt](img/Diagrama-Gantt.PNG)
 
