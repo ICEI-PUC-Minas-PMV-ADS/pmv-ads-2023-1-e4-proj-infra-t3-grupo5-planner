@@ -1,27 +1,16 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Em um mundo com rotinas cada vez mais aceleradas, é nítido o aumento da necessidade de ferramentas que auxiliem no gerenciamento organizacional, seja para formar ideias, planejar tarefas, listar metas, aliviar a sobrecarga mental, aumentar a disciplina, a produtividade, entre outras funções. Esse tipo de ferramenta pode ser utilizado tanto com foco pessoal quanto profissional, a depender das necessidades e das experiências de cada um. Os planners tradicionais de papel ajudam nessa função, mas por ser físico dificultam o acesso e a gestão em qualquer lugar, abrindo espaço para que as plataformas digitais entrem no mercado como um produto de substituição.  
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+As pessoas que precisam fazer a gestão do tempo, planejamentos e manter as diversas tarefas do dia-a-dia de maneira organizada tem de acessar vários aplicativos que tem como objetivo cumprir apenas uma das funções listadas ou então optar pelo planner físico, dificultando o gerenciamento em qualquer lugar. Isso acarreta em falta de praticidade e pode gerar sobrecarga mental, porque ainda é preciso se lembrar de incluir na rotina o acesso ao planner para verificar as tarefas que devem ser realizadas no dia, por exemplo. Cabe se atentar que em um cenário digital é necessário se preocupar com a segurança dos dados registrados pelo usuário e com a integridade para que seja uma ferramenta confiável onde as informações não se percam.     
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Diante dos pontos apresentados, o projeto tem como objetivo a criação de uma plataforma mobile e web que concentre várias ferramentas de organização em um só lugar e que permita o armazenamento dos registros em nuvem para que possa ser acessado em múltiplos dispositivos. Os usuários não precisarão baixar um aplicativo para cada função desejada, nem se preocupar em carregar um planner físico para onde quer que esteja se deslocando, trazendo mais praticidade e segurança para as informações armazenadas na ferramenta.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, a plataforma busca permitir que os usuários possam criar, editar, apagar e modificar o template de páginas de texto, criar checklists, adicionar lembretes, criar lista de metas, criar lista de hábitos, registrar o humor do dia, realizar controle financeiro e personalizar as páginas utilizando stickers. Além disso, deseja-se que os usuários possam acessar o planner utilizando diferentes dispositivos, através do login.
 
 ## Justificativa
 
