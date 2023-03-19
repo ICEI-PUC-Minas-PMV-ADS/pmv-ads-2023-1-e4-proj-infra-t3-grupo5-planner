@@ -113,12 +113,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                                                                   |
-|-----|---------------------------------------------------------------------------------------------|
-| 01  | A plataforma funcionará apenas com conexão à internet.                                      |
-| 02  | A equipe não poderá subcontratar o desenvolvimento do projeto.                              |
-| 03  | A stack do aplicativo limita-se às linguagens C#, Javascript e seus respectivos frameworks. |
-| 04  | As fontes de dados limitam-se ao Postgres, Mongo e Redis.                                   |
+| ID  | Restrição                                                                                                               |
+|-----|-------------------------------------------------------------------------------------------------------------------------|
+| 01  | A plataforma funcionará apenas com conexão à internet.                                                                  |
+| 02  | A equipe não poderá subcontratar o desenvolvimento do projeto.                                                          |
+| 03  | A stack do aplicativo limita-se às linguagens C#, Javascript e seus respectivos frameworks.                             |
+| 04  | As fontes de dados limitam-se ao Postgres, Mongo e Redis.                                                               |
+| 05  | O uso da plataforma na íntegra está condicionado ao pagamento de um plano (modelo freemium).                            |
+| 06  | Todos os widgets possuem limitação de uso dentro de um documento, cujos valores são condicionados à natureza do widget. |
+| 07  | Usuários do plano free podem criar apenas um documento por dia.                                                         |
 
 ## Diagrama de Casos de Uso
 
