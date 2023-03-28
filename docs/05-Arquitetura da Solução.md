@@ -2,9 +2,9 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+A nossa solução consiste em dois front-ends comunicando-se com o back-end por meio de um API Gateway, que interage com microsserviços escritos em C# por meio de protocolo gRPC. Cada widget deverá ser desenvolvido como um microsserviço isolado e cada microsserviço contará com seu próprio banco de dados e tabelas dentro de seu domínio.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![Arquitetura Distribuída](img/arquitetura-distribuida.png)
 
 ## Diagrama de Classes
 
