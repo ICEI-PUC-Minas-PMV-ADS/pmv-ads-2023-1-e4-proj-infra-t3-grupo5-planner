@@ -5,16 +5,13 @@ namespace Store.PostgreSQL.Repositories;
 
 public class UserRepository : IUserStore
 {
+    public Task<int> CreateUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<User> GetUser()
     {
-        var user = new User
-        {
-            Id = 1,
-            FirstName = "Teste",
-            LastName = "Da Silva",
-            Email = "testedasilva@sauro.com",
-            IsPremium = true
-        };
-        return Task.FromResult(user);
+        throw new NotImplementedException();
     }
 }

@@ -1,4 +1,6 @@
 using Core.Entities;
+using Core.Exceptions;
+using Core.Requests;
 using Core.Stores;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +17,18 @@ public class UserController : ControllerBase
         _userStore = userStore;
     }
 
-    [HttpGet]
-    [Route("profile")]
-    public async Task<ActionResult<User>> GetUser()
+    [HttpPost]
+    [Route("create")]
+    public async Task<ActionResult<User>> CreateUser([FromBody] CreateUserRequest request)
     {
-        return await _userStore.GetUser();
+        try
+        {
+            var user = new User(request);
+            return await _userStore.GetUser();
+        }
+        catch (WeakPasswordException e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 }
