@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.RegularExpressions;
 using Core.Entities.Interfaces;
-using Core.Exceptions;
 using Core.Requests;
 
 namespace Core.Entities;
