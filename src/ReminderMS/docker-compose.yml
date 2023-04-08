@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  userms:
+    image: userms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20003:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - userms-network
+    depends_on:
+      - "usermspgsql"
+
+  usermspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: userms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: userms
+    ports:
+      - "5403:5432"
+    networks:
+      - userms-network
+
+networks:
+  userms-network:
+    driver: bridge
