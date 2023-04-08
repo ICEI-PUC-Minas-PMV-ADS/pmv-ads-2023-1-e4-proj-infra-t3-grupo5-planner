@@ -8,7 +8,7 @@ COPY ["src/ReminderMS.API/ReminderMS.API.csproj", "ReminderMS.API/"]
 COPY ["src/Networking.API/Networking.API.csproj", "Networking.API/"]
 COPY ["src/Core/Core.csproj", "Core/"]
 COPY ["src/Store.PostgreSQL/Store.PostgreSQL.csproj", "Store.PostgreSQL/"]
-RUN dotnet restore "UserMS.API/UserMS.API.csproj"
+RUN dotnet restore "ReminderMS.API/ReminderMS.API.csproj"
 COPY . .
 WORKDIR "/src/src/ReminderMS.API"
 RUN dotnet build "ReminderMS.API.csproj" -c Release -o /app/build

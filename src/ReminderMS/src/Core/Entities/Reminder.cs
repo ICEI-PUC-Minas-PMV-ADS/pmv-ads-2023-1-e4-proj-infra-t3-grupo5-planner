@@ -6,7 +6,7 @@ using Core.Requests;
 
 namespace Core.Entities;
 
-public class User : ITrackable
+public class Reminder : ITrackable
 {
     public int Id { get; private set; }
     public int UserId { get; private set;  }
@@ -21,9 +21,9 @@ public class User : ITrackable
     public DateTime DeletedAt { get; private set; }
     
     // Tech debt: wee need an empty constructor for EF.
-    private User() {}
+    private Reminder() {}
 
-    public User(CreateUserRequest request)
+    public Reminder(CreateReminderRequest request)
     { 
         UserId = request.UserId;
         Title = request.Title;

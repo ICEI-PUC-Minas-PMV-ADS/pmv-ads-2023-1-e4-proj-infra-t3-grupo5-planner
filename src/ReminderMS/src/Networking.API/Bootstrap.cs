@@ -13,7 +13,7 @@ public class ApiBootstrap
         
         options.Invoke(_builder.Services);
 
-        var adapterAssembly = typeof(UserController).Assembly;
+        var adapterAssembly = typeof(ReminderController).Assembly;
 
         _builder.Services.AddControllers()
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));

@@ -18,7 +18,7 @@ public class ContextFactory : IDesignTimeDbContextFactory<Context>
             .AddEnvironmentVariables()
             .Build();
         var optionsBuilder = new DbContextOptionsBuilder<Context>(); 
-        var connectionString = configurationBuilder.GetConnectionString("UserMSDatabase");
+        var connectionString = configurationBuilder.GetConnectionString("ReminderMSDatabase");
         optionsBuilder.UseNpgsql(connectionString);
         optionsBuilder.AddInterceptors(new SoftDeletableEntityInterceptor());
 

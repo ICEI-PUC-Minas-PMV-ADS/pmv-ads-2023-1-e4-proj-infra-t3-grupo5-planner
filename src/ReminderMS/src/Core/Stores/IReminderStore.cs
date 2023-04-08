@@ -4,6 +4,6 @@ namespace Core.Stores;
 
 public interface IReminderStore
 {
-    public Task<int> CreateReminder(User user);
-    public Task<User> GetReminder();
+    public Task<int> CreateReminder(Reminder reminder);
+    public Task<Reminder> GetReminder();
 }
