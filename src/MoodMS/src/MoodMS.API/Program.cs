@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 var api = new ApiBootstrap(args, options =>
 {
-    options.AddScoped<IUserStore, UserRepository>();
+    options.AddScoped<IMoodStore, MoodRepository>();
 });
 
 await api.RunAsync();
