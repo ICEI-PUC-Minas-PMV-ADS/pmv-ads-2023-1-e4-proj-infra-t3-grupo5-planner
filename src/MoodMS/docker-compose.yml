@@ -20,7 +20,7 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_MOOD: moodms
+      POSTGRES_USER: moodms
       POSTGRES_PASSWORD: planner
       POSTGRES_DB: moodms
     ports:

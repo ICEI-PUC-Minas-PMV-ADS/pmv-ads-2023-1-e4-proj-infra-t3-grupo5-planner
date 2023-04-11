@@ -3,14 +3,14 @@ using Core.Stores;
 
 namespace Store.PostgreSQL.Repositories;
 
-public class UserRepository : IUserStore
+public class MoodRepository : IMoodStore
 {
-    public Task<int> CreateUser(User user)
+    public Task<int> CreateMood(Mood mood)
     {
         throw new NotImplementedException();
     }
 
-    public Task<User> GetUser()
+    public Task<Mood> GetMood()
     {
         throw new NotImplementedException();
     }

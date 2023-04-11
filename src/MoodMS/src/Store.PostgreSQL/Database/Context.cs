@@ -9,7 +9,7 @@ public class Context : DbContext
 {
     public Context(DbContextOptions options) : base(options) {}
     
-    public DbSet<User> Users { get; set; }
+    public DbSet<Mood> Moods { get; set; }
 
     public DbSet<PasswordReset> PasswordResets { get; set; }
 
