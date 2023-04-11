@@ -1514,11 +1514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\UserMS.API\\UserMS.API.csproj",
-      "projectName": "UserMS.API",
-      "projectPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\UserMS.API\\UserMS.API.csproj",
+      "projectUniqueName": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\MoodMS.API.csproj",
+      "projectName": "MoodMS.API",
+      "projectPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\MoodMS.API.csproj",
       "packagesPath": "C:\\Users\\sabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\UserMS.API\\obj\\",
+      "outputPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\NuGet.Config",
