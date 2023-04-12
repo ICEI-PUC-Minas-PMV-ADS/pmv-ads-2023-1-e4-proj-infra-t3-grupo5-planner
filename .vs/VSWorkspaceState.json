@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src\\ChecklistMS",
-    "\\src\\ChecklistMS\\src",
-    "\\src\\ChecklistMS\\src\\Networking.API",
-    "\\src\\UserMS\\src\\Core",
-    "\\src\\UserMS\\src\\Core\\Exceptions",
-    "\\src\\UserMS\\src\\Core\\Requests",
-    "\\src\\UserMS\\src\\Core\\Stores",
-    "\\src\\UserMS\\src\\Networking.API",
-    "\\src\\UserMS\\src\\UserMS.API"
+    ""
   ],
+  "SelectedNode": "\\ChecklistMS.sln",
   "PreviewInSolutionExplorer": false
 }

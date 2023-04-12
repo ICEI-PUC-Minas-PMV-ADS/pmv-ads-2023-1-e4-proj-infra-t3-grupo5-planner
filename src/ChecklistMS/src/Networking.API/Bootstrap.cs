@@ -13,7 +13,7 @@ public class ApiBootstrap
         
         options.Invoke(_builder.Services);
 
-        var adapterAssembly = typeof(WidgetCheckboxController).Assembly;
+        var adapterAssembly = typeof(TaskController).Assembly;
 
         _builder.Services.AddControllers()
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));

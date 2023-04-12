@@ -3,20 +3,20 @@ using Core.Stores;
 
 namespace Store.PostgreSQL.Repositories;
 
-public class WidgetCheckboxRepository : IWidgetCheckboxStore
+public class WidgetCheckboxRepository : ITaskStore
 {
 
-    public Task<IEnumerable<WidgetCheckbox>> GetChecklist()
+    public Task<IEnumerable<System.Threading.Tasks.Task>> GetChecklist()
     {
         throw new NotImplementedException();
     }
 
-    public Task<int> CreateWidgetCheckbox(WidgetCheckbox Checkbox)
+    public Task<int> CreateWidgetCheckbox(Core.Entities.Task Checkbox)
     {
         throw new NotImplementedException();
     }
 
-    public Task<int> UpdateWidgetCheckbox(WidgetCheckbox Checkbox)
+    public Task<int> UpdateWidgetCheckbox(Core.Entities.Task Checkbox)
     {
         throw new NotImplementedException();
     }
