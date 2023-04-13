@@ -24,11 +24,11 @@ public class ApiBootstrap
     public Task RunAsync()
     {
         var app = _builder.Build();
-     
+
         app.UseSwagger();
         app.UseSwaggerUI();
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
 
         app.UseAuthorization();
         
