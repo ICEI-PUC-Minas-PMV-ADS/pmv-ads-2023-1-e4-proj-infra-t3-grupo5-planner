@@ -4,6 +4,7 @@ namespace Core.Stores;
 
 public interface IMoodStore
 {
-    public Task<int> CreateMood(Mood mood);
-    public Task<Mood> GetMood();
+    public Task CreateMood(Mood mood);
+    public Task<List<Mood>> GetMood();
+    public Task<Mood> GetMoodById(int id);
 }
