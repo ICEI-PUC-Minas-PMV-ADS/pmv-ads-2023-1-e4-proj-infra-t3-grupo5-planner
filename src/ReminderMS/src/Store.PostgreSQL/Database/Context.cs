@@ -11,8 +11,6 @@ public class Context : DbContext
     
     public DbSet<Reminder> Reminder { get; set; }
 
-    //public DbSet<PasswordReset> PasswordResets { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyGlobalFilters<ISoftDeletable>(p => p.DeletedOn == null);

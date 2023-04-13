@@ -1,9 +1,8 @@
 using Core.Entities;
-using Core.Exceptions;
 using Core.Requests;
 using Core.Stores;
 using Microsoft.AspNetCore.Mvc;
-//TODO: Criar o controle do Reminder
+
 namespace Networking.API.Controllers;
 
 [ApiController]
@@ -16,11 +15,13 @@ public class ReminderController : ControllerBase
     {
         _reminderStore = reminderStore;
     }
-
+    
     [HttpPost]
     [Route("create")]
     public async Task<ActionResult<Reminder>> CreateReminder([FromBody] CreateReminderRequest request)
     {
-        return null;
+        var reminder = new Reminder(request);
+        return await _reminderStore.GetReminder();
     }
+    
 }
