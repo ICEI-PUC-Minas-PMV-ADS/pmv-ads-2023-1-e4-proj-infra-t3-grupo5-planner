@@ -1,17 +1,31 @@
 ﻿using Core.Entities;
 using Core.Stores;
+using Microsoft.EntityFrameworkCore;
+using Store.PostgreSQL.Database;
 
 namespace Store.PostgreSQL.Repositories;
 
 public class MoodRepository : IMoodStore
 {
-    public Task<int> CreateMood(Mood mood)
+    private readonly Context _context;
+
+    public MoodRepository(Context context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+    public async Task CreateMood(Mood mood)
+    {
+        _context.Moods.Add(mood);
+        await _context.SaveChangesAsync();
     }
 
-    public Task<Mood> GetMood()
+    public async Task<Mood> GetMoodById(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Moods.FindAsync(id);
+    }
+
+    public async Task<List<Mood>> GetMood()
+    {
+        return await _context.Moods.ToListAsync();
     }
 }
