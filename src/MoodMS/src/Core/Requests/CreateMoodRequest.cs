@@ -1,5 +1,4 @@
-using System.Text.RegularExpressions;
-
+using Core.Entities.Enums;
 namespace Core.Requests;
 
 public class CreateMoodRequest
