@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\MoodMS",
+    "\\src\\MoodMS\\src",
+    "\\src\\MoodMS\\src\\Store.PostgreSQL",
+    "\\src\\MoodMS\\src\\Store.PostgreSQL\\Repositories"
   ],
-  "SelectedNode": "\\MoodMS.sln",
+  "SelectedNode": "\\src\\MoodMS\\MoodMS.sln",
   "PreviewInSolutionExplorer": false
 }
