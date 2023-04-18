@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <RootNamespace>MoodMS.API</RootNamespace>
+        <RootNamespace>PageMS.API</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
