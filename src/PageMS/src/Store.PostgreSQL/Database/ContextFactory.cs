@@ -18,7 +18,7 @@ public class ContextFactory : IDesignTimeDbContextFactory<Context>
             .AddEnvironmentVariables()
             .Build();
         var optionsBuilder = new DbContextOptionsBuilder<Context>(); 
-        var connectionString = configurationBuilder.GetConnectionString("MoodMSDatabase");
+        var connectionString = configurationBuilder.GetConnectionString("PageMSDatabase");
         optionsBuilder.UseNpgsql(connectionString);
         optionsBuilder.AddInterceptors(new SoftDeletableEntityInterceptor());
 

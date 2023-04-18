@@ -9212,20 +9212,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sabri\\.nuget\\packages\\": {}
+    "C:\\Users\\palom\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\MoodMS.API.csproj",
-      "projectName": "MoodMS.API",
-      "projectPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\MoodMS.API.csproj",
-      "packagesPath": "C:\\Users\\sabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\MoodMS.API\\obj\\",
+      "projectUniqueName": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj",
+      "projectName": "PageMS.API",
+      "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj",
+      "packagesPath": "C:\\Users\\palom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\NuGet.Config",
-        "C:\\Users\\sabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\NuGet.Config",
+        "C:\\Users\\palom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9238,11 +9238,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\Networking.API\\Networking.API.csproj": {
-              "projectPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\Networking.API\\Networking.API.csproj"
+            "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj": {
+              "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj"
             },
-            "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
-              "projectPath": "C:\\Users\\sabri\\OneDrive\\Documentos\\Codes\\V3\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\MoodMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj"
+            "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
+              "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj"
             }
           }
         }

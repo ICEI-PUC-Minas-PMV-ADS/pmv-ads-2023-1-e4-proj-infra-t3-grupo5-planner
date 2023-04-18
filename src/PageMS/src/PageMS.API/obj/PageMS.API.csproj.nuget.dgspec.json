@@ -1,0 +1,298 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\palom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\NuGet.Config",
+          "C:\\Users\\palom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj",
+        "projectName": "Networking.API",
+        "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj",
+        "packagesPath": "C:\\Users\\palom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\NuGet.Config",
+          "C:\\Users\\palom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj",
+        "projectName": "PageMS.API",
+        "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\PageMS.API.csproj",
+        "packagesPath": "C:\\Users\\palom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\PageMS.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\NuGet.Config",
+          "C:\\Users\\palom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj": {
+                "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Networking.API\\Networking.API.csproj"
+              },
+              "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
+                "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj",
+        "projectName": "Store.PostgreSQL",
+        "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj",
+        "packagesPath": "C:\\Users\\palom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Store.PostgreSQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\NuGet.Config",
+          "C:\\Users\\palom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\palom\\OneDrive\\Área de Trabalho\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\PageMS\\src\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

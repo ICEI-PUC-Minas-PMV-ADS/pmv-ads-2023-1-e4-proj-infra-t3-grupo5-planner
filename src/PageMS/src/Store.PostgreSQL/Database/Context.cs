@@ -9,7 +9,7 @@ public class Context : DbContext
 {
     public Context(DbContextOptions options) : base(options) {}
     
-    public DbSet<Mood> Moods { get; set; }
+    public DbSet<Page> Pages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -13,7 +13,7 @@ public class ApiBootstrap
         
         options.Invoke(_builder.Services);
 
-        var adapterAssembly = typeof(MoodController).Assembly;
+        var adapterAssembly = typeof(PageController).Assembly;
 
         _builder.Services.AddControllers()
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));
