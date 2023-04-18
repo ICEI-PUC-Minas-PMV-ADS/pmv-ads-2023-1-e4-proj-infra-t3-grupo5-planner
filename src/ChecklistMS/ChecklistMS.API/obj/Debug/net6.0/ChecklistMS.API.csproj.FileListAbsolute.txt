@@ -1,0 +1,5 @@
+C:\Users\Pedro Thiago\Documents\Estudo\PUC MINAS\04-QUARTO SEMESTRE\REPOSITORIO\src\ChecklistMS\ChecklistMS.API\obj\Debug\net6.0\ChecklistMS.API.csproj.AssemblyReference.cache
+C:\Users\Pedro Thiago\Documents\Estudo\PUC MINAS\04-QUARTO SEMESTRE\REPOSITORIO\src\ChecklistMS\ChecklistMS.API\obj\Debug\net6.0\ChecklistMS.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedro Thiago\Documents\Estudo\PUC MINAS\04-QUARTO SEMESTRE\REPOSITORIO\src\ChecklistMS\ChecklistMS.API\obj\Debug\net6.0\ChecklistMS.API.AssemblyInfoInputs.cache
+C:\Users\Pedro Thiago\Documents\Estudo\PUC MINAS\04-QUARTO SEMESTRE\REPOSITORIO\src\ChecklistMS\ChecklistMS.API\obj\Debug\net6.0\ChecklistMS.API.AssemblyInfo.cs
+C:\Users\Pedro Thiago\Documents\Estudo\PUC MINAS\04-QUARTO SEMESTRE\REPOSITORIO\src\ChecklistMS\ChecklistMS.API\obj\Debug\net6.0\ChecklistMS.API.csproj.CoreCompileInputs.cache
