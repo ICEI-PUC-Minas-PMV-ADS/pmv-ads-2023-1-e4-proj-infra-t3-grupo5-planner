@@ -9,6 +9,8 @@ namespace Core.Entities;
 public class Widget : ITrackable
 {
     public int Id { get; private set; }
+    public WidgetType Type { get; private set; }
+
 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedOn { get; private set; }
@@ -21,5 +23,6 @@ public class Widget : ITrackable
 
     public Widget(CreatePageRequest request)
     {
+        Type = request.Type;
     }
 }

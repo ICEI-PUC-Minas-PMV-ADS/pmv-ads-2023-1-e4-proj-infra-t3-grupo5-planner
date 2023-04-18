@@ -12,6 +12,7 @@ public class Page : ITrackable
     public int UserId { get; private set; }
     public string Title { get; private set; }
     public string Body { get; private set; }
+    public List<Widget> Widgets { get; private set; }
 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedOn { get; private set; }
@@ -27,5 +28,6 @@ public class Page : ITrackable
         UserId = request.UserId;
         Title = request.Title;
         Body = request.Body;
+        Widgets = request.Widgets;
     }
 }
