@@ -12,8 +12,8 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230412031419_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230418234515_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Core.Entities.Mood", b =>
+            modelBuilder.Entity("Core.Entities.Page", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,23 +33,64 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("CurrentMood")
-                        .HasColumnType("integer");
-
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Moods");
+                    b.ToTable("Pages");
+                });
+
+            modelBuilder.Entity("Core.Entities.Widget", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("PageId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PageId");
+
+                    b.ToTable("Widget");
+                });
+
+            modelBuilder.Entity("Core.Entities.Widget", b =>
+                {
+                    b.HasOne("Core.Entities.Page", null)
+                        .WithMany("Widgets")
+                        .HasForeignKey("PageId");
+                });
+
+            modelBuilder.Entity("Core.Entities.Page", b =>
+                {
+                    b.Navigation("Widgets");
                 });
 #pragma warning restore 612, 618
         }

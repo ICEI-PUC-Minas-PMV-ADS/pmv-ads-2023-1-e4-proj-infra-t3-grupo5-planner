@@ -2,11 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\MoodMS",
-    "\\src\\MoodMS\\src",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL\\Repositories"
+    "\\src\\PageMS",
+    "\\src\\PageMS\\src",
+    "\\src\\PageMS\\src\\Core",
+    "\\src\\PageMS\\src\\Core\\Entities",
+    "\\src\\PageMS\\src\\Core\\Entities\\Enums",
+    "\\src\\PageMS\\src\\Core\\Requests",
+    "\\src\\PageMS\\src\\Store.PostgreSQL",
+    "\\src\\PageMS\\src\\Store.PostgreSQL\\Migrations"
   ],
-  "SelectedNode": "\\src\\MoodMS\\MoodMS.sln",
+  "SelectedNode": "\\src\\PageMS\\src\\Store.PostgreSQL\\Migrations\\ContextModelSnapshot.cs",
   "PreviewInSolutionExplorer": false
 }

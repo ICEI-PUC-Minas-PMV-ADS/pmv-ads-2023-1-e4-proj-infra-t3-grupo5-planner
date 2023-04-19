@@ -1,7 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.RegularExpressions;
 using Core.Entities.Interfaces;
-using Core.Entities.Enums;
 using Core.Requests;
 
 namespace Core.Entities;
