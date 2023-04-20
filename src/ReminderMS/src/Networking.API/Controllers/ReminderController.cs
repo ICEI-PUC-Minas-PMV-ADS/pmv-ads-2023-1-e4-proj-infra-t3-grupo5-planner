@@ -27,10 +27,29 @@ public class ReminderController : ControllerBase
     }
 
     [HttpGet]
-    [Route("test")]
-    public IActionResult Test()
+    [Route("ListReminders/{userId}")]
+    public async Task<ActionResult<List<Reminder>>> GetRemindersById(int UserId)
     {
-        return Ok("Test successful!");
-}
-    
+        var reminders = await _reminderStore.GetRemindersByUserId(UserId);
+        
+        if(reminders == null || reminders.Count == 0){
+            return StatusCode(404);
+        }
+
+        return reminders;
+    }
+
+    [HttpGet]
+    [Route("search/{id}")]
+    public async Task<ActionResult<Reminder>> GetReminderByid(int id){
+        
+        var reminder = await _reminderStore.GetReminderByid(id);
+        
+        if(reminder == null){
+            return NotFound();
+        }
+
+        return reminder;
+    }
+
 }

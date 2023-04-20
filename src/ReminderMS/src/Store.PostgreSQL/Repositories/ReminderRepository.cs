@@ -24,4 +24,16 @@ public class ReminderRepository : IReminderStore
     {
         return await _context.Reminder.ToListAsync();
     }
+
+    public async Task<List<Reminder>> GetRemindersByUserId(int id)
+    {
+        return await _context.Reminder.Where(u => u.UserId == id).ToListAsync();
+    }
+
+    public async Task<Reminder> GetReminderByid(int id)
+    {
+        var reminder = await _context.Reminder.FirstOrDefaultAsync(u => u.Id == id);
+
+        return reminder == null ? null : reminder;
+    }
 }
