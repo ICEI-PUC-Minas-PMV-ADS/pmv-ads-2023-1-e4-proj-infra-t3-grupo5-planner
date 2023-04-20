@@ -21,7 +21,16 @@ public class ReminderController : ControllerBase
     public async Task<ActionResult<Reminder>> CreateReminder([FromBody] CreateReminderRequest request)
     {
         var reminder = new Reminder(request);
-        return await _reminderStore.GetReminder();
+        await _reminderStore.CreateReminder(reminder);
+
+        return reminder;
     }
+
+    [HttpGet]
+    [Route("test")]
+    public IActionResult Test()
+    {
+        return Ok("Test successful!");
+}
     
 }

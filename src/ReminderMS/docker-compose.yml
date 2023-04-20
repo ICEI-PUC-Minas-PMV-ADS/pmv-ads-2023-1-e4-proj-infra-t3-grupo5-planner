@@ -20,7 +20,7 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_reminder: reminderms
+      POSTGRES_USER: reminderms
       POSTGRES_PASSWORD: planner
       POSTGRES_DB: reminderms
     ports:
@@ -31,3 +31,4 @@ services:
 networks:
   reminderms-network:
     driver: bridge
+

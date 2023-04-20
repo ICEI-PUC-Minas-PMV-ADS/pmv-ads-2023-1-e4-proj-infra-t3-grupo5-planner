@@ -1,17 +1,27 @@
 ﻿using Core.Entities;
 using Core.Stores;
+using Microsoft.EntityFrameworkCore;
+using Store.PostgreSQL.Database;
 
 namespace Store.PostgreSQL.Repositories;
 
 public class ReminderRepository : IReminderStore
 {
-    public Task<int> CreateReminder(Reminder reminder)
+    private readonly Context _context;
+
+    public ReminderRepository(Context context)
     {
-        throw new NotImplementedException();
+        _context = context;
     }
 
-    public Task<Reminder> GetReminder()
+    public async Task CreateReminder(Reminder reminder)
     {
-        throw new NotImplementedException();
+        _context.Reminder.Add(reminder);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<List<Reminder>> GetReminder()
+    {
+        return await _context.Reminder.ToListAsync();
     }
 }

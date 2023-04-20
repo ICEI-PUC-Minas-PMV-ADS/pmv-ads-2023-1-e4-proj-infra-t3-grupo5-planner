@@ -6,7 +6,7 @@ using Core.Requests;
 
 namespace Core.Entities;
 
-public class Reminder : ITrackable
+public class Reminder //: ITrackable
 {
     public int Id { get; private set; }
     public int UserId { get; private set;  }
@@ -14,11 +14,11 @@ public class Reminder : ITrackable
     public DateTime RemindsAt { get; private set; }
     
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public DateTime CreatedOn { get; private set; }
+    public DateTime? CreatedOn { get; private set; }
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime UpdatedOn { get; private set; }
+    public DateTime? UpdatedOn { get; private set; }
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime DeletedAt { get; private set; }
+    public DateTime? DeletedAt { get; private set; }
     
     // Tech debt: wee need an empty constructor for EF.
     private Reminder() {}
@@ -28,5 +28,7 @@ public class Reminder : ITrackable
         UserId = request.UserId;
         Title = request.Title;
         RemindsAt = request.RemindsAt;
+        this.CreatedOn = new DateTime();
+        this.UpdatedOn = new DateTime();
     }
 }
