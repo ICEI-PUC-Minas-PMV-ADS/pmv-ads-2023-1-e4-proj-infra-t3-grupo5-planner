@@ -4,9 +4,13 @@
     "\\src",
     "\\src\\MoodMS",
     "\\src\\MoodMS\\src",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL\\Repositories"
+    "\\src\\MoodMS\\src\\MoodMS.API",
+    "\\src\\MoodMS\\src\\Store.PostgreSQL\\Database",
+    "\\src\\UserMS",
+    "\\src\\UserMS\\src",
+    "\\src\\UserMS\\src\\Store.PostgreSQL",
+    "\\src\\UserMS\\src\\Store.PostgreSQL\\Database"
   ],
-  "SelectedNode": "\\src\\MoodMS\\MoodMS.sln",
+  "SelectedNode": "\\src\\MoodMS\\src\\MoodMS.API\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

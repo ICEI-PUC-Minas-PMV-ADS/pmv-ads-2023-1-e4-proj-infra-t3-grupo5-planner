@@ -10,13 +10,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Networking.API\Networking.API.csproj" />
       <ProjectReference Include="..\Store.PostgreSQL\Store.PostgreSQL.csproj" />
     </ItemGroup>
