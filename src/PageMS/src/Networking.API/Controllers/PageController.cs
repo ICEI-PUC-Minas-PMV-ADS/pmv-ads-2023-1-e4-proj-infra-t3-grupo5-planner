@@ -51,6 +51,6 @@ public class PageController : ControllerBase
             return NotFound();
         }
 
-        return page;
+        return Ok (page);
     }
 }

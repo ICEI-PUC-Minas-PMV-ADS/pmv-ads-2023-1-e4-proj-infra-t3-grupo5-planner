@@ -11,6 +11,6 @@
     "\\src\\PageMS\\src\\Store.PostgreSQL",
     "\\src\\PageMS\\src\\Store.PostgreSQL\\Migrations"
   ],
-  "SelectedNode": "\\src\\PageMS\\src\\Store.PostgreSQL\\Migrations\\ContextModelSnapshot.cs",
+  "SelectedNode": "\\src\\PageMS\\src\\Store.PostgreSQL\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }
