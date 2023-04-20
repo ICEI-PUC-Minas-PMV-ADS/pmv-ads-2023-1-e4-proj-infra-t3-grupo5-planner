@@ -4,12 +4,12 @@
     "\\src",
     "\\src\\MoodMS",
     "\\src\\MoodMS\\src",
+    "\\src\\MoodMS\\src\\Core",
+    "\\src\\MoodMS\\src\\Core\\Entities",
     "\\src\\MoodMS\\src\\MoodMS.API",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL\\Database",
-    "\\src\\UserMS",
-    "\\src\\UserMS\\src",
-    "\\src\\UserMS\\src\\Store.PostgreSQL",
-    "\\src\\UserMS\\src\\Store.PostgreSQL\\Database"
+    "\\src\\MoodMS\\src\\Networking.API",
+    "\\src\\MoodMS\\src\\Networking.API\\Controllers",
+    "\\src\\MoodMS\\src\\Store.PostgreSQL"
   ],
   "SelectedNode": "\\src\\MoodMS\\src\\MoodMS.API\\Program.cs",
   "PreviewInSolutionExplorer": false
