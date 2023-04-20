@@ -2,6 +2,7 @@ using Core.Entities;
 using Core.Requests;
 using Core.Stores;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace Networking.API.Controllers;
 
@@ -28,7 +29,7 @@ public class MoodController : ControllerBase
 
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("mood/{id}")]
     public async Task<ActionResult<Mood>> GetMoodById(int id)
     {
         var mood = await _moodStore.GetMoodById(id);
@@ -52,5 +53,27 @@ public class MoodController : ControllerBase
         }
 
         return Ok(mood);
+    }
+
+    [HttpPatch("mood/{id}")]
+    public async Task<ActionResult<Mood>> UpdateMood(int id, [FromBody] JsonPatchDocument<Mood> patchMood)
+    {
+        var mood = await _moodStore.GetMoodById(id);
+
+        if (mood == null)
+        {
+            return NotFound();
+        }
+
+        await _moodStore.Update(mood);
+        return CreatedAtAction("GetMoodById", new { id = mood.Id }, mood);
+
+    }
+
+    [HttpDelete("mood/{id}")]
+    public async Task DeleteMood(int id)
+    {
+        await _moodStore.Delete(id);
+
     }
 }
