@@ -51,6 +51,6 @@ public class MoodController : ControllerBase
             return NotFound();
         }
 
-        return mood;
+        return Ok(mood);
     }
 }
