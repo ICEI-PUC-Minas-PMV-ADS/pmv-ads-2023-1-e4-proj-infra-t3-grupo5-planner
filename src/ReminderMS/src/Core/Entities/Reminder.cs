@@ -1,12 +1,12 @@
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.RegularExpressions;
+using Core.Entities.DTO;
 using Core.Entities.Interfaces;
 using Core.Exceptions;
 using Core.Requests;
 
 namespace Core.Entities;
 
-public class Reminder //: ITrackable
+public class Reminder : ITrackable
 {
     public int Id { get; private set; }
     public int UserId { get; private set;  }
@@ -14,9 +14,9 @@ public class Reminder //: ITrackable
     public DateTime RemindsAt { get; private set; }
     
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public DateTime? CreatedOn { get; private set; }
+    public DateTime? CreatedAt { get; private set; }
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime? UpdatedOn { get; private set; }
+    public DateTime? UpdatedAt { get; private set; }
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
     public DateTime? DeletedAt { get; private set; }
     
@@ -27,8 +27,25 @@ public class Reminder //: ITrackable
     { 
         UserId = request.UserId;
         Title = request.Title;
-        RemindsAt = request.RemindsAt;
-        this.CreatedOn = new DateTime();
-        this.UpdatedOn = new DateTime();
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
+        if(request.RemindsAt < DateTime.Now){
+            throw new ReminderDateException("A data do lembrete não pode ser para antes da data atual");
+        }else{
+            RemindsAt = request.RemindsAt;
+        }
     }
+
+    public void UpdateReminder(ReminderDTO reminderDTO)
+    {
+        Title = reminderDTO.Title;
+        RemindsAt = reminderDTO.RemindsAt;
+        if(reminderDTO.RemindsAt < DateTime.Now){
+            throw new ReminderDateException("A data do lembrete não pode ser para antes da data atual");
+        }else{
+            RemindsAt = reminderDTO.RemindsAt;
+        }
+        UpdatedAt = DateTime.UtcNow;
+    }
+
 }

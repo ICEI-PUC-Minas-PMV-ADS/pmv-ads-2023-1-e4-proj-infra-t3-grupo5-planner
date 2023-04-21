@@ -5,7 +5,7 @@ namespace Core.Entities.Interfaces;
 public interface ITrackable
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public DateTime? CreatedOn { get; }
+    public DateTime? CreatedAt { get; }
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime? UpdatedOn { get; }
+    public DateTime? UpdatedAt { get; }
 }

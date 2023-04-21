@@ -20,9 +20,10 @@ public class ReminderRepository : IReminderStore
         await _context.SaveChangesAsync();
     }
 
-    public async Task<List<Reminder>> GetReminder()
+    public async Task UpdateReminder(Reminder reminder)
     {
-        return await _context.Reminder.ToListAsync();
+        _context.Entry(reminder).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
     }
 
     public async Task<List<Reminder>> GetRemindersByUserId(int id)
@@ -31,9 +32,12 @@ public class ReminderRepository : IReminderStore
     }
 
     public async Task<Reminder> GetReminderByid(int id)
+    {       
+        return await _context.Reminder.FirstOrDefaultAsync(u => u.Id == id);;
+    }
+    public async Task DeleteReminder(int id)
     {
-        var reminder = await _context.Reminder.FirstOrDefaultAsync(u => u.Id == id);
-
-        return reminder == null ? null : reminder;
+        _context.Reminder.Remove(await _context.Reminder.FindAsync(id));
+        await _context.SaveChangesAsync();
     }
 }

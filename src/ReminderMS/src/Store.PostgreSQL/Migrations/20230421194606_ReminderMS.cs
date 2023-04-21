@@ -21,8 +21,8 @@ namespace Store.PostgreSQL.Migrations
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
                     RemindsAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>

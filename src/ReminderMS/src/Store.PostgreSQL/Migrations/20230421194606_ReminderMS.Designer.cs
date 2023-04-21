@@ -12,7 +12,7 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230420141501_ReminderMS")]
+    [Migration("20230421194606_ReminderMS")]
     partial class ReminderMS
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("CreatedOn")
+                    b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
 
@@ -48,7 +48,7 @@ namespace Store.PostgreSQL.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("UpdatedOn")
+                    b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
