@@ -9,8 +9,8 @@ public class Mood : ITrackable
 {
     public int Id { get; private set; }
     public CurrentMood CurrentMood { get; private set; }    
-    public DateTime CreatedOn { get; private set; }
-    public DateTime UpdatedOn { get; private set; }
+    public DateTime CreatedOn { get; set; }
+    public DateTime UpdatedOn { get; set; }
     public DateTime? DeletedOn { get; private set; }
 
     // Tech debt: wee need an empty constructor for EF.
@@ -26,5 +26,10 @@ public class Mood : ITrackable
     public void UpdateMood(MoodUpdateDto moodUpdateDto)
     {
         CurrentMood = moodUpdateDto.CurrentMood;
+    }
+
+    public CurrentMood GetCurrentMood()
+    {
+        return CurrentMood;
     }
 }
