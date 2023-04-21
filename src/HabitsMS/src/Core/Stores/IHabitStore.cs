@@ -4,6 +4,12 @@ namespace Core.Stores;
 
 public interface IHabitStore
 {
-    public Task<int> CreateHabit(Habit habit);
-    public Task<Habit> GetHabit();
+    public Task CreateHabit(Habit habit);
+    public Task<List<Habit>> GetHabitsByUserId(int id);
+    public Task<Habit?> GetHabitById(int id);
+    public Task Delete(int id);
+    public Task UpdateHabit(Habit habit, DateTime? updatedOn);
 }
+
+
+
