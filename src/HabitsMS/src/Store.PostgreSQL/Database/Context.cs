@@ -7,8 +7,10 @@ namespace Store.PostgreSQL.Database;
 
 public class Context : DbContext
 {
-    public Context(DbContextOptions options) : base(options) {}
-    
+    public Context(DbContextOptions<Context> options) : base(options)
+    {
+    }
+
     public DbSet<Habit> Habits { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

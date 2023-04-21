@@ -14,4 +14,5 @@
       <ProjectReference Include="..\Store.PostgreSQL\Store.PostgreSQL.csproj" />
     </ItemGroup>
 
+
 </Project>

@@ -3,8 +3,15 @@
     "",
     "\\src",
     "\\src\\HabitsMS",
-    "\\src\\HabitsMS\\src"
+    "\\src\\HabitsMS\\src",
+    "\\src\\HabitsMS\\src\\Core",
+    "\\src\\HabitsMS\\src\\Core\\Entities",
+    "\\src\\HabitsMS\\src\\Core\\Entities\\Interfaces",
+    "\\src\\HabitsMS\\src\\Core\\Requests",
+    "\\src\\HabitsMS\\src\\Networking.API",
+    "\\src\\HabitsMS\\src\\Store.PostgreSQL",
+    "\\src\\HabitsMS\\src\\Store.PostgreSQL\\Migrations"
   ],
-  "SelectedNode": "\\src\\HabitsMS\\HabitsMS.sln",
+  "SelectedNode": "\\src\\HabitsMS\\src\\Core\\Entities\\Habit.cs",
   "PreviewInSolutionExplorer": false
 }
