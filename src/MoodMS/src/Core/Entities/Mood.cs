@@ -1,6 +1,7 @@
 using Core.Entities.Interfaces;
 using Core.Entities.Enums;
 using Core.Requests;
+using Core.Entities.Dto;
 
 namespace Core.Entities;
 
@@ -20,5 +21,10 @@ public class Mood : ITrackable
         CurrentMood = request.CurrentMood;
         CreatedOn = DateTime.UtcNow;
         UpdatedOn = DateTime.UtcNow;
+    }
+
+    public void UpdateMood(MoodUpdateDto moodUpdateDto)
+    {
+        CurrentMood = moodUpdateDto.CurrentMood;
     }
 }

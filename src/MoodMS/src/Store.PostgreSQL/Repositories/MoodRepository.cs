@@ -31,11 +31,10 @@ public class MoodRepository : IMoodStore
         return await _context.Moods.FindAsync(id);
     }
 
-    public async Task<Mood> Update(Mood mood)
+    public async Task Update(Mood mood)
     {
         _context.Entry(mood).State = EntityState.Modified;
         await _context.SaveChangesAsync();
-        return mood;
     }
 
     public async Task Delete(int id)
