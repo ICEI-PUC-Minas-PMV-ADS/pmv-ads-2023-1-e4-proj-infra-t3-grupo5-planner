@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  expensesms:
+    image: expensesms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20009:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      - expensesms-network
+    depends_on:
+      - "expensesmspgsql"
+
+  expensesmspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: expensesms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: expensesms
+    ports:
+      - "5409:5432"
+    networks:
+      - expensesms-network
+
+networks:
+  expensesms-network:
+    driver: bridge
