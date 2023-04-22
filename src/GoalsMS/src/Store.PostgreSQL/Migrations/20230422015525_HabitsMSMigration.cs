@@ -13,7 +13,7 @@ namespace Store.PostgreSQL.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Habits",
+                name: "Goals",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -21,12 +21,15 @@ namespace Store.PostgreSQL.Migrations
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     Icon = table.Column<string>(type: "text", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    Target = table.Column<int>(type: "integer", nullable: false),
+                    Progress = table.Column<int>(type: "integer", nullable: false),
+                    ReachedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Habits", x => x.Id);
+                    table.PrimaryKey("PK_Goals", x => x.Id);
                 });
         }
 
@@ -34,7 +37,7 @@ namespace Store.PostgreSQL.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Habits");
+                name: "Goals");
         }
     }
 }

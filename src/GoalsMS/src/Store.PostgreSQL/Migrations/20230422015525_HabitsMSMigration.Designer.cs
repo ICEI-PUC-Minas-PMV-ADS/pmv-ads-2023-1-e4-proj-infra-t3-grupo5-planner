@@ -12,7 +12,7 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230421185122_HabitsMSMigration")]
+    [Migration("20230422015525_HabitsMSMigration")]
     partial class HabitsMSMigration
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Core.Entities.Habit", b =>
+            modelBuilder.Entity("Core.Entities.Goal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -41,12 +41,20 @@ namespace Store.PostgreSQL.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("Progress")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("ReachedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Target")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("UserId")
@@ -54,7 +62,7 @@ namespace Store.PostgreSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Habits");
+                    b.ToTable("Goals");
                 });
 #pragma warning restore 612, 618
         }
