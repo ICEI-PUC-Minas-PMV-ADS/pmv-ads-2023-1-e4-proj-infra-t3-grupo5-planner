@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <RootNamespace>HabitsMS.API</RootNamespace>
+        <RootNamespace>GoalsMS.API</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

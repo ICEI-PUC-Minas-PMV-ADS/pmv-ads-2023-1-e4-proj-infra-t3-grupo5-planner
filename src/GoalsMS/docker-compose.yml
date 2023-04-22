@@ -1,33 +1,33 @@
 version: '3'
 
 services:
-  habitsms:
-    image: habitsms
+  goalsms:
+    image: goalsms
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "20006:80"
+      - "20007:80"
     environment:
       ASPNETCORE_ENVIRONMENT: Staging
     networks:
-      - habitsms-network
+      - goalsms-network
     depends_on:
-      - "habitsmspgsql"
+      - "goalsmspgsql"
 
-  habitsmspgsql:
+  goalsmspgsql:
     platform: linux/x86_64
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: habitsms
+      POSTGRES_USER: goalsms
       POSTGRES_PASSWORD: planner
-      POSTGRES_DB: habitsms
+      POSTGRES_DB: goalsms
     ports:
-      - "5406:5432"
+      - "5407:5432"
     networks:
-      - habitsms-network
+      - goalsms-network
 
 networks:
-  habitsms-network:
+  goalsms-network:
     driver: bridge

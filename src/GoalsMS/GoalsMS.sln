@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{159317CF-11A2-48B6-A7FA-98301923A3C0}"
 	ProjectSection(SolutionItems) = preProject
-		src\HabitsMS.API\HabitsMS.API.csproj = src\HabitsMS.API\HabitsMS.API.csproj
+		src\GoalsMS.API\GoalsMS.API.csproj = src\GoalsMS.API\GoalsMS.API.csproj
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.csproj", "{F74778FE-851C-4E49-97A5-D280C5C59BD8}"

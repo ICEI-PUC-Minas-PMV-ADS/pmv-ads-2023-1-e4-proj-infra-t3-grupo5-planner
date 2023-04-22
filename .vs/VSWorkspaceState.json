@@ -2,16 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\HabitsMS",
-    "\\src\\HabitsMS\\src",
-    "\\src\\HabitsMS\\src\\Core",
-    "\\src\\HabitsMS\\src\\Core\\Entities",
-    "\\src\\HabitsMS\\src\\Core\\Entities\\Interfaces",
-    "\\src\\HabitsMS\\src\\Core\\Requests",
-    "\\src\\HabitsMS\\src\\Networking.API",
-    "\\src\\HabitsMS\\src\\Store.PostgreSQL",
-    "\\src\\HabitsMS\\src\\Store.PostgreSQL\\Migrations"
+    "\\src\\GoalsMS",
+    "\\src\\GoalsMS\\src",
+    "\\src\\GoalsMS\\src\\Core",
+    "\\src\\GoalsMS\\src\\Core\\Entities",
+    "\\src\\GoalsMS\\src\\Core\\Entities\\Interfaces",
+    "\\src\\GoalsMS\\src\\Core\\Requests",
+    "\\src\\GoalsMS\\src\\Networking.API",
+    "\\src\\GoalsMS\\src\\Store.PostgreSQL",
+    "\\src\\GoalsMS\\src\\Store.PostgreSQL\\Migrations"
   ],
-  "SelectedNode": "\\src\\HabitsMS\\src\\Core\\Entities\\Habit.cs",
+  "SelectedNode": "\\src\\GoalsMS\\src\\Core\\Entities\\Goal.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -10,6 +10,6 @@ src/Networking.API/.DS_Store
 src/Store.PostgreSQL/bin
 src/Store.PostgreSQL/obj
 src/Store.PostgreSQL/.DS_Store
-src/HabitsMS.API/bin
-src/HabitsMS.API/obj
-src/HabitsMS.API/.DS_Store
+src/GoalsMS.API/bin
+src/GoalsMS.API/obj
+src/GoalsMS.API/.DS_Store

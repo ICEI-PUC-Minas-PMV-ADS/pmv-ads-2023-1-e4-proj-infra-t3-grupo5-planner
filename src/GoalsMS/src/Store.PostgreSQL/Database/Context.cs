@@ -11,7 +11,7 @@ public class Context : DbContext
     {
     }
 
-    public DbSet<Habit> Habits { get; set; }
+    public DbSet<Goal> Goals { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
