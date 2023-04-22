@@ -1,0 +1,342 @@
+{
+  "format": 1,
+  "restore": {
+    "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\ReminderMS.API\\ReminderMS.API.csproj": {}
+  },
+  "projects": {
+    "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\dc-ba\\.nuget\\packages\\",
+        "outputPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\NuGet.Config",
+          "C:\\Users\\dc-ba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\Networking.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\Networking.API.csproj",
+        "projectName": "Networking.API",
+        "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\Networking.API.csproj",
+        "packagesPath": "C:\\Users\\dc-ba\\.nuget\\packages\\",
+        "outputPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\NuGet.Config",
+          "C:\\Users\\dc-ba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj": {
+                "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj",
+        "projectName": "Store.PostgreSQL",
+        "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj",
+        "packagesPath": "C:\\Users\\dc-ba\\.nuget\\packages\\",
+        "outputPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\NuGet.Config",
+          "C:\\Users\\dc-ba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj": {
+                "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23128.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\ReminderMS.API\\ReminderMS.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\ReminderMS.API\\ReminderMS.API.csproj",
+        "projectName": "ReminderMS.API",
+        "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\ReminderMS.API\\ReminderMS.API.csproj",
+        "packagesPath": "C:\\Users\\dc-ba\\.nuget\\packages\\",
+        "outputPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\ReminderMS.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\NuGet.Config",
+          "C:\\Users\\dc-ba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\Networking.API.csproj": {
+                "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Networking.API\\Networking.API.csproj"
+              },
+              "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj": {
+                "projectPath": "e:\\meusProjetos\\Puc\\Planner\\pmv-ads-2023-1-e4-proj-infra-t3-grupo5-planner\\src\\ReminderMS\\src\\Store.PostgreSQL\\Store.PostgreSQL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
