@@ -2,16 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\GoalsMS",
-    "\\src\\GoalsMS\\src",
-    "\\src\\GoalsMS\\src\\Core",
-    "\\src\\GoalsMS\\src\\Core\\Entities",
-    "\\src\\GoalsMS\\src\\Core\\Entities\\Interfaces",
-    "\\src\\GoalsMS\\src\\Core\\Requests",
-    "\\src\\GoalsMS\\src\\Networking.API",
-    "\\src\\GoalsMS\\src\\Store.PostgreSQL",
-    "\\src\\GoalsMS\\src\\Store.PostgreSQL\\Migrations"
+    "\\src\\TemplatesMS",
+    "\\src\\TemplatesMS\\src",
+    "\\src\\TemplatesMS\\src\\Core",
+    "\\src\\TemplatesMS\\src\\Core\\Entities",
+    "\\src\\TemplatesMS\\src\\Core\\Requests",
+    "\\src\\TemplatesMS\\src\\Store.PostgreSQL"
   ],
-  "SelectedNode": "\\src\\GoalsMS\\src\\Core\\Entities\\Goal.cs",
+  "SelectedNode": "\\src\\TemplatesMS\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }
