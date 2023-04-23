@@ -60,7 +60,10 @@ public class ReminderController : ControllerBase
         {
             return NotFound("Item não encontrado");
         }
+        request.Title = request.Title == "" ? reminder.Title : Utils.FieldUtils.UpdateFieldOrUseDefault(request.Title, reminder.Title);
+        request.RemindsAt = request.RemindsAt == null ? reminder.RemindsAt : Utils.FieldUtils.UpdateFieldOrUseDefault(request.RemindsAt, reminder.RemindsAt);
         reminder.UpdateReminder(request);
+        reminder.UpdatedAt = DateTime.UtcNow;
         await _reminderStore.UpdateReminder(reminder);
         return reminder;
     } 

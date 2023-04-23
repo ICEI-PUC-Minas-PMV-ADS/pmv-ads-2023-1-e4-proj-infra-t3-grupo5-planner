@@ -15,10 +15,10 @@ public class Reminder : ITrackable
     
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime? CreatedAt { get; private set; }
-    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime? UpdatedAt { get; private set; }
-    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-    public DateTime? DeletedAt { get; private set; }
+    //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    public DateTime? UpdatedAt { get; set; }
+    //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    //public DateTime? DeletedAt { get; private set; }
     
     // Tech debt: wee need an empty constructor for EF.
     private Reminder() {}
@@ -45,7 +45,5 @@ public class Reminder : ITrackable
         }else{
             RemindsAt = reminderDTO.RemindsAt;
         }
-        UpdatedAt = DateTime.UtcNow;
     }
-
 }

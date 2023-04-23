@@ -34,10 +34,6 @@ namespace Store.PostgreSQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DeletedAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<DateTime>("RemindsAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -46,7 +42,6 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("UserId")
