@@ -7,4 +7,9 @@
         <RootNamespace>Core</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Exceptions\" />
+      <Folder Include="System\Threading\" />
+    </ItemGroup>
+
 </Project>

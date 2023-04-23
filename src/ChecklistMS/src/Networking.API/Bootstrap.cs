@@ -13,7 +13,7 @@ public class ApiBootstrap
         
         options.Invoke(_builder.Services);
 
-        var adapterAssembly = typeof(TaskController).Assembly;
+        var adapterAssembly = typeof(TaskCheckboxController).Assembly;
 
         _builder.Services.AddControllers()
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));
@@ -31,7 +31,7 @@ public class ApiBootstrap
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
-        
+   
         app.MapControllers();
         return app.RunAsync();
     }

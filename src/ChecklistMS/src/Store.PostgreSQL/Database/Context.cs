@@ -9,13 +9,17 @@ public class Context : DbContext
 {
     public Context(DbContextOptions options) : base(options) {}
     
-    public DbSet<User> Users { get; set; }
+    public DbSet<Checklist> Checklist { get; set; }
 
-    public DbSet<PasswordReset> PasswordResets { get; set; }
+    public DbSet<TaskCheckbox> TaskCheckbox { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyGlobalFilters<ISoftDeletable>(p => p.DeletedOn == null);
-        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Checklist>()
+           .HasKey(e => e.Id);
+
+        modelBuilder.Entity<TaskCheckbox>()
+          .HasKey(e => e.Id);
     }
 }

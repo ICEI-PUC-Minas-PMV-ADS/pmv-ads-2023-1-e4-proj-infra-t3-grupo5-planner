@@ -18,10 +18,12 @@ public class ContextFactory : IDesignTimeDbContextFactory<Context>
             .AddEnvironmentVariables()
             .Build();
         var optionsBuilder = new DbContextOptionsBuilder<Context>(); 
-        var connectionString = configurationBuilder.GetConnectionString("UserMSDatabase");
+        var connectionString = configurationBuilder.GetConnectionString("ChecklistMSDatabase");
         optionsBuilder.UseNpgsql(connectionString);
         optionsBuilder.AddInterceptors(new SoftDeletableEntityInterceptor());
 
         return new Context(optionsBuilder.Options);
     }
+
+
 }

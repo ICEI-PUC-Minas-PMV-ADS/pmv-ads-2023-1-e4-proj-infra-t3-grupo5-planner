@@ -3,9 +3,10 @@ namespace Core.Stores;
 
 public interface IChecklistStore
 {
-    public Checklist<IEnumerable<System.Threading.Checklist>> GetTasks();
-    public Checklist<int> CreateChecklist(Entities.Checklist Checkbox);
-    public Checklist<int> UpdateChecklist(Entities.Checklist Checkbox);
-    public Checklist<int> DeleteChecklist(int Id);
+    public Task<IEnumerable<Checklist>> GetChecklist();
+    public Task<Checklist> CreateChecklist(Checklist Checklist);
+    public Task<Checklist?> GetChecklistById(int id);
+    public Task<Checklist> UpdateChecklist(Checklist Checklist);
+    public Task DeleteChecklist(int Id);
 
 }

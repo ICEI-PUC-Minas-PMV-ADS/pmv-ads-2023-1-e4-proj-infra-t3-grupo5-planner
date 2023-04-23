@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Core.Requests
 {
-   public class ChecklistRequest
+    public class ChecklistRequest
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
+
     }
 }

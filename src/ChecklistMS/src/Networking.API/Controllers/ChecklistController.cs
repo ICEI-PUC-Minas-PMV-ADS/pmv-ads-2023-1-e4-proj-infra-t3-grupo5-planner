@@ -1,5 +1,4 @@
 ﻿using Core.Entities;
-using Core.Exceptions;
 using Core.Requests;
 using Core.Stores;
 using Microsoft.AspNetCore.Mvc;
@@ -18,35 +17,71 @@ public class ChecklistController : ControllerBase
     }
 
 
-    [HttpGet]
-    [Route("getchecklist")]
-    public async Task<IEnumerable<System.Threading.Tasks.Task>> GetTasks()
-    {
-        return await _tasksStore.GetTasks();
-    }
 
     [HttpPost]
     [Route("create")]
-    public async Task<int> CreateTasks([FromBody] TaskRequest request)
+    public async Task<ActionResult<Checklist>> CreateTasks([FromBody] ChecklistRequest request)
     {
+        request.Title = "Nova Checklist";
 
-        var task = new Core.Entities.Task(request);
-        return await _tasksStore.CreateTask(task);
+        var checklist = new Checklist(request);
+
+        await _checklistStore.CreateChecklist(checklist);
+
+        return CreatedAtAction("GetChecklistById", new { id = checklist.Id }, checklist);
+        
     }
 
-    [HttpPut]
-    [Route("update")]
-    public async Task<int> UpdateTask([FromBody] TaskRequest request)
+    [HttpGet("checklist/{id}")]
+    public async Task<ActionResult<Checklist>> GetChecklistById(int id)
     {
-        var task = new Core.Entities.Task(request);
-        return await _tasksStore.UpdateTask(task);
+        var checklist = await _checklistStore.GetChecklistById(id);
+
+        if (checklist == null)
+        {
+            return NotFound();
+        }
+        return checklist;
+    }
+
+
+    [HttpGet("checklists")]
+    public async Task<ActionResult<IEnumerable<Checklist>>> GetChecklist(int id)
+    {
+        var checklists = await _checklistStore.GetChecklist();
+
+        if (checklists == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(checklists);
+    }
+
+
+    [HttpPatch("update")]
+
+    public async Task<ActionResult<Checklist>> UpdateChecklist([FromBody] ChecklistRequest checklistRequest)
+    {
+        var checklist = await _checklistStore.GetChecklistById(checklistRequest.Id);
+
+        if (checklist == null)
+        {
+            return NotFound();
+        }
+
+        checklist.UpdateChecklist(checklistRequest);
+
+        await _checklistStore.UpdateChecklist(checklist);
+        return Ok(checklist);
+
     }
 
     [HttpDelete]
     [Route("delete/{id}")]
-    public async Task<int> DeleteTask([FromQuery] int Id)
+    public async Task DeleteChecklist(int Id)
     {
-        return await _tasksStore.DeleteTask(Id);
+       await _checklistStore.DeleteChecklist(Id);
     }
 
 }
