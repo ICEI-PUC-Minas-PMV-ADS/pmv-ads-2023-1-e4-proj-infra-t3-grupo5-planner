@@ -7,11 +7,11 @@ public class Context : DbContext
 {
     public Context(DbContextOptions<Context> options) : base(options) {}
     
-    public DbSet<Mood> Moods { get; set; }
+    public DbSet<Expenses> Expensess { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Mood>()
+        modelBuilder.Entity<Expenses>()
             .HasKey(e => e.Id);
     }
 }

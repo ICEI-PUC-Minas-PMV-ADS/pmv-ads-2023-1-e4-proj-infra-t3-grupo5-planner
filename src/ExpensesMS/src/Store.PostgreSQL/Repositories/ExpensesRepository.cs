@@ -8,6 +8,30 @@ namespace Store.PostgreSQL.Repositories;
 
 public class ExpensesRepository : IExpensesStore
 {
+
+    private readonly Context _context;
+
+    public ExpensesRepository(Context context)
+    {
+        _context = context;
+    }
+    public async Task<Expenses> CreateExpenses(Expenses expenses)
+    {
+        _context.Expensess.Add(expenses);
+        await _context.SaveChangesAsync();
+        return expenses;
+    }
+
+    public async Task<Expenses> GetExpensesById(int id)
+    {
+        return await _context.Expensess.FindAsync(id);
+    }
+
+    public async Task<Tags> CreateTagToExpenses(Tags tag, int expenseId)
+    {
+        var expense = await GetExpensesById(expenseId);
+        
+    }
     /*
     private readonly Context _context;
 

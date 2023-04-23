@@ -1,8 +1,9 @@
-using Core.Entities.Enums;
 namespace Core.Requests;
 
 public class CreateExpensesRequest
 {
-    public CurrentExpenses CurrentExpenses { get; set; }
+    public int UserId { get; set; }
+    //public int TagId { get; set; }
+    public float Amount { get; set; }
    
 }

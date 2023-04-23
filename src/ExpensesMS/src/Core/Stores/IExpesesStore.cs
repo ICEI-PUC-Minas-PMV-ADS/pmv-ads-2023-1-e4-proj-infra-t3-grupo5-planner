@@ -4,6 +4,7 @@ namespace Core.Stores;
 
 public interface IExpensesStore
 {
+    public Task<Expenses> CreateExpenses(Expenses expenses);
     /*
     public Task<Expenses> CreateExpenses(Expenses Expenses);
     public Task<IEnumerable<Expenses>> GetExpenses();

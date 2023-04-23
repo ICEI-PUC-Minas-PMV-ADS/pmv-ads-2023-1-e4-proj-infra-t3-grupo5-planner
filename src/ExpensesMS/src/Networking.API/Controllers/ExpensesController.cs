@@ -10,6 +10,20 @@ namespace Networking.API.Controllers;
 [Route("[controller]")]
 public class ExpensesController : ControllerBase
 {
+    private readonly IExpensesStore _expesesStore;
+
+    public ExpensesController(IExpensesStore expensesStore)
+    {
+        _expesesStore = expensesStore;
+    }
+
+    [HttpPost]
+    [Route("createExpense")]
+    public async Task<Expenses> CreateExpense([FromBody] CreateExpensesRequest request)
+    {
+        var expense = new Expenses(request);
+        return await _expesesStore.CreateExpenses(expense);  
+    }
     /*
     private readonly IMoodStore _moodStore;
 
