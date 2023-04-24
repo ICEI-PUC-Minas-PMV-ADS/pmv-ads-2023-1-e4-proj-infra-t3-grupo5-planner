@@ -1,5 +1,4 @@
-using System.Text.RegularExpressions;
-using Core.Exceptions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Core.Requests;
 
@@ -13,5 +12,5 @@ public class CreateUserRequest
 
     public string Password { get; set; }
 
-    public DateOnly BirthDate { get; set; }
+    public string BirthDate { get; set; }
 }

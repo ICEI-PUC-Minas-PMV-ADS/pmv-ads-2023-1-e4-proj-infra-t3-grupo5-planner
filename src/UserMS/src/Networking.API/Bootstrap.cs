@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Mvc;
 using Networking.API.Controllers;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Networking.API.Converters;
 
 namespace Networking.API;
 
@@ -19,6 +21,11 @@ public class ApiBootstrap
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));
         _builder.Services.AddEndpointsApiExplorer();
         _builder.Services.AddSwaggerGen();
+        
+        _builder.Services.Configure<JsonOptions>(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
+        });
     }
 
     public Task RunAsync()

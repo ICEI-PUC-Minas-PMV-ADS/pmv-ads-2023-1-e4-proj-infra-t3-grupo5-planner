@@ -1,9 +1,13 @@
-using Core.Entities;
+using Core.Entities.User;
+using Core.Requests;
 
 namespace Core.Stores;
 
 public interface IUserStore
 {
-    public Task<int> CreateUser(User user);
-    public Task<User> GetUser();
+    public Task<User> CreateUser(CreateUserRequest createUserRequest);
+
+    public Task<bool> IsUserEmailUnique(Email email);
+    
+    public Task<User> GetUser(int userId);
 }
