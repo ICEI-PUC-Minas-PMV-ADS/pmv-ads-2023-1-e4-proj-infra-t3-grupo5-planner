@@ -79,9 +79,9 @@ public class ChecklistController : ControllerBase
 
     [HttpDelete]
     [Route("delete/{id}")]
-    public async Task DeleteChecklist(int Id)
+    public async Task DeleteChecklist(int id)
     {
-       await _checklistStore.DeleteChecklist(Id);
+       await _checklistStore.DeleteChecklist(id);
     }
 
 }

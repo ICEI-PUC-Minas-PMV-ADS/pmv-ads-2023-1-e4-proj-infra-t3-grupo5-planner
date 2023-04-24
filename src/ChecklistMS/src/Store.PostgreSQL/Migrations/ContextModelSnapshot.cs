@@ -22,6 +22,21 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
+                {
+                    b.Property<int>("ChecklistId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TaskCheckboxId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ChecklistId", "TaskCheckboxId");
+
+                    b.HasIndex("TaskCheckboxId");
+
+                    b.ToTable("ChecklistTaskCheckbox");
+                });
+
             modelBuilder.Entity("Core.Entities.Checklist", b =>
                 {
                     b.Property<int>("Id")
@@ -42,7 +57,6 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
@@ -79,12 +93,26 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
                     b.ToTable("TaskCheckbox");
+                });
+
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
+                {
+                    b.HasOne("Core.Entities.Checklist", null)
+                        .WithMany()
+                        .HasForeignKey("ChecklistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.TaskCheckbox", null)
+                        .WithMany()
+                        .HasForeignKey("TaskCheckboxId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

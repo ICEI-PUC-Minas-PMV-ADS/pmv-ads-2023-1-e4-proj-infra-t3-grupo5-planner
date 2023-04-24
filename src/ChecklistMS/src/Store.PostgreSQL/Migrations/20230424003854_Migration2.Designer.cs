@@ -12,8 +12,8 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230423004944_Migration4")]
-    partial class Migration4
+    [Migration("20230424003854_Migration2")]
+    partial class Migration2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,6 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
@@ -60,6 +59,9 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
+
+                    b.Property<int?>("ChecklistId")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("CompletionDate")
                         .HasColumnType("timestamp with time zone");
@@ -82,12 +84,25 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ChecklistId");
+
                     b.ToTable("TaskCheckbox");
+                });
+
+            modelBuilder.Entity("Core.Entities.TaskCheckbox", b =>
+                {
+                    b.HasOne("Core.Entities.Checklist", null)
+                        .WithMany("TaskCheckbox")
+                        .HasForeignKey("ChecklistId");
+                });
+
+            modelBuilder.Entity("Core.Entities.Checklist", b =>
+                {
+                    b.Navigation("TaskCheckbox");
                 });
 #pragma warning restore 612, 618
         }

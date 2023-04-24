@@ -12,8 +12,8 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230423002510_Migration3")]
-    partial class Migration3
+    [Migration("20230424013101_Migration5")]
+    partial class Migration5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,21 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
+                {
+                    b.Property<int>("ChecklistId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TaskCheckboxId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ChecklistId", "TaskCheckboxId");
+
+                    b.HasIndex("TaskCheckboxId");
+
+                    b.ToTable("ChecklistTaskCheckbox");
+                });
+
             modelBuilder.Entity("Core.Entities.Checklist", b =>
                 {
                     b.Property<int>("Id")
@@ -33,22 +48,19 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreatedOn")
-                        .IsRequired()
+                    b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text");
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("DeletedOn")
-                        .HasColumnType("text");
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("UpdatedOn")
-                        .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("text");
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -63,16 +75,15 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-                    b.Property<DateTimeOffset>("CompletionDate")
+                    b.Property<DateTime>("CompletionDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("CreatedOn")
-                        .IsRequired()
+                    b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text");
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("DeletedOn")
-                        .HasColumnType("text");
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("IdChecklist")
                         .HasColumnType("integer");
@@ -84,14 +95,27 @@ namespace Store.PostgreSQL.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("UpdatedOn")
-                        .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("text");
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
                     b.ToTable("TaskCheckbox");
+                });
+
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
+                {
+                    b.HasOne("Core.Entities.Checklist", null)
+                        .WithMany()
+                        .HasForeignKey("ChecklistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.TaskCheckbox", null)
+                        .WithMany()
+                        .HasForeignKey("TaskCheckboxId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -14,9 +14,11 @@ namespace Core.Entities
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedOn { get; private set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedOn { get; private set; }
         public DateTime? DeletedOn { get; private set; }
+
+        public ICollection<TaskCheckbox> TaskCheckbox { get; set; } // relação de muitos para muitos
 
         // Tech debt: wee need an empty constructor for EF.
         private Checklist() { }
