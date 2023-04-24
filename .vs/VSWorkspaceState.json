@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\ChecklistMS",
+    "\\src\\ChecklistMS\\src",
+    "\\src\\ChecklistMS\\src\\Store.PostgreSQL",
+    "\\src\\ChecklistMS\\src\\Store.PostgreSQL\\Migrations"
   ],
-  "SelectedNode": "\\ChecklistMS.sln",
+  "SelectedNode": "\\src\\ChecklistMS\\src\\Store.PostgreSQL\\Migrations\\ContextModelSnapshot.cs",
   "PreviewInSolutionExplorer": false
 }
