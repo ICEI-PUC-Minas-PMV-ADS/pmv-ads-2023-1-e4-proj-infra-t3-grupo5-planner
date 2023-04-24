@@ -17,52 +17,61 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
-
-## Esquema Relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
+![Modelo ER](img/03-diagrama-ER1.png)
+![Modelo ER](img/03-diagrama-ER2.png)
+![Modelo ER](img/03-diagrama-ER3.png)
+![Modelo ER](img/03-diagrama-ER4.png)
+![Modelo ER](img/03-diagrama-ER5.png)
+![Modelo ER](img/03-diagrama-ER6.png)
+![Modelo ER](img/03-diagrama-ER7.png)
+![Modelo ER](img/03-diagrama-ER8.png)
+![Modelo ER](img/03-diagrama-ER9.png)
+![Modelo ER](img/03-diagrama-ER10.png)
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O modelo físico da aplicação se encontra na pasta src/UserMS/src/Store.PostgreSQL/Migrations/20230329121607_InitialMigration.cs.
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para o desenvolvimento desse projeto foi escolhido um conjunto de tecnologias:
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+| Tecnologia         | Descrição                                                                                                              |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Github             | Um sistema de controle de versão distribuída e uma plataforma de hospedagem de repositórios e código-fonte.            |
+| C#                 | Liguagem de programação.                                                                                               |
+| Figma              | Ferramenta utilizada para o desenvolvimento do design das telas do aplicativo, wireframes e modelos de relacionamento. |
+| Trello             | Ferramenta utilizada para gestão de tarefas, prazos e atividades concluídas.                                           |
+| JavaScript         | Liguagem de programação.                                                                                               |
+| Visual Studio Code | Ambiente de desenvolvimento integrado (IDE) principal para desenvolver o código-fonte do projeto.                      |
+| React              | Biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em págiweb.                   |
+| React Native       | Biblioteca Javascript usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.               |
+| Docker             | Plataforma utilizada para criação de contêineres para o desenvolvimento da API.                                        |
+| Microsoft Azure    | Ferramenta para publicar o aplicativo e dados.                                                                         |
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A equipe optou pela plataforma Microsoft Azure para a hospedagem do aplicativo.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+Para a qualidade de software o grupo optou seguir os fundamentos da norma internacional ISO/IEC 25010. Com isso, serão analisadas as seguintes características e sub-características:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+### Funcionalidade
+Conjunto de atributos que evidenciam a existência de um conjunto de funções e suas propriedades especificadas. As subcaracterísticas da Funcionalidade determinadas pelo time são: Adequação, Interoperabilidade e Segurança de Acesso.
+### Usabilidade
+Conjunto de atributos que evidenciam o esforço necessário para poder-se utilizar o software, bem como o julgamento individual deste uso, por um conjunto implicito ou explicito de usuários. As sub-características da Usabilidade estabelecidas pela equipe são: Inteligibilidade, Apreensibilidade e Comportamento em relação aos recursos.
+### Portabilidade
+Conjunto de atributos que evidenciam a capacidade do software em ser transferido de um ambiente para outro. As sub-características da Usabilidade estabelecidas pela equipe são: Adaptabilidade.
+### Eficiencia
+Conjunto de atributos que evidenciam o esforço necessário para fazer modificações especificadas no software. As sub-características da Usabilidade estabelecidas pela equipe são: Analisabilidade.
+### Manutenibilidade
+Atributos do software que evidenciam o esforço necessário para modificá-lo, remover seus defeitos ou adaptá-lo a mudanças ambientais. As sub-características da Usabilidade estabelecidas pela equipe são: Modificabilidade e Testabilidade.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+## Documentação da implementação da Web API reset Rotas
+![Reminder](img/03-reminder.png)
+![Checklist](img/03-checklist.png)
+![TaskCheckbox](img/03-taskcheckbox.png)
+## Documentação da implementação das funcionalidades que envolvem o banco de dados NoSQL
+A equipe optou por utilizar inicialmente o PostgreSQL.
