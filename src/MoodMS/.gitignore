@@ -13,3 +13,4 @@ src/Store.PostgreSQL/.DS_Store
 src/MoodMS.API/bin
 src/MoodMS.API/obj
 src/MoodMS.API/.DS_Store
+/.vs/
