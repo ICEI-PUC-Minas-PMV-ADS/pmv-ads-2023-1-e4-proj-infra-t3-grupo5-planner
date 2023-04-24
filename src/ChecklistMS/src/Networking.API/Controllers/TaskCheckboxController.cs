@@ -77,9 +77,9 @@ public class TaskCheckboxController : ControllerBase
 
     [HttpDelete]
     [Route("delete/{id}")]
-    public async Task DeleteTaskCheckbox(int Id)
+    public async Task DeleteTaskCheckbox(int id)
     {
-        await _taskCheckboxStore.DeleteTaskCheckbox(Id);
+        await _taskCheckboxStore.DeleteTaskCheckbox(id);
     }
 
 
