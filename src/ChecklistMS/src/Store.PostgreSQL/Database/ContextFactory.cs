@@ -17,6 +17,7 @@ public class ContextFactory : IDesignTimeDbContextFactory<Context>
             .AddJsonFile($"appsettings.{environment}.json", optional: true)
             .AddEnvironmentVariables()
             .Build();
+
         var optionsBuilder = new DbContextOptionsBuilder<Context>(); 
         var connectionString = configurationBuilder.GetConnectionString("ChecklistMSDatabase");
         optionsBuilder.UseNpgsql(connectionString);
