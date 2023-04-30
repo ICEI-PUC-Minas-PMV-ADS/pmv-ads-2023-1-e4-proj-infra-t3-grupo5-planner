@@ -33,7 +33,6 @@ public class Context : DbContext
         var trackableEntities = this.ChangeTracker.Entries().Where(e => e is {Entity: ITrackable, State: EntityState.Added or EntityState.Modified});
         foreach (var trackableEntity in trackableEntities)
         {
-            Console.WriteLine(trackableEntity);
             trackableEntity.Property("UpdatedOn").CurrentValue = DateTime.UtcNow;
 
             if (trackableEntity.State == EntityState.Added)

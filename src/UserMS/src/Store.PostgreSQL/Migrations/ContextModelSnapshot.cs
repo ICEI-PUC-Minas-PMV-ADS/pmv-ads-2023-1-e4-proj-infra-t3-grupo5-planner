@@ -53,8 +53,18 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BirthDate")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("BirthDate");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("Email");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -72,55 +82,25 @@ namespace Store.PostgreSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.User.User", b =>
                 {
-                    b.OwnsOne("Core.Entities.User.BirthDate", "BirthDate", b1 =>
-                        {
-                            b1.Property<int>("UserId")
-                                .HasColumnType("integer");
-
-                            b1.Property<DateOnly>("Date")
-                                .HasColumnType("date")
-                                .HasColumnName("BirthDate");
-
-                            b1.HasKey("UserId");
-
-                            b1.ToTable("Users");
-
-                            b1.WithOwner()
-                                .HasForeignKey("UserId");
-                        });
-
-                    b.OwnsOne("Core.Entities.User.Email", "Email", b1 =>
-                        {
-                            b1.Property<int>("UserId")
-                                .HasColumnType("integer");
-
-                            b1.Property<string>("Address")
-                                .IsRequired()
-                                .HasColumnType("text")
-                                .HasColumnName("Email");
-
-                            b1.HasKey("UserId");
-
-                            b1.ToTable("Users");
-
-                            b1.WithOwner()
-                                .HasForeignKey("UserId");
-                        });
-
                     b.OwnsOne("Core.Entities.User.Password", "Password", b1 =>
                         {
                             b1.Property<int>("UserId")
                                 .HasColumnType("integer");
 
-                            b1.Property<string>("HashedPassword")
+                            b1.Property<string>("Hash")
                                 .IsRequired()
                                 .HasColumnType("text")
-                                .HasColumnName("Password");
+                                .HasColumnName("PasswordHash");
+
+                            b1.Property<string>("Salt")
+                                .IsRequired()
+                                .HasColumnType("text")
+                                .HasColumnName("PasswordSalt");
 
                             b1.HasKey("UserId");
 
@@ -129,12 +109,6 @@ namespace Store.PostgreSQL.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("UserId");
                         });
-
-                    b.Navigation("BirthDate")
-                        .IsRequired();
-
-                    b.Navigation("Email")
-                        .IsRequired();
 
                     b.Navigation("Password")
                         .IsRequired();
