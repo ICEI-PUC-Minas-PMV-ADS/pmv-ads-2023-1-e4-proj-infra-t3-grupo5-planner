@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {toRem} from '../../utils/toRem';
+import { toRem } from "../../utils/toRem";
 
 const TextStyled = styled.p`
   font-family: "Quicksand";
@@ -7,30 +7,30 @@ const TextStyled = styled.p`
   flex-direction: row;
   align-items: flex-start;
   line-height: 160%;
-  color: #1A1A1A;
-  
-  #titulo-grande{
+  color: #1a1a1a;
+
+  &.titulo-grande {
     font-size: ${toRem(32)};
-    width: 86px;
+    width: 270px;
     height: 51px;
     font-weight: 600;
   }
 
-  .item-widget{
+  &.item-widget {
     font-size: ${toRem(20)};
     width: 328px;
     height: 32px;
     font-weight: 400;
   }
 
-  #subtitulo{
+  &.subtitulo {
     font-size: ${toRem(26)};
     width: 328px;
     height: 42px;
     font-weight: 600;
   }
 
-  #titulo-widget{
+  &.titulo-widget {
     font-size: ${toRem(20)};
     width: 328px;
     height: 32px;
@@ -38,7 +38,7 @@ const TextStyled = styled.p`
     text-transform: uppercase;
   }
 
-  #label{
+  &.label-styled {
     font-size: ${toRem(14)};
     width: 328px;
     height: 22px;
@@ -46,29 +46,29 @@ const TextStyled = styled.p`
     color: #696767;
   }
 
-  #texto-botao{
+  &.texto-botao {
     font-size: ${toRem(16)};
     width: 95px;
     height: 26px;
     font-weight: 700;
   }
 
-  #texto-input{
+  &.texto-input {
     font-size: ${toRem(16)};
     width: 328px;
     height: 26px;
     font-weight: 400;
   }
 
-  #mensagem-erro{
+  &.mensagem-erro {
     font-size: ${toRem(12)};
     width: 328px;
     height: 19px;
     font-weight: 400;
-    color: #ED4B58;
+    color: #ed4b58;
   }
 
-  #titulo-pequeno{
+  &.titulo-pequeno {
     font-size: ${toRem(20)};
     width: 328px;
     height: 32px;
@@ -76,4 +76,3 @@ const TextStyled = styled.p`
   }
 `;
 export default TextStyled;
-

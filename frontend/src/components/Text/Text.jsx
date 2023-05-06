@@ -3,7 +3,7 @@ import TextStyled from './Text.styled';
 
 const Text = ({ id, text }) => {
   return (
-    <TextStyled id={id}>{text}</TextStyled>
+    <TextStyled className={`${id}`} id={id}>{text}</TextStyled>
   );
 }
 
