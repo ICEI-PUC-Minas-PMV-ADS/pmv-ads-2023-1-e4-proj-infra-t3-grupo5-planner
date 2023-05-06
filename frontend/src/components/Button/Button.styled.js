@@ -7,28 +7,42 @@ const ButtonStyled = styled.p`
     align-items: center;
     cursor: pointer;
 
-    &.botao-preto-arredondado, &.botao-branco-arredondado {
+    &.radio-black-button, &.radio-white-button {
         background-color: #333333;
         width: 191px;
         height: 48px;
         border-radius: 32px;
+        justify-content: left;
     }
 
-    &.botao-preto-arredondado:hover, &.botao-branco-arredondado:hover, &.botao-preto-retangular:hover, &.botao-branco-retangular:hover {
+    &.radio-black-button:hover, &.radio-white-button:hover, &.rectangular-black-button:hover, &.rectangular-white-button:hover {
         background-color: #ed4858;
     }
 
-    &.botao-preto-retangular, &.botao-branco-retangular {
+    &.rectangular-black-button, &.rectangular-white-button {
         background-color: #333333;
         width: 228px;
         height: 46px;
         border-radius: 8px;
     }
 
-    &.botao-branco-arredondado, &.botao-branco-retangular {
+    &.radio-white-button, &.rectangular-white-button {
         background-color: #FFFFFF;
         border: 2px solid #000000;
         height: 46px;
+    }
+
+    &.pink-button {
+        background-color: #ed4858;
+        width: 62px;
+        height: 30px;
+        border-radius: 8px;
+        border: 4px solid #000000;
+    }
+
+    &.close-button{
+        width: 16px;
+        height: 16px;
     }
 `;
 

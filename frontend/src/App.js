@@ -16,10 +16,12 @@ function App() {
         <Text id="text-input" text="Texto input" />
         <Text id="message-error" text="Mensagem de erro" />
         <Text id="little-text" text="Título pequeno" />
-        <Button id="radio-black-button" icon textId="texto-botao-claro" text="Texto Botão"/>
-        <Button id="radio-white-button" icon textId="texto-botao-escuro" text="Texto Botão"/>
-        <Button id="radio-black-button" textId="texto-botao-claro" text="Texto Botão"/>
-        <Button id="rectangular-white-button" textId="texto-botao-escuro" text="Texto Botão"/>
+        <Button id="radio-black-button" plusIcon="white" textId="button-white-text" text="Texto Botão"/>
+        <Button id="radio-white-button" plusIcon textId="button-black-text" text="Texto Botão"/>
+        <Button id="rectangular-black-button" textId="button-white-text" text="Texto Botão"/>
+        <Button id="rectangular-white-button" textId="button-black-text" text="Texto Botão"/>
+        <Button id="pink-button" plus textId="button-black-text" text=""/>
+        <Button id="close-button" close textId="button-black-text" text=""/>
 
       </header>
     </div>
