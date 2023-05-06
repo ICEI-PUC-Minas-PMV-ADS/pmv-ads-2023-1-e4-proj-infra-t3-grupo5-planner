@@ -6,6 +6,7 @@ const ButtonStyled = styled.p`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     &.radio-black-button, &.radio-white-button {
         background-color: #333333;
