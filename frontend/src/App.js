@@ -11,7 +11,8 @@ function App() {
         <Text id="subtitulo" text="Subtítulo" />
         <Text id="titulo-widget" text="Título widget" />
         <Text id="label-styled" text="Label" />
-        <Text id="texto-botao" text="Texto botão" />
+        <Text id="texto-botao-escuro" text="Texto preto" />
+        <Text id="texto-botao-claro" text="Texto branco" />
         <Text id="texto-input" text="Texto input" />
         <Text id="mensagem-erro" text="Mensagem de erro" />
         <Text id="titulo-pequeno" text="Título pequeno" />
