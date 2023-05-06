@@ -5,16 +5,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Text id="titulo-grande" text="Título grande" />
+        <Text id="big-title" text="Título grande" />
         <Text id="item-widget" text="Item Widget" />
-        <Text id="subtitulo" text="Subtítulo" />
-        <Text id="titulo-widget" text="Título widget" />
+        <Text id="subtitle" text="Subtítulo" />
+        <Text id="title-widget" text="Título widget" />
         <Text id="label-styled" text="Label" />
-        <Text id="texto-botao-escuro" text="Texto preto" />
-        <Text id="texto-botao-claro" text="Texto branco" />
-        <Text id="texto-input" text="Texto input" />
-        <Text id="mensagem-erro" text="Mensagem de erro" />
-        <Text id="titulo-pequeno" text="Título pequeno" />
+        <Text id="button-black-text" text="Texto preto" />
+        <Text id="button-white-text" text="Texto branco" />
+        <Text id="text-input" text="Texto input" />
+        <Text id="message-error" text="Mensagem de erro" />
+        <Text id="little-text" text="Título pequeno" />
       </header>
     </div>
   );
