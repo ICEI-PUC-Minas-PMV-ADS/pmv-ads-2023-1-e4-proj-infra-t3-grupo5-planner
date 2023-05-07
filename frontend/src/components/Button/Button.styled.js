@@ -46,8 +46,14 @@ const ButtonStyled = styled.p`
         height: 16px;
     }
 
-    &.profile-picture, &.text-button{
-        justify-content: left
+    &.profile-picture {
+        width: 56px;
+        height: 56px;
+    }
+
+    &.text-button {
+        width: 180px;
+        height: 42px;
     }
 `;
 
