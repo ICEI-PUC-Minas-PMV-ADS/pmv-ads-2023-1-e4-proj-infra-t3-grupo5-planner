@@ -2,15 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\MoodMS",
-    "\\src\\MoodMS\\src",
-    "\\src\\MoodMS\\src\\Core",
-    "\\src\\MoodMS\\src\\Core\\Entities",
-    "\\src\\MoodMS\\src\\MoodMS.API",
-    "\\src\\MoodMS\\src\\Networking.API",
-    "\\src\\MoodMS\\src\\Networking.API\\Controllers",
-    "\\src\\MoodMS\\src\\Store.PostgreSQL"
+    "\\src\\ExpensesMS",
+    "\\src\\ExpensesMS\\src",
+    "\\src\\ExpensesMS\\src\\Networking.API",
+    "\\src\\ExpensesMS\\src\\Networking.API\\Controllers"
   ],
-  "SelectedNode": "\\src\\MoodMS\\src\\MoodMS.API\\Program.cs",
+  "SelectedNode": "\\src\\ExpensesMS\\src\\Networking.API\\Controllers\\ExpensesController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -41,7 +41,7 @@ namespace Store.PostgreSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Expensess");
+                    b.ToTable("Expenses");
                 });
 
             modelBuilder.Entity("Core.Entities.Tags", b =>
@@ -51,6 +51,9 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("TagId"));
+
+                    b.Property<float>("Amount")
+                        .HasColumnType("real");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
@@ -84,7 +87,7 @@ namespace Store.PostgreSQL.Migrations
             modelBuilder.Entity("Core.Entities.Tags", b =>
                 {
                     b.HasOne("Core.Entities.Expenses", "Expenses")
-                        .WithMany("Tags")
+                        .WithMany("TagsOnExpense")
                         .HasForeignKey("ExpensesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -94,7 +97,7 @@ namespace Store.PostgreSQL.Migrations
 
             modelBuilder.Entity("Core.Entities.Expenses", b =>
                 {
-                    b.Navigation("Tags");
+                    b.Navigation("TagsOnExpense");
                 });
 #pragma warning restore 612, 618
         }

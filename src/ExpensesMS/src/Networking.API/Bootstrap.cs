@@ -19,9 +19,10 @@ public class ApiBootstrap
             .PartManager.ApplicationParts.Add(new AssemblyPart(adapterAssembly));
         _builder.Services.AddEndpointsApiExplorer();
         _builder.Services.AddSwaggerGen();
-        _builder.Services.AddControllers().AddJsonOptions(options => {
-            options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
-        });
+        //_builder.Services.AddControllers().AddJsonOptions(options => {
+        //    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        //});
+        _builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
     }
 
     public Task RunAsync()

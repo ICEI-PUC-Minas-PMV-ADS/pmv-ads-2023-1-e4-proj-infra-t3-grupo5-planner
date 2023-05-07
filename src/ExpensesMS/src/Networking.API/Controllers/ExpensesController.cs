@@ -18,10 +18,17 @@ public class ExpensesController : ControllerBase
     }
 
     [HttpGet]
-    [Route("{userId}")]
+    [Route("getByUserId/{userId}")]
     public async Task<IEnumerable<Expenses>> GetExpensesByUserId(int userId)
     {
         return await _expesesStore.GetExpensesByUserId(userId);
+    }
+
+    [HttpGet]
+    [Route("getByExpensesId/{expensesId}")]
+    public async Task<Expenses?> GetExpensesByExpensesId(int expensesId)
+    {
+        return await _expesesStore.GetExpensesById(expensesId);
     }
 
     [HttpPost]
@@ -39,19 +46,62 @@ public class ExpensesController : ControllerBase
         await _expesesStore.DeleteExpense(expenseId);
     }
 
-    [HttpPut]
-    [Route("newTag/{expenseId}")]
-    public async Task<Expenses> InsertNewTagsInExpenses([FromBody] CreateTagsRequest request, int expenseId)
+    [HttpPost]
+    [Route("tags/{expenseId}")]
+    public async Task<ActionResult<Expenses>> InsertNewTagsInExpenses([FromBody] CreateTagsRequest request, int expenseId)
     {
-        var newTag = new Tags(request);
         var expense = await _expesesStore.GetExpensesById(expenseId);
-        if(newTag != null)
+        if(expense != null)
         {
-            if(expense != null)
+            request.ExpensesId = expenseId;
+            request.UserId = expense.UserId;
+            var newTag = new Tags(request);
+            var updatedExpense = await _expesesStore.InsertNewTagInExpenses(expenseId, newTag);
+
+            if (updatedExpense != null)
             {
-                return await _expesesStore.InsertNewTagInExpenses(expenseId, newTag);
+                return Ok(updatedExpense);
+            }
+            else
+            {
+                return BadRequest();
             }
         }
-        return expense;
+
+        return NotFound();
     }
+
+    [HttpGet]
+    [Route("tags/{expenseId}")]
+    public async Task<ActionResult<IEnumerable<Tags>>> GetTagsByExpenseId(int expenseId)
+    {
+        var tags = await _expesesStore.GetTagsByExpenseId(expenseId);
+
+        if (tags == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(tags);
+    }
+
+    [HttpPut]
+    [Route("tags/{tagId}")]
+    public async Task<ActionResult<Tags>> UpdateTagByTagId(int tagId, [FromBody] TagsDto tagsDto)
+    {
+        var tag = await _expesesStore.UpdateTagByTagId(tagId, tagsDto);
+        if(tag == null)
+        {
+            return NotFound();
+        }
+        return tag;
+    }
+
+    [HttpDelete]
+    [Route("tags/{tagId}")]
+    public async Task DeleteTagByTagId(int tagId)
+    {
+        await _expesesStore.DeleteTagByTagId(tagId);
+    }
+
 }
