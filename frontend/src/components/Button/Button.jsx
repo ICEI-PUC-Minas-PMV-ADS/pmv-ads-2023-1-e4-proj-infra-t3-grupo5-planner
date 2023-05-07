@@ -3,7 +3,7 @@ import ButtonStyled from './Button.styled'
 import Text from '../Text/Text'
 import { GoPlus } from 'react-icons/go'
 import { GrClose } from 'react-icons/gr'
-import Avatar from '../../assets/Avatar'
+import Avatar from '../../assets/Button/Avatar'
 
 const Button = ({ id, textId, text, plusIcon, plusButton, closeIcon, profileIcon }) => {
     return (
