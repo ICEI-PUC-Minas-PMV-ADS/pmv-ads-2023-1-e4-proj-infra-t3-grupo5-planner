@@ -45,6 +45,10 @@ const ButtonStyled = styled.p`
         width: 16px;
         height: 16px;
     }
+
+    &.profile-picture{
+        justify-content: left
+    }
 `;
 
 export default ButtonStyled;

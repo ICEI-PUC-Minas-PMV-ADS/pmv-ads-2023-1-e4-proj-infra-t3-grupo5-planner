@@ -20,8 +20,9 @@ function App() {
         <Button id="radio-white-button" plusIcon textId="button-black-text" text="Texto Botão"/>
         <Button id="rectangular-black-button" textId="button-white-text" text="Texto Botão"/>
         <Button id="rectangular-white-button" textId="button-black-text" text="Texto Botão"/>
-        <Button id="pink-button" plus textId="button-black-text" text=""/>
-        <Button id="close-button" close textId="button-black-text" text=""/>
+        <Button id="pink-button" plusButton textId="button-black-text" text=""/>
+        <Button id="close-button" closeIcon textId="button-black-text" text=""/>
+        <Button profileIcon id="profile-picture" text=""/>
 
       </header>
     </div>
