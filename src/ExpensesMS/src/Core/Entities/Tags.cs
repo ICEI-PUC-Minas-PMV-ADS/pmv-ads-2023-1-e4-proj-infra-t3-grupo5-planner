@@ -14,11 +14,13 @@ public class Tags : ITrackable
     public int UserId { get; private set; }
     public string Name { get; private set; }
     public IsExpenses IsExpense { get; private set; }
+    public float Amount {get; private set;}
     public DateTime CreatedOn { get; set; }
     public DateTime UpdatedOn { get; set; }
     public DateTime? DeletedOn { get; set; }
 
-    public ICollection<Expenses> Expenses { get; set; } // relação de muitos para muitos
+    public Expenses Expenses {get; set;}
+    
     // Tech debt: wee need an empty constructor for EF.
     private Tags() {}
 
@@ -26,13 +28,17 @@ public class Tags : ITrackable
     {
         UserId = request.UserId;
         Name = request.Name;
-        IsExpense = IsExpenses.True;
+        Amount = request.Amount;
+        IsExpense = request.IsExpense;
         CreatedOn = DateTime.UtcNow;
         UpdatedOn = DateTime.UtcNow;
     }
 
-    public void UpdateExpenses(ExpensesDto ExpensesDto)
+    public void UpdateTags(TagsDto tagsDto)
     {
-        
+        Name = tagsDto.Name;
+        IsExpense = tagsDto.IsExpense;
+        Amount = tagsDto.Amount;
+        UpdatedOn = DateTime.UtcNow;
     }
 }

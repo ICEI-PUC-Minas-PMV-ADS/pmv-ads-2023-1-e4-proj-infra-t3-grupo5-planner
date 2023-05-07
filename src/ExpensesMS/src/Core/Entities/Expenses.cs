@@ -8,10 +8,8 @@ public class Expenses : ITrackable
 {
     public int Id { get; private set; } 
     public int UserId { get; private set; }
-    public float Amount { get; private set; }
     public DateTime CreatedOn { get; set; }
     public DateTime UpdatedOn { get; set; }
-
     public ICollection<Tags> Tags { get; set; } // relação de muitos para muitos
     
     // Tech debt: wee need an empty constructor for EF.
@@ -20,7 +18,6 @@ public class Expenses : ITrackable
     public Expenses(CreateExpensesRequest request)
     {
         UserId = request.UserId;
-        Amount = request.Amount;
         CreatedOn = DateTime.UtcNow;
         UpdatedOn = DateTime.UtcNow;
     }

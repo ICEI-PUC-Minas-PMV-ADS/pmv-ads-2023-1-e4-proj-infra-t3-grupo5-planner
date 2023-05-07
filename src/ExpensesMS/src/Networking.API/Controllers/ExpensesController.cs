@@ -17,81 +17,41 @@ public class ExpensesController : ControllerBase
         _expesesStore = expensesStore;
     }
 
+    [HttpGet]
+    [Route("{userId}")]
+    public async Task<IEnumerable<Expenses>> GetExpensesByUserId(int userId)
+    {
+        return await _expesesStore.GetExpensesByUserId(userId);
+    }
+
     [HttpPost]
-    [Route("createExpense")]
+    [Route("")]
     public async Task<Expenses> CreateExpense([FromBody] CreateExpensesRequest request)
     {
         var expense = new Expenses(request);
         return await _expesesStore.CreateExpenses(expense);  
     }
-    /*
-    private readonly IMoodStore _moodStore;
 
-    public MoodController(IMoodStore moodStore)
+    [HttpDelete]
+    [Route("{expenseId}")]
+    public async Task DeleteExpense(int expenseId)
     {
-        _moodStore = moodStore;
+        await _expesesStore.DeleteExpense(expenseId);
     }
 
-    [HttpPost]
-    [Route("create")]
-    public async Task<ActionResult<Mood>> CreateMood([FromBody] CreateMoodRequest request)
+    [HttpPut]
+    [Route("newTag/{expenseId}")]
+    public async Task<Expenses> InsertNewTagsInExpenses([FromBody] CreateTagsRequest request, int expenseId)
     {
-
-            var mood = new Mood(request);
-            await _moodStore.CreateMood(mood);
-
-            return CreatedAtAction("GetMoodById", new { id = mood.Id }, mood);
-
-    }
-
-    [HttpGet("mood/{id}")]
-    public async Task<ActionResult<Mood>> GetMoodById(int id)
-    {
-        var mood = await _moodStore.GetMoodById(id);
-
-        if (mood == null)
+        var newTag = new Tags(request);
+        var expense = await _expesesStore.GetExpensesById(expenseId);
+        if(newTag != null)
         {
-            return NotFound();
+            if(expense != null)
+            {
+                return await _expesesStore.InsertNewTagInExpenses(expenseId, newTag);
+            }
         }
-
-        return mood;
+        return expense;
     }
-
-    [HttpGet("moods")]
-    public async Task<ActionResult<IEnumerable<Mood>>> GetMood(int id)
-    {
-        var mood = await _moodStore.GetMood();
-
-        if (mood == null)
-        {
-            return NotFound();
-        }
-
-        return Ok(mood);
-    }
-
-    [HttpPatch("mood/{id}")]
-    public async Task<ActionResult<Mood>> UpdateMood(int id, [FromBody] MoodUpdateDto moodUpdateDto)
-    {
-        var mood = await _moodStore.GetMoodById(id);
-
-        if (mood == null)
-        {
-            return NotFound();
-        }
-
-        mood.UpdateMood(moodUpdateDto);
-
-        await _moodStore.Update(mood);
-        return Ok();
-
-    }
-
-    [HttpDelete("mood/{id}")]
-    public async Task DeleteMood(int id)
-    {
-        await _moodStore.Delete(id);
-
-    }
-    */
 }

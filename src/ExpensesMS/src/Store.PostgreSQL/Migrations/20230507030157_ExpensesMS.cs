@@ -19,7 +19,6 @@ namespace Store.PostgreSQL.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserId = table.Column<int>(type: "integer", nullable: false),
-                    Amount = table.Column<float>(type: "real", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -39,54 +38,34 @@ namespace Store.PostgreSQL.Migrations
                     IsExpense = table.Column<int>(type: "integer", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ExpensesId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tags", x => x.TagId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ExpensesTags",
-                columns: table => new
-                {
-                    ExpensesId = table.Column<int>(type: "integer", nullable: false),
-                    TagsTagId = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ExpensesTags", x => new { x.ExpensesId, x.TagsTagId });
                     table.ForeignKey(
-                        name: "FK_ExpensesTags_Expensess_ExpensesId",
+                        name: "FK_Tags_Expensess_ExpensesId",
                         column: x => x.ExpensesId,
                         principalTable: "Expensess",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ExpensesTags_Tags_TagsTagId",
-                        column: x => x.TagsTagId,
-                        principalTable: "Tags",
-                        principalColumn: "TagId",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExpensesTags_TagsTagId",
-                table: "ExpensesTags",
-                column: "TagsTagId");
+                name: "IX_Tags_ExpensesId",
+                table: "Tags",
+                column: "ExpensesId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ExpensesTags");
+                name: "Tags");
 
             migrationBuilder.DropTable(
                 name: "Expensess");
-
-            migrationBuilder.DropTable(
-                name: "Tags");
         }
     }
 }

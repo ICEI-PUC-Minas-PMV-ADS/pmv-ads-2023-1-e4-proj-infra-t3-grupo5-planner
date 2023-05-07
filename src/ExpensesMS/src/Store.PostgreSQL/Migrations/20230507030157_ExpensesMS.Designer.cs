@@ -12,7 +12,7 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230422230038_ExpensesMS")]
+    [Migration("20230507030157_ExpensesMS")]
     partial class ExpensesMS
     {
         /// <inheritdoc />
@@ -32,9 +32,6 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<float>("Amount")
-                        .HasColumnType("real");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
@@ -64,6 +61,9 @@ namespace Store.PostgreSQL.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("ExpensesId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("IsExpense")
                         .HasColumnType("integer");
 
@@ -79,37 +79,25 @@ namespace Store.PostgreSQL.Migrations
 
                     b.HasKey("TagId");
 
+                    b.HasIndex("ExpensesId");
+
                     b.ToTable("Tags");
                 });
 
-            modelBuilder.Entity("ExpensesTags", b =>
+            modelBuilder.Entity("Core.Entities.Tags", b =>
                 {
-                    b.Property<int>("ExpensesId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("TagsTagId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ExpensesId", "TagsTagId");
-
-                    b.HasIndex("TagsTagId");
-
-                    b.ToTable("ExpensesTags");
-                });
-
-            modelBuilder.Entity("ExpensesTags", b =>
-                {
-                    b.HasOne("Core.Entities.Expenses", null)
-                        .WithMany()
+                    b.HasOne("Core.Entities.Expenses", "Expenses")
+                        .WithMany("Tags")
                         .HasForeignKey("ExpensesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Entities.Tags", null)
-                        .WithMany()
-                        .HasForeignKey("TagsTagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Expenses");
+                });
+
+            modelBuilder.Entity("Core.Entities.Expenses", b =>
+                {
+                    b.Navigation("Tags");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Core.Entities.Dto;
 using Core.Stores;
 using Microsoft.EntityFrameworkCore;
 using Store.PostgreSQL.Database;
@@ -22,54 +23,34 @@ public class ExpensesRepository : IExpensesStore
         return expenses;
     }
 
-    public async Task<Expenses> GetExpensesById(int id)
+    public async Task<Expenses?> GetExpensesById(int id)
     {
         return await _context.Expensess.FindAsync(id);
     }
 
-    public async Task<Tags> CreateTagToExpenses(Tags tag, int expenseId)
+    public async Task<IEnumerable<Expenses>> GetExpensesByUserId(int userId)
     {
-        var expense = await GetExpensesById(expenseId);
-        
-    }
-    /*
-    private readonly Context _context;
-
-    public MoodRepository(Context context)
-    {
-        _context = context;
-    }
-    public async Task<Mood> CreateMood(Mood mood)
-    {
-        _context.Moods.Add(mood);
-        await _context.SaveChangesAsync();
-        return mood;
+        return await _context.Expensess.Where(e => e.UserId == userId).ToListAsync();
     }
 
-    public async Task<IEnumerable<Mood>> GetMood()
+    public async Task DeleteExpense(int id)
     {
-        return await _context.Moods.ToListAsync();
-    }
-
-    public async Task<Mood?> GetMoodById(int id)
-    {
-        return await _context.Moods.FindAsync(id);
-    }
-
-    public async Task Update(Mood mood)
-    {
-        _context.Entry(mood).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
-    }
-
-    public async Task Delete(int id)
-    {
-        var mood = await _context.Moods.FindAsync(id);
-        if (mood != null)
+        var expenses = await GetExpensesById(id);
+        if (expenses != null)
         {
-            _context.Moods.Remove(mood);
+            _context.Expensess.Remove(expenses);
             await _context.SaveChangesAsync();
         }
     }
-    */
+
+    public async Task<Expenses?> InsertNewTagInExpenses(int expenseId, Tags tag)
+    {
+        var expense = await _context.Expensess.FindAsync(expenseId);
+        if (expense != null)
+        {   
+            expense.Tags.Add(tag);
+            await _context.SaveChangesAsync();
+        }
+        return expense;
+    }
 }

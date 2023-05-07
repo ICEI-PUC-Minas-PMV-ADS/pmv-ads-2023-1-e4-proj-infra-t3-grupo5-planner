@@ -4,6 +4,6 @@ namespace Core.Entities.Enums;
 
 public enum IsExpenses
 {
-    False,
-    True
+    Outlet,
+    Inlet
 }
