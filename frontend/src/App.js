@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "./components/Text/Text";
 import Button from "./components/Button/Button";
+import Mood from "./components/Mood/Mood";
 
 function App() {
   return (
@@ -24,7 +25,14 @@ function App() {
         <Button id="close-button" closeIcon textId="button-black-text" text=""/>
         <Button id="text-button" textId="button-black-text" text="Texto Botão"/>
         <Button profileIcon id="profile-picture" text=""/>
-
+        <Mood id="small-mood" mood="sad"/> 
+        <Mood id="small-mood" mood="happy"/> 
+        <Mood id="small-mood" mood="inLove"/> 
+        <Mood id="small-mood" mood="playful"/> 
+        <Mood id="small-mood" mood="worried"/> 
+        <Mood id="small-mood" mood="angry"/> 
+        <Mood id="medium-mood" mood="angry"/> 
+        <Mood id="big-mood" mood="angry"/> 
       </header>
     </div>
   );
