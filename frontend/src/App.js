@@ -22,6 +22,7 @@ function App() {
         <Button id="rectangular-white-button" textId="button-black-text" text="Texto Botão"/>
         <Button id="pink-button" plusButton textId="button-black-text" text=""/>
         <Button id="close-button" closeIcon textId="button-black-text" text=""/>
+        <Button id="text-button" textId="button-black-text" text="Texto Botão"/>
         <Button profileIcon id="profile-picture" text=""/>
 
       </header>
