@@ -1,18 +1,21 @@
+import Box from "./components/Box/Box";
+import Card from "./components/Card/Card.styled";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header">
+        <Box id="box-header" />
+        <Box id="box-widget-content" />
+        <Box id="box-moods" />
+        <Card id="card-modal">
+          <div className="cima"></div>
+          <div className="baixo"></div>
+        </Card>
+        <Card id="card-widget">
+          <div className="cima"></div>
+          <div className="baixo"></div>
+        </Card>
       </header>
     </div>
   );
