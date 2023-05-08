@@ -1,15 +1,18 @@
 import React from 'react'
-import TextStyled from './Logo.styled';
-import BlackLogo from '../../assets/logo-branca.png';
+import { LogoStyled, ImageStyled } from './Logo.styled';
+import BlackColorLogo from '../../assets/black-logo.svg';
+import WhiteColorLogo from '../../assets/white-logo.svg';
 
-const Logo = ({ blacklogo, whitelogo }) => {
+const Logo = ({ blackLogo, whiteLogo, heightImage }) => {
   return (
     <LogoStyled>
-
-
+        {blackLogo && <ImageStyled heightImage={heightImage} src={BlackColorLogo} alt="Logo preta" />}
+        {whiteLogo && <ImageStyled heightImage={heightImage} src={WhiteColorLogo} alt="Logo branca" />} 
     </LogoStyled> 
-
   );
 }
 
 export default Logo
+
+
+

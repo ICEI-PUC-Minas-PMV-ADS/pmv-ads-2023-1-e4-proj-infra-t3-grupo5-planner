@@ -1,5 +1,6 @@
 import React from "react";
 import Text from "./components/Text/Text";
+import Logo from "./components/Logo/Logo";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Text id="texto-input" text="Texto input" />
         <Text id="mensagem-erro" text="Mensagem de erro" />
         <Text id="titulo-pequeno" text="Título pequeno" />
+        <Logo blackLogo heightImage={40}></Logo>
       </header>
     </div>
   );
