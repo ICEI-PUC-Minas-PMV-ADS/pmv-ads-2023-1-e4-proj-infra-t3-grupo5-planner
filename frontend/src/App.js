@@ -2,6 +2,15 @@ import React from "react";
 import Text from "./components/Text/Text";
 import Button from "./components/Button/Button";
 import Mood from "./components/Mood/Mood";
+import Box from "./components/Box/Box";
+import {
+  WhiteBox,
+  RedBox,
+  WidgetBox,
+  ModalWhiteBox,
+  ModalRedBox,
+  ModalBox,
+} from "./components/Box/Box.styled";
 
 function App() {
   return (
@@ -33,7 +42,18 @@ function App() {
         <Mood id="small-mood" mood="angry"/> 
         <Mood id="medium-mood" mood="angry"/> 
         <Mood id="big-mood" mood="angry"/> 
+        <Box id="HeaderBox" />
       </header>
+      <Box id="MoodsBox" />
+      <Box id="WidgetContentBox" />
+      <WidgetBox>
+        <RedBox />
+        <WhiteBox />
+      </WidgetBox>
+      <ModalBox>
+        <ModalRedBox />
+        <ModalWhiteBox />
+      </ModalBox>
     </div>
   );
 }
