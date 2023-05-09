@@ -1,22 +1,31 @@
 import Box from "./components/Box/Box";
-import Card from "./components/Card/Card.styled";
+import {
+  WhiteBox,
+  RedBox,
+  WidgetBox,
+  ModalWhiteBox,
+  ModalRedBox,
+  ModalBox,
+} from "./components/Box/Box.styled";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Box id="box-header" />
-        <Box id="box-widget-content" />
-        <Box id="box-moods" />
-        <Card id="card-modal">
-          <div className="cima"></div>
-          <div className="baixo"></div>
-        </Card>
-        <Card id="card-widget">
-          <div className="cima"></div>
-          <div className="baixo"></div>
-        </Card>
+        <Box id="HeaderBox" />
       </header>
+      <Box id="MoodsBox" />
+      <Box id="WidgetContentBox" />
+
+      <WidgetBox>
+        <RedBox />
+        <WhiteBox />
+      </WidgetBox>
+
+      <ModalBox>
+        <ModalRedBox />
+        <ModalWhiteBox />
+      </ModalBox>
     </div>
   );
 }
