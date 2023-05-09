@@ -9,7 +9,7 @@ const TextStyled = styled.p`
   line-height: 160%;
   color: #1a1a1a;
 
-  &.titulo-grande {
+  &.big-title {
     font-size: ${toRem(32)};
     font-weight: 600;
   }
@@ -19,12 +19,12 @@ const TextStyled = styled.p`
     font-weight: 400;
   }
 
-  &.subtitulo {
+  &.subtitle {
     font-size: ${toRem(26)};
     font-weight: 600;
   }
 
-  &.titulo-widget {
+  &.title-widget {
     font-size: ${toRem(20)};
     font-weight: 700;
     text-transform: uppercase;
@@ -36,28 +36,28 @@ const TextStyled = styled.p`
     color: #696767;
   }
 
-  &.texto-botao-escuro,
-  &.texto-botao-claro {
+  &.button-black-text,
+  &.button-white-text {
     font-size: ${toRem(16)};
     font-weight: 700;
   }
 
-  &.texto-botao-claro {
+  &.button-white-text {
     color: #ffffff;
   }
 
-  &.texto-input {
+  &.text-input {
     font-size: ${toRem(16)};
     font-weight: 400;
   }
 
-  &.mensagem-erro {
+  &.message-error {
     font-size: ${toRem(12)};
     font-weight: 400;
     color: #ed4b58;
   }
 
-  &.titulo-pequeno {
+  &.little-text {
     font-size: ${toRem(20)};
     font-weight: 600;
   }
