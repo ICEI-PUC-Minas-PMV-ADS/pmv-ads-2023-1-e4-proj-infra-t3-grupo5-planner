@@ -6,13 +6,22 @@ const Box = styled.div`
   flex-direction: row;
 
   &.HeaderBox {
-    width: ${toRem(1440)};
+    width: ${toRem(1000)};
     height: ${toRem(80)};
     border-radius: ${toRem(0)} ${toRem(0)} ${toRem(32)} ${toRem(32)};
     background-color: #333333;
     border: 4px solid #333333;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 ${toRem(56)};
+    @media (max-width: 768px) {
+        height: ${toRem(60)};
+        width: 100%;
+        padding: 0 ${toRem(10)};
+        justify-content: space-between;
+        border-radius: ${toRem(0)} ${toRem(0)} ${toRem(20)} ${toRem(20)};
+
+    }
   }
   &.MoodsBox {
     width: ${toRem(448)};

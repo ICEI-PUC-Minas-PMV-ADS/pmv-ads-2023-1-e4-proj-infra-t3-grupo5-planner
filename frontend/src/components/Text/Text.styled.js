@@ -46,6 +46,10 @@ const TextStyled = styled.p`
     color: #ffffff;
   }
 
+  &.button-red-text {
+    color: #ED4B58;
+  }
+
   &.text-input {
     font-size: ${toRem(16)};
     font-weight: 400;
