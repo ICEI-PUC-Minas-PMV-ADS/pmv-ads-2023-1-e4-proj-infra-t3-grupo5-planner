@@ -11,6 +11,8 @@ const Box = styled.div`
     border-radius: ${toRem(0)} ${toRem(0)} ${toRem(32)} ${toRem(32)};
     background-color: #333333;
     border: 4px solid #333333;
+    justify-content: center;
+    align-items: center;
   }
   &.MoodsBox {
     width: ${toRem(448)};
@@ -26,6 +28,9 @@ const Box = styled.div`
     border-radius: ${toRem(16)};
     background-color: #f2f2f2;
     border: ${toRem(4)} solid #333333;
+  }
+  &.ModalBox {
+    filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
   }
 `;
 
@@ -52,13 +57,6 @@ export const RedBox = styled.div`
   background: #ed4b58;
   border: ${toRem(4)} solid #333333;
   border-radius: ${toRem(32)} ${toRem(32)} ${toRem(0)} ${toRem(0)};
-`;
-
-export const ModalBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
 `;
 
 export const ModalWhiteBox = styled.div`
