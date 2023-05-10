@@ -8,6 +8,16 @@ const ButtonStyled = styled.p`
     cursor: pointer;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+    &.header-button {
+        filter: none;
+        width: 120px;
+        height: 46px;
+        border-radius: 32px;
+        :hover {
+            background-color: #FFFFFF   
+        }
+    }
+
     &.radio-black-button, &.radio-white-button {
         background-color: #333333;
         width: 191px;

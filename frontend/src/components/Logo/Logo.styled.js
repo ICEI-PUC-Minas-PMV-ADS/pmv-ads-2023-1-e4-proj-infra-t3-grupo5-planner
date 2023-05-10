@@ -8,4 +8,7 @@ export const LogoStyled = styled.div`
 
 export const ImageStyled = styled.img`
   height: ${(props) => props.heightImage}px;
+  @media (max-width: 768px) {
+    height: 25px;
+  }
 `;
