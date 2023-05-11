@@ -28,4 +28,13 @@ export const IconButton = styled.button`
 border:none;
 display:flex;
 align-items:center; 
+margin:0;
+padding:0;
+`
+
+export const GoalsIconsContainer = styled.div`
+display:flex;
+border:none;
+flex-direction:row;
+gap:${toRem(4)};
 `
