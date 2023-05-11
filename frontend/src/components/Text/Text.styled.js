@@ -8,6 +8,7 @@ const TextStyled = styled.p`
   align-items: flex-start;
   line-height: 160%;
   color: #1a1a1a;
+  margin: 0 !important;
 
   &.big-title {
     font-size: ${toRem(32)};
@@ -15,7 +16,7 @@ const TextStyled = styled.p`
   }
 
   &.item-widget {
-    font-size: ${toRem(20)};
+    font-size: ${toRem(18)};
     font-weight: 400;
   }
 
@@ -64,6 +65,12 @@ const TextStyled = styled.p`
   &.little-text {
     font-size: ${toRem(20)};
     font-weight: 600;
+  }
+
+  &.description-widget {
+    font-size: ${toRem(16)};
+    font-weight: 700;   
+    line-height: 100%; 
   }
 `;
 export default TextStyled;
