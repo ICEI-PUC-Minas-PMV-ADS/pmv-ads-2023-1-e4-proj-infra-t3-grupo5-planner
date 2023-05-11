@@ -6,6 +6,7 @@ import {
   RightSideContent,
   LeftSideContent, 
   IconButton,
+  GoalsIconsContainer,
 } from "./WidgetContent.styled";
 import Icon from "../Icon/Icon";
 
@@ -21,10 +22,26 @@ export const WidgetContent = ({
   ExpenseValue
 }) => {
   const [habitCheck, setHabitCheck] = useState(true);
+  const [clickAddIcon, setClickAddIcon] = useState(true);
+  const [clickRemoveIcon, setClickRemoveIcon] = useState(true);
+
   const changeHabitIcon = () => {
     setHabitCheck(!habitCheck);
   };
 
+  const addHandleMouseDown = () => {
+    setClickAddIcon(false)   
+  }
+  const addHandleMouseUp = () => {
+    setClickAddIcon(true)   
+  }
+
+  const removeHandleMouseDown = () => {
+    setClickRemoveIcon(false)   
+  }
+  const removeHandleMouseUp = () => {
+    setClickRemoveIcon(true)   
+  }
   switch (id) {
     default:
       return (
@@ -61,9 +78,11 @@ export const WidgetContent = ({
                 <Text id="description-widget" text={textDescription} />
               </LeftSideContent>
               <RightSideContent>
-                <Text id="item-widget" text={progressValue + "/" + goalValue} />               
-                  <IconButton><Icon id="goalsIcons" icon="add_circle_outline" /></IconButton>
-                  <IconButton><Icon id="goalsIcons" icon="remove_circle_outline" /></IconButton>            
+                <Text id="item-widget" text={progressValue + "/" + goalValue} />  
+                <GoalsIconsContainer>             
+                  <IconButton onMouseDown={addHandleMouseDown} onMouseUp={addHandleMouseUp}>{clickAddIcon ? <Icon id="goalsIcons" icon="add_circle_outline"/>: <Icon id="goalsIcons" icon="add_circle"/> }</IconButton>
+                  <IconButton onMouseDown={removeHandleMouseDown} onMouseUp={removeHandleMouseUp}>{clickRemoveIcon ? <Icon id="goalsIcons" icon="remove_circle_outline"/>:<Icon id="goalsIcons" icon="remove_circle"/>}</IconButton>            
+                </GoalsIconsContainer>
               </RightSideContent>
             </Container>
           }
