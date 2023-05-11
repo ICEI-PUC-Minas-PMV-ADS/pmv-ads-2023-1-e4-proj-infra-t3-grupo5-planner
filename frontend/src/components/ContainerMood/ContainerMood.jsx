@@ -12,43 +12,46 @@ const ContainerMood = () => {
   return (
     <Box
       id="MoodsBox"
+      onClick={() => console.log('Mood')}
       content={
         <>
-          <Mood
-            id="small-mood"
-            mood="sad"
-            isSelected={selectedIcon === "sad"}
-            onClick={() => handleIconClick("sad")}
-            disabled={selectedIcon && selectedIcon !== "sad"}
-          />
+        <div onClick={() => handleIconClick("sad")}>
+            <Mood
+              id="small-mood"
+              mood="sad"
+              isSelected={selectedIcon === "sad"}
+              disabled={selectedIcon !== "sad"}
+            />
+        </div>
+        <div onClick={() => handleIconClick("happy")}>
           <Mood
             id="small-mood"
             mood="happy"
             isSelected={selectedIcon === "happy"}
-            onClick={() => handleIconClick("happy")}
-            disabled={selectedIcon && selectedIcon !== "happy"}
+            disabled={selectedIcon !== "happy"}
           />
-          <Mood
-            id="small-mood"
-            mood="inLove"
-            isSelected={selectedIcon === "inlove"}
-            onClick={() => handleIconClick("inlove")}
-            disabled={selectedIcon && selectedIcon !== "inlove"}
-          />
-          <Mood
-            id="small-mood"
-            mood="playful"
-            isSelected={selectedIcon === "playful"}
-            onClick={() => handleIconClick("playful")}
-            disabled={selectedIcon && selectedIcon !== "playful"}
-          />
-          <Mood
-            id="small-mood"
-            mood="worried"
-            isSelected={selectedIcon === "worried"}
-            onClick={() => handleIconClick("worried")}
-            disabled={selectedIcon && selectedIcon !== "worried"}
-          />
+          </div>
+          <div onClick={() => handleIconClick("inlove")}>
+            <Mood
+              id="small-mood"
+              mood="inLove"
+              isSelected={selectedIcon === "inlove"}
+            />
+          </div>
+          <div onClick={() => handleIconClick("playful")}>
+            <Mood
+              id="small-mood"
+              mood="playful"
+              isSelected={selectedIcon === "playful"}
+            />
+          </div>
+          <div onClick={() => handleIconClick("worried")}>
+            <Mood
+              id="small-mood"
+              mood="worried"
+              isSelected={selectedIcon === "worried"}
+            />
+          </div>
         </>
       }
     />
