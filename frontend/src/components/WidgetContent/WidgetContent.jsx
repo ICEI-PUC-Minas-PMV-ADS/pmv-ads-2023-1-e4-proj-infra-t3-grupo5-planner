@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Box from "../Box/Box";
 import Text from "../Text/Text";
 import {
@@ -20,6 +20,11 @@ export const WidgetContent = ({
   habitsIcon,
   ExpenseValue
 }) => {
+  const [habitCheck, setHabitCheck] = useState(true);
+  const changeHabitIcon = () => {
+    setHabitCheck(!habitCheck);
+  };
+
   switch (id) {
     default:
       return (
@@ -75,7 +80,8 @@ export const WidgetContent = ({
                 <Text id="description-widget" text={textDescription} />
               </LeftSideContent>
               <RightSideContent>
-              <IconButton><Icon id="goalsIcons" icon="radio_button_unchecked_outlined"/></IconButton>
+              <IconButton onClick={changeHabitIcon}> 
+              {habitCheck ? <Icon id="goalsIcons" icon="radio_button_unchecked_outlined"/> : <Icon id="goalsIcons" icon="radio_button_checked_outlined"/>}</IconButton>
               </RightSideContent>
             </Container>
           }
