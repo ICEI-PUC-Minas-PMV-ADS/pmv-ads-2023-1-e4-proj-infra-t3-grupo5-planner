@@ -1,9 +1,9 @@
 import React from 'react'
 import { IconStyled } from './Icon.styled.js';
 
-const Icon = ({icon}) => {
+const Icon = ({icon, id}) => {
   return (
-    <IconStyled className='material-icons'>{icon}</IconStyled>
+    <IconStyled id={id} className={`material-icons ${id}`}>{icon}</IconStyled>
   )
 }
 
