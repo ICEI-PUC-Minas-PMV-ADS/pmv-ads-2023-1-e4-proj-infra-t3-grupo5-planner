@@ -88,6 +88,9 @@ export const ModalRedBox = styled.div`
   background: #ed4b58;
   border: ${toRem(4)} solid #333333;
   border-radius: ${toRem(32)} ${toRem(32)} ${toRem(0)} ${toRem(0)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Box;
