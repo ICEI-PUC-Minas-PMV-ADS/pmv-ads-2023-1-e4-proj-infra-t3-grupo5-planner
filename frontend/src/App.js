@@ -1,14 +1,12 @@
 import React from "react";
-import Header from "./components/Header/Header";
 import "./index.css";
-import ContainerMood from "./components/ContainerMood/ContainerMood";
+import ContainerReminder from "./components/ContainerReminder/ContainerReminder";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Header />
-        <ContainerMood></ContainerMood>
-      </header>
+      <header className="App-header"></header>
+      <ContainerReminder />
     </div>
   );
 }
