@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyled = styled.p`
+export const ButtonStyled = styled.p`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -67,4 +67,9 @@ const ButtonStyled = styled.p`
     }
 `;
 
-export default ButtonStyled;
+export const ArrowStyled = styled.p`
+    transform: ${props => props.isSelected ? 'rotate(90deg)' : 'rotate(0)'};
+    transition: 'transform 0.3s ease';
+    margin: 0;
+`
+
