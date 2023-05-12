@@ -15,14 +15,19 @@ const TextStyled = styled.p`
     font-weight: 600;
   }
 
+
   &.item-widget {
     font-size: ${toRem(18)};
     font-weight: 400;
   }
 
-  &.subtitle {
+  &.subtitle, &.subtitle-grey {
     font-size: ${toRem(26)};
     font-weight: 600;
+  }
+
+  &.subtitle-grey {
+    color: #696767;
   }
 
   &.title-widget {
