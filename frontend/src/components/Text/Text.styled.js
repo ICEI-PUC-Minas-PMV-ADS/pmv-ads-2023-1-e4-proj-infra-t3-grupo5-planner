@@ -31,6 +31,12 @@ const TextStyled = styled.p`
     text-transform: uppercase;
   }
 
+  &.title-container {
+    font-size: ${toRem(40)};
+    font-weight: 500;
+    color: #ffffff
+  }
+
   &.label-styled {
     font-size: ${toRem(14)};
     font-weight: 700;
