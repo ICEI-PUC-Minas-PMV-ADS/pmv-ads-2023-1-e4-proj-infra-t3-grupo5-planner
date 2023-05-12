@@ -6,12 +6,17 @@ export const HelpComponent = styled.div`
 
 `
 
-export const PrincipalText = styled.div`
+export const HelpTitle = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     display: flex;
     margin: 0;
+`
+
+export const HelpText = styled.div`
+    display: ${props => props.isSelected ? 'inline' : 'none'};
+    transition: 'transform 0.3s ease';
 `
 
 export const HR = styled.div`

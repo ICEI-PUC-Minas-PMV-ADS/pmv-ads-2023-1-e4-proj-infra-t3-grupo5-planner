@@ -1,9 +1,9 @@
-import { HelpComponent, PrincipalText } from "./Help.style";
+import { HelpComponent, HelpText, HelpTitle } from "./Help.style";
 import React, { useState } from "react";
 import Text from "../Text/Text";
 import Button from "../Button/Button";
 
-const Help = ({ text }) => {
+const Help = ({ text, helpText }) => {
 
     const [rotated, setRotated] = useState(false);
 
@@ -14,7 +14,7 @@ const Help = ({ text }) => {
 
     return (
         <HelpComponent>
-            <PrincipalText>
+            <HelpTitle>
                 <Text id={`subtitle-grey`} text={`${text}`} />
                 <div onClick={() => handleArrowClick()}>
                     <Button
@@ -23,7 +23,12 @@ const Help = ({ text }) => {
                         isSelected={rotated}
                     />
                 </div>
-            </PrincipalText>
+            </HelpTitle>
+            <div onClick={() => handleArrowClick()}>
+                <HelpText isSelected={rotated}>
+                    <Text id={`text-input`} text={helpText} />
+                </HelpText>
+            </div>
             <><hr style={{ height: 4, backgroundColor: 'black' }}></hr>
             </>
         </HelpComponent>
