@@ -43,6 +43,7 @@ const Box = styled.div`
   }
   &.ModalBox {
     filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
+    flex-direction: column;
   }
 `;
 
