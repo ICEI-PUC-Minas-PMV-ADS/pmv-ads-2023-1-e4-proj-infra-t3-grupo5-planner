@@ -35,11 +35,13 @@ const Box = styled.div`
   }
 
   &.WidgetContentBox {
-    width: ${toRem(400)};
-    height: ${toRem(72)};
+    width: 100%;
+    min-height: ${toRem(72)};
+    margin-bottom: ${toRem(8)};
     border-radius: ${toRem(16)};
     background-color: #f2f2f2;
     border: ${toRem(4)} solid #333333;
+    box-sizing: border-box;
   }
   &.ModalBox {
     filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
@@ -53,9 +55,9 @@ const Box = styled.div`
 `;
 
 export const WhiteBox = styled.div`
-  width: ${toRem(446)};
-  height: ${toRem(376)};
-  padding: ${toRem(16)};
+  width: ${toRem(456)};
+  height: ${toRem(312)};
+  padding: ${toRem(16)} ${toRem(0)} ${toRem(0)} ${toRem(16)};
   box-sizing: border-box;
   background: #f2f2f2;
   border-top: none;
@@ -66,7 +68,7 @@ export const WhiteBox = styled.div`
 `;
 
 export const RedBox = styled.div`
-  width: ${toRem(446)};
+  width: ${toRem(456)};
   height: ${toRem(64)};
   padding-left: ${toRem(16)};
   box-sizing: border-box;
