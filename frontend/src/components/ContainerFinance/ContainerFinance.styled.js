@@ -5,7 +5,7 @@ export const Line = styled.div`
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 31px;
+    margin-left: 13px;
     width: 616px;
     padding: 0;
 
@@ -25,13 +25,13 @@ export const Label = styled.div`
 
     &.label-name {
         width: 432px;
-        margin-top: 60px;
+        margin-top: 44px;
         margin-bottom: 20px
     }
 
     &.label-type {
         width: 160px;
-        margin-top: 60px;
+        margin-top: 44px;
         margin-bottom: 20px
     }
 

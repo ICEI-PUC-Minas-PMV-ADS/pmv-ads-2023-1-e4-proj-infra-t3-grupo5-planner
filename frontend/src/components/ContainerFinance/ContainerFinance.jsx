@@ -32,7 +32,7 @@ const ContainerFinance = () => {
                         </Label>
                     </Line>
                     <Buttons>
-                        <Button id="text-button" text="Cancelar"></Button>
+                        <Button id="text-button" text="Cancelar" textId="button-black-text"></Button>
                         <Button id="rectangular-black-button" textId="button-white-text" text="Criar hábito"></Button>
                     </Buttons>
                 </ModalWhiteBox>
