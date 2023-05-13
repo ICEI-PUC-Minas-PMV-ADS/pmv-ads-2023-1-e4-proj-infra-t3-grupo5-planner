@@ -45,17 +45,18 @@ const Box = styled.div`
     filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
     flex-direction: column;
   }
-`;
-
-export const WidgetBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  &.WidgetBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const WhiteBox = styled.div`
   width: ${toRem(446)};
   height: ${toRem(376)};
+  padding: ${toRem(16)};
+  box-sizing: border-box;
   background: #f2f2f2;
   border-top: none;
   border-bottom: ${toRem(4)} solid #333333;
@@ -67,14 +68,24 @@ export const WhiteBox = styled.div`
 export const RedBox = styled.div`
   width: ${toRem(446)};
   height: ${toRem(64)};
+  padding-left: ${toRem(16)};
+  box-sizing: border-box;
   background: #ed4b58;
   border: ${toRem(4)} solid #333333;
   border-radius: ${toRem(32)} ${toRem(32)} ${toRem(0)} ${toRem(0)};
+  display: flex;
+  justify-content: start;
+  align-items: center;
 `;
 
 export const ModalWhiteBox = styled.div`
   width: ${toRem(696)};
   height: ${toRem(352)};
+  padding-left: ${toRem(16)};
+  padding-right: ${toRem(32)};
+  padding-top: ${toRem(16)};
+  padding-bottom: ${toRem(16)};
+  box-sizing: border-box;
   background: #f2f2f2;
   border-top: none;
   border-bottom: ${toRem(4)} solid #333333;
@@ -86,9 +97,13 @@ export const ModalWhiteBox = styled.div`
 export const ModalRedBox = styled.div`
   width: ${toRem(696)};
   height: ${toRem(80)};
+  box-sizing: border-box;
   background: #ed4b58;
   border: ${toRem(4)} solid #333333;
   border-radius: ${toRem(32)} ${toRem(32)} ${toRem(0)} ${toRem(0)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Box;
