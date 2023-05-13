@@ -1,26 +1,41 @@
 import React from "react";
 import Box from "../Box/Box";
-import { ModalRedBox, ModalWhiteBox, RedBox, WhiteBox, WidgetBox } from "../Box/Box.styled";
+import { ModalRedBox, ModalWhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
 import Input from "../Input/Input"
+import Button from "../Button/Button";
+import { Buttons, Line, Label } from "./ContainerFinance.styled";
 
 const ContainerFinance = () => {
 
     return (
         <Box id="ModalBox" content={
             <div>
-                <Text id="title-container" text="Defina uma finança" />
-                <ModalRedBox content={
-                    <div>
-                        <Text id="title-container" text="Defina uma finança" />
-                    </div>}>
+                <ModalRedBox>
+                    <Text id="title-container" text="Defina uma finança" />
                 </ModalRedBox>
-                <ModalWhiteBox content={<div><Input></Input></div>}></ModalWhiteBox>    
-
-                <WidgetBox ></WidgetBox>
-                <RedBox>
-                </RedBox>
-                <WhiteBox content={<div><Input></Input></div>}></WhiteBox>
+                <ModalWhiteBox>
+                    <Line>
+                        <Label className="label-name">
+                            <Text id="label-styled" text="Nome"></Text>
+                            <Input type="Text"></Input>
+                        </Label>
+                        <Label className="label-type">
+                            <Text id="label-styled" text="Tipo"></Text>
+                            <Input type="Text"></Input>
+                        </Label>
+                    </Line>
+                    <Line>
+                        <Label className="label-value">
+                            <Text id="label-styled" text="Valor"></Text>
+                            <Input type="Text" placeholder="R$ 000,00"></Input>
+                        </Label>
+                    </Line>
+                    <Buttons>
+                        <Button id="text-button" text="Cancelar"></Button>
+                        <Button id="rectangular-black-button" textId="button-white-text" text="Criar hábito"></Button>
+                    </Buttons>
+                </ModalWhiteBox>
             </div>
         }></Box>
     );
