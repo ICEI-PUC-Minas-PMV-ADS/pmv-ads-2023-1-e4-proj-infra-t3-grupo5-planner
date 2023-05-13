@@ -5,8 +5,12 @@ import Text from "../Text/Text";
 import { WidgetContent } from "../WidgetContent/WidgetContent";
 import Button from "../Button/Button";
 import { useState } from "react";
-import {NewHabitContent, PlusButtonContainer} from "./WidgetHabits.styled";
-
+import {
+  NewHabitContent,
+  PlusButtonContainer,
+  ScrollBox,
+  DownRow,
+} from "./WidgetHabits.styled";
 
 export const WidgetHabits = () => {
   const [habits, setHabits] = useState([]);
@@ -24,7 +28,7 @@ export const WidgetHabits = () => {
             <Text id="title-widget" text="Hábitos" />
           </RedBox>
           <WhiteBox>
-            <div>
+            <ScrollBox>
               {habits.map((habit, index) => (
                 <NewHabitContent key={index}>
                   <WidgetContent
@@ -34,10 +38,15 @@ export const WidgetHabits = () => {
                   />
                 </NewHabitContent>
               ))}
-            </div>
-            <PlusButtonContainer>
-              <Button plusIcon id="pink-button" text="" onClick={addNewHabit} />
-            </PlusButtonContainer>
+            </ScrollBox>
+            <DownRow>
+              <Button
+                plusButton
+                id="pink-button"
+                text=""
+                onClick={addNewHabit}
+              />
+            </DownRow>
           </WhiteBox>
         </div>
       }

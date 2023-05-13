@@ -5,6 +5,7 @@ import ContainerReminder from "./components/ContainerReminder/ContainerReminder"
 import ContainerFinance from "./components/ContainerFinance/ContainerFinance";
 import ContainerChecklist from "./components/ContainerChecklist/ContainerChecklist";
 import ContainerNote from "./components/ContainerNote/ContainerNote";
+import { WidgetHabits } from "./components/WidgetHabits/WidgetHabits";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       <ContainerFinance></ContainerFinance>
       <ContainerChecklist></ContainerChecklist>
       <ContainerNote></ContainerNote>
+      <WidgetHabits></WidgetHabits>
     </div>
   );
 }
