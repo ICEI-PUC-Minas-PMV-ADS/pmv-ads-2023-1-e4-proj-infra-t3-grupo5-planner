@@ -14,6 +14,6 @@ export const DownRow = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 48px;
-  padding-right: 16px;
+  height: ${toRem(48)};
+  padding-right: ${toRem(16)};
 `;

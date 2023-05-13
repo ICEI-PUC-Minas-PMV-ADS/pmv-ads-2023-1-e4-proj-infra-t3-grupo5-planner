@@ -6,9 +6,9 @@ export const Line = styled.div`
   align-items: top;
   display: flex;
   justify-content: left;
-  margin-left: 0px;
+  margin-left: ${toRem(0)};
   width: 100%;
-  padding: 0;
+  padding: ${toRem(0)};
 `;
 
 export const Balance = styled.div`
@@ -39,8 +39,8 @@ export const Label = styled.div`
 
   &.label-name {
     width: 70%;
-    margin-right: 8px;
-    margin-top: 3px;
+    margin-right: ${toRem(8)};
+    margin-top: ${toRem(4)};
   }
 
   &.label-value {
@@ -61,6 +61,6 @@ export const DownRow = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 48px;
-  padding-right: 16px;
+  height: ${toRem(48)};
+  padding-right: ${toRem(16)};
 `;

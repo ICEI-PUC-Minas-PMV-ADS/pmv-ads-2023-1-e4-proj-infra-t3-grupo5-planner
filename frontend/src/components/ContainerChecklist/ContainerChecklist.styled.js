@@ -1,45 +1,45 @@
 import styled from "styled-components";
+import { toRem } from "../../utils/toRem";
 
 export const Line = styled.div`
-    flex-direction: row;
-    align-items: top;
-    display: flex;
-    justify-content: left;
-    margin-left: 0px;
-    width: 93%;
-    padding: 0;
-`
-
-export const Buttons = styled.div`
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    bottom: 0;
-    right: 13px;
-    margin-bottom: 16px;
-`
-
-export const BoxSize = styled.div`
-    position: relative;
-    width: 414px;
-    height: 376px;
-`
+  flex-direction: row;
+  align-items: top;
+  display: flex;
+  justify-content: left;
+  margin-left: ${toRem(0)};
+  width: 100%;
+  padding: ${toRem(0)};
+`;
 
 export const Label = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: top;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
 
-    &.label-checkbox {
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-        margin-top: 3px;
-    }
+  &.label-checkbox {
+    width: ${toRem(24)};
+    height: ${toRem(24)};
+    margin-right: ${toRem(8)};
+    margin-top: ${toRem(4)};
+  }
 
-    &.label-text {
-        width: 85%;
-    }
-`
-
+  &.label-text {
+    width: 85%;
+  }
+`;
+export const ScrollBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: ${toRem(240)};
+  overflow: scroll;
+  overflow-x: hidden;
+`;
+export const DownRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: ${toRem(48)};
+  padding-right: ${toRem(16)};
+`;

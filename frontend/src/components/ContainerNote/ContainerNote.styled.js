@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const BoxSize = styled.div`
   position: relative;
-  width: 414px;
-  height: 376px;
+  width: 380px;
+  height: 248px;
 `;
 
 export const TextArea = styled.textarea`
-  width: 380px;
-  height: 310px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
   max-width: 100%;
   line-height: 1.5;
