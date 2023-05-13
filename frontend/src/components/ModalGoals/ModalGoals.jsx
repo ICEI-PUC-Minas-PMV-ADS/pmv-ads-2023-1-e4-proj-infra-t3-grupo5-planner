@@ -4,15 +4,15 @@ import { ModalRedBox, ModalWhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
 import Input from "../Input/Input"
 import Button from "../Button/Button";
-import { Buttons, Line, Label } from "./ContainerGoals.styled";
+import { Buttons, Line, Label } from "./ModalGoals.styled";
 
-const ContainerGoals = () => {
+const ModalGoals = () => {
 
     return (
         <Box id="ModalBox" content={
             <div>
                 <ModalRedBox>
-                    <Text id="title-container" text="Defina uma meta" />
+                    <Text id="title-modal" text="Defina uma meta" />
                 </ModalRedBox>
                 <ModalWhiteBox>
                     <Line>
@@ -35,7 +35,7 @@ const ContainerGoals = () => {
     );
 };
 
-export default ContainerGoals;
+export default ModalGoals;
 
 
 

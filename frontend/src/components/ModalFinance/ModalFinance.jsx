@@ -4,15 +4,15 @@ import { ModalRedBox, ModalWhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
 import Input from "../Input/Input"
 import Button from "../Button/Button";
-import { Buttons, Line, Label } from "./ContainerFinance.styled";
+import { Buttons, Line, Label } from "./ModalFinance.styled";
 
-const ContainerFinance = () => {
+const ModalFinance = () => {
 
     return (
         <Box id="ModalBox" content={
             <div>
                 <ModalRedBox>
-                    <Text id="title-container" text="Defina uma finança" />
+                    <Text id="title-modal" text="Defina uma finança" />
                 </ModalRedBox>
                 <ModalWhiteBox>
                     <Line>
@@ -41,7 +41,7 @@ const ContainerFinance = () => {
     );
 };
 
-export default ContainerFinance;
+export default ModalFinance;
 
 
 

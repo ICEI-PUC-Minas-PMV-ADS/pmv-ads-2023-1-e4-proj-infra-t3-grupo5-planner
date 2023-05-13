@@ -36,7 +36,7 @@ const TextStyled = styled.p`
     text-transform: uppercase;
   }
 
-  &.title-container {
+  &.title-modal {
     font-size: ${toRem(40)};
     font-weight: 500;
     color: #ffffff
