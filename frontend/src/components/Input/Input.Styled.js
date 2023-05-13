@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {toRem} from "../../utils/toRem";
 
 export const InputStyled = styled.input`
-max-width:100%;
+width:100%;
 background: #FFFFFF;
 border: ${toRem(2)} solid #333333;
 border-radius:${toRem(8)};
