@@ -6,9 +6,9 @@ import { GrClose } from 'react-icons/gr'
 import Avatar from '../../assets/Button/Avatar'
 import Arrow from '../../assets/Button/Arrow'
 
-const Button = ({ id, textId, text, plusIcon, plusButton, closeIcon, profileIcon, arrow, isSelected }) => {
+const Button = ({ id, textId, text, plusIcon, plusButton, closeIcon, profileIcon, arrow, isSelected, onClick }) => {
     return (
-        <ButtonStyled className={`${id}`} id={id}>
+        <ButtonStyled className={`${id}`} id={id} onClick={onClick}>
             {plusIcon && <GoPlus color={`${plusIcon}`} style={ { marginLeft: 32, marginRight: 16, fontSize: 20} }/>}
             {plusButton && <GoPlus color={`${plusButton}`} style={ { fontSize: 20} }/>}
             {closeIcon && <GrClose color={`${closeIcon}`} style={ { fontSize: 20} }/>}
