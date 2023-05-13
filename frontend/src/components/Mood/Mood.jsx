@@ -7,7 +7,7 @@ import Playful from '../../assets/Moods/Playful'
 import Sad from '../../assets/Moods/Sad'
 import Worried from '../../assets/Moods/Worried'
 
-const Button = ({ id, mood, isSelected }) => {
+const Mood = ({ id, mood, isSelected }) => {
     return (
         <MoodStyled className={`${id}`} id={`${id}`} isSelected={isSelected}>{
             (mood === "angry" && <Angry className={id}  />) || 
@@ -20,4 +20,4 @@ const Button = ({ id, mood, isSelected }) => {
     )
 }
 
-export default Button
+export default Mood
