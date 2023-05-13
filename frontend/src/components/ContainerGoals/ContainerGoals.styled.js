@@ -24,20 +24,15 @@ export const Label = styled.div`
     flex-direction: column;
 
     &.label-name {
-        width: 432px;
-        margin-top: 44px;
-        margin-bottom: 20px
+        width: 504px;
+        margin-top: 28px;
+        margin-bottom: 168px
     }
 
     &.label-type {
-        width: 160px;
-        margin-top: 44px;
-        margin-bottom: 20px
-    }
-
-    &.label-value {
-        width: 616px;
-        margin-bottom: 55px;
+        width: 88px;
+        margin-top: 28px;
+        margin-bottom: 168px
     }
 `
 
