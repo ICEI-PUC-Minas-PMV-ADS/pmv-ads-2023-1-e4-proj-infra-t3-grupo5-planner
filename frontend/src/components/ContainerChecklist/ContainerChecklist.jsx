@@ -6,7 +6,7 @@ import Input from "../Input/Input"
 import Button from "../Button/Button";
 import { Buttons, Line, Label, BoxSize } from "./ContainerChecklist.styled";
 
-const ModalFinance = () => {
+const ContainerChecklist = () => {
 
     return (
         <Box id="WidgetBox" content={
@@ -34,7 +34,7 @@ const ModalFinance = () => {
     );
 };
 
-export default ModalFinance;
+export default ContainerChecklist;
 
 
 
