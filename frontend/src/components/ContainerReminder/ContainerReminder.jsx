@@ -4,7 +4,7 @@ import { RedBox, WhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
 import Button from "../Button/Button";
 import { WidgetContent } from "../WidgetContent/WidgetContent";
-import { ScrollBox, DownRow } from "./ConteinerReminder.syled";
+import { ScrollBox, DownRow } from "./ConteinerReminder.styled";
 const ContainerReminder = () => {
   return (
     <Box
