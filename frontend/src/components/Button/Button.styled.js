@@ -51,6 +51,12 @@ export const ButtonStyled = styled.p`
         border: 4px solid #000000;
     }
 
+    &.pink-button:hover{
+        background-color: #333333;
+        color: #ed4858;
+        border: 4px solid #ed4858;
+    }
+
     &.close-button{
         width: 16px;
         height: 16px;

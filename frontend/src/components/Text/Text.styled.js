@@ -42,6 +42,12 @@ const TextStyled = styled.p`
     color: #ffffff
   }
 
+  &.text-container-content {
+    font-size: ${toRem(20)};
+    font-weight: 400;
+    color: #1a1a1a
+  }
+
   &.label-styled {
     font-size: ${toRem(14)};
     font-weight: 700;
