@@ -3,13 +3,13 @@ import Input from "../Input/Input";
 import Text from "../Text/Text";
 import FormContentStyled from "./FormContent.styled";
 
-const FormContent = ({ label, type, error }) => {
+const FormContent = ({ label, type, error, placeholder }) => {
   switch (type) {
     default:
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label}></Text>
-          <Input id="Text" type={type}></Input>
+          <Input id="Text" type={type} placeholder={placeholder}></Input>
           <Text id="message-error" text={error}></Text>
         </FormContentStyled>
       );
@@ -17,7 +17,7 @@ const FormContent = ({ label, type, error }) => {
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label}></Text>
-          <Input id="Text" type={type}></Input>
+          <Input id="Text" type={type} placeholder={placeholder}></Input>
           <Text id="message-error" text={error}></Text>
         </FormContentStyled>
       );

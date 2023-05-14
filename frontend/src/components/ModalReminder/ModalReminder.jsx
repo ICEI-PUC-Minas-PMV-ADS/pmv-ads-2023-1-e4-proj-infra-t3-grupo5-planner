@@ -2,29 +2,37 @@ import React from "react";
 import Box from "../Box/Box";
 import { ModalRedBox, ModalWhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
-import Button from "../Button/Button";
-import { Buttons, Line, WidthArea } from "./ModalGoals.styled";
+import { Line, WidthArea, Buttons } from "./ModalReminder.styled";
 import FormContent from "../FormContent/FormContent";
+import Button from "../Button/Button";
 
-const ModalGoals = () => {
+const Reminder = () => {
   return (
     <Box
       id="ModalBox"
       content={
-        <div>
+        <>
           <ModalRedBox>
-            <Text id="title-modal" text="Defina uma meta" />
+            {" "}
+            <Text id="title-container" text="Defina um lembrete"></Text>
           </ModalRedBox>
           <ModalWhiteBox>
+            {" "}
             <Line>
-              <WidthArea className="TwoPart">
+              <WidthArea className="ThreePart">
                 <FormContent label="Nome" type="Text"></FormContent>
               </WidthArea>
+            </Line>
+            <Line>
+              <WidthArea className="TwoPart">
+                {" "}
+                <FormContent label="Data" type="Date" error=""></FormContent>
+              </WidthArea>
               <WidthArea className="OnePart">
-                <FormContent label="Tipo" type="Text"></FormContent>
+                {" "}
+                <FormContent label="Hora" type="Time" error=""></FormContent>
               </WidthArea>
             </Line>
-
             <Buttons>
               <Button
                 id="text-button"
@@ -34,14 +42,14 @@ const ModalGoals = () => {
               <Button
                 id="rectangular-black-button"
                 textId="button-white-text"
-                text="Criar meta"
+                text="Criar lembrete"
               ></Button>
             </Buttons>
           </ModalWhiteBox>
-        </div>
+        </>
       }
     ></Box>
   );
 };
 
-export default ModalGoals;
+export default Reminder;
