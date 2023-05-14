@@ -83,7 +83,7 @@ export const RedBox = styled.div`
 export const ModalWhiteBox = styled.div`
   width: ${toRem(696)};
   height: ${toRem(352)};
-  padding-left: ${toRem(16)};
+  padding-left: ${toRem(32)};
   padding-right: ${toRem(32)};
   padding-top: ${toRem(16)};
   padding-bottom: ${toRem(16)};

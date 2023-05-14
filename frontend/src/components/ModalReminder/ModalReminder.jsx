@@ -2,7 +2,7 @@ import React from "react";
 import Box from "../Box/Box";
 import { ModalRedBox, ModalWhiteBox } from "../Box/Box.styled";
 import Text from "../Text/Text";
-import { Line, Date, Time, Buttons } from "./ModalReminder.styled";
+import { Line, WidthArea, Buttons } from "./ModalReminder.styled";
 import FormContent from "../FormContent/FormContent";
 import Button from "../Button/Button";
 
@@ -18,28 +18,20 @@ const Reminder = () => {
           </ModalRedBox>
           <ModalWhiteBox>
             {" "}
-            <FormContent
-              label="Nome"
-              type="Text"
-              placeholder="Escreva seu lembrete"
-            ></FormContent>
             <Line>
-              <Date>
+              <WidthArea className="ThreePart">
+                <FormContent label="Nome" type="Text"></FormContent>
+              </WidthArea>
+            </Line>
+            <Line>
+              <WidthArea className="TwoPart">
                 {" "}
-                <FormContent
-                  label="Data"
-                  type="Date"
-                  error="Mensagem de erro"
-                ></FormContent>
-              </Date>
-              <Time>
+                <FormContent label="Data" type="Date" error=""></FormContent>
+              </WidthArea>
+              <WidthArea className="OnePart">
                 {" "}
-                <FormContent
-                  label="Hora"
-                  type="Time"
-                  error="Mensagem de erro"
-                ></FormContent>
-              </Time>
+                <FormContent label="Hora" type="Time" error=""></FormContent>
+              </WidthArea>
             </Line>
             <Buttons>
               <Button
