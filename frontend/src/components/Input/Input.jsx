@@ -1,7 +1,7 @@
 import React from "react";
-import { InputStyled} from "./Input.Styled";
+import { InputStyled, SelectStyled} from "./Input.Styled";
 
-const Input = ({ id, type, placeholder, icon }) => {
+const Input = ({ id, type, placeholder, icon, value }) => {
   switch (type) {
 
     default:
@@ -69,7 +69,15 @@ const Input = ({ id, type, placeholder, icon }) => {
               type={type}          
               placeholder={placeholder}
             ></InputStyled>
-          );             
+          );
+          case "Select":         
+          return (
+            <SelectStyled
+              className={`${type}`}  
+              id={id}               
+              value={value}
+            ></SelectStyled>
+          );                          
   }
 };
 
