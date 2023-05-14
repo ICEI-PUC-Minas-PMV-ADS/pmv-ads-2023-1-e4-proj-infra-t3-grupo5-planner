@@ -7,25 +7,13 @@ import {
   WhiteBox,
   WidgetContentBox,
 } from "./components/Box/Box.styled";
-import ContainerReminder from "./components/ContainerReminder/ContainerReminder";
+import ModalReminder from "./components/ModalReminder/ModalReminder";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <ContainerReminder />
-
-      <Box
-        id="WidgetBox"
-        content={
-          <>
-            <RedBox></RedBox>
-            <WhiteBox>
-              <Box id="WidgetContentBox"></Box>
-            </WhiteBox>
-          </>
-        }
-      />
+      <ModalReminder />
     </div>
   );
 }
