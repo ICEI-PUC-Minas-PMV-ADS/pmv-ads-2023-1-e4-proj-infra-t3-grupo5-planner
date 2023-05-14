@@ -5,9 +5,14 @@ using Microsoft.Extensions.Configuration;
 
 namespace Store.PostgreSQL.Database;
 
-public class ContextFactory : IDesignTimeDbContextFactory<Context>
+public class ContextFactory : IDesignTimeDbContextFactory<Context>, IDbContextFactory<Context>
 {
     public Context CreateDbContext(string[] args)
+    {
+        return CreateDbContext();
+    }
+
+    public Context CreateDbContext()
     {
         var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
         
