@@ -1,4 +1,4 @@
-import { HelpComponent, HelpText, HelpTitle } from "./Help.style";
+import { HelpComponent, HelpText, HelpTitle } from "./Help.styled";
 import React, { useState } from "react";
 import Text from "../Text/Text";
 import Button from "../Button/Button";
