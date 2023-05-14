@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.p`
+export const ButtonStyled = styled.button`
     display: flex;
     flex-direction: row;
     justify-content: center;
