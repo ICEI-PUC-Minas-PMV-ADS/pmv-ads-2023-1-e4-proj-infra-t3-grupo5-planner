@@ -1,6 +1,7 @@
 using Core.Entities;
 using Core.Requests;
 using Core.Stores;
+using Core.Entities.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Networking.API.Controllers;
@@ -28,7 +29,7 @@ public class MoodController : ControllerBase
 
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("mood/{id}")]
     public async Task<ActionResult<Mood>> GetMoodById(int id)
     {
         var mood = await _moodStore.GetMoodById(id);
@@ -51,6 +52,30 @@ public class MoodController : ControllerBase
             return NotFound();
         }
 
-        return mood;
+        return Ok(mood);
+    }
+
+    [HttpPatch("mood/{id}")]
+    public async Task<ActionResult<Mood>> UpdateMood(int id, [FromBody] MoodUpdateDto moodUpdateDto)
+    {
+        var mood = await _moodStore.GetMoodById(id);
+
+        if (mood == null)
+        {
+            return NotFound();
+        }
+
+        mood.UpdateMood(moodUpdateDto);
+
+        await _moodStore.Update(mood);
+        return Ok();
+
+    }
+
+    [HttpDelete("mood/{id}")]
+    public async Task DeleteMood(int id)
+    {
+        await _moodStore.Delete(id);
+
     }
 }

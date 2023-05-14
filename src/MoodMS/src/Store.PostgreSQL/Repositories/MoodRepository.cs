@@ -2,6 +2,7 @@
 using Core.Stores;
 using Microsoft.EntityFrameworkCore;
 using Store.PostgreSQL.Database;
+using System.Xml;
 
 namespace Store.PostgreSQL.Repositories;
 
@@ -13,19 +14,36 @@ public class MoodRepository : IMoodStore
     {
         _context = context;
     }
-    public async Task CreateMood(Mood mood)
+    public async Task<Mood> CreateMood(Mood mood)
     {
         _context.Moods.Add(mood);
         await _context.SaveChangesAsync();
+        return mood;
     }
 
-    public async Task<Mood> GetMoodById(int id)
+    public async Task<IEnumerable<Mood>> GetMood()
+    {
+        return await _context.Moods.ToListAsync();
+    }
+
+    public async Task<Mood?> GetMoodById(int id)
     {
         return await _context.Moods.FindAsync(id);
     }
 
-    public async Task<List<Mood>> GetMood()
+    public async Task Update(Mood mood)
     {
-        return await _context.Moods.ToListAsync();
+        _context.Entry(mood).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task Delete(int id)
+    {
+        var mood = await _context.Moods.FindAsync(id);
+        if (mood != null)
+        {
+            _context.Moods.Remove(mood);
+            await _context.SaveChangesAsync();
+        }
     }
 }

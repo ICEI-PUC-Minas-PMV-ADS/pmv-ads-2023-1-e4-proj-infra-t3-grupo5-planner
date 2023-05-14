@@ -28,7 +28,7 @@ public class ApiBootstrap
         app.UseSwagger();
         app.UseSwaggerUI();
 
-        //app.UseHttpsRedirection();
+        app.UseHttpsRedirection();
 
         app.UseAuthorization();
         

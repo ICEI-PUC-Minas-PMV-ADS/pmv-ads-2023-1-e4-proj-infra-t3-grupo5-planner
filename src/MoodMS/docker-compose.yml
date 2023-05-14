@@ -9,7 +9,7 @@ services:
     ports:
       - "20004:80"
     environment:
-      ASPNETCORE_ENVIRONMENT: Staging
+      ASPNETCORE_ENVIRONMENT: Development
     networks:
       - moodms-network
     depends_on:
