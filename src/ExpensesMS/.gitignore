@@ -1,0 +1,16 @@
+.vs
+.idea
+.DS_Store
+src/.DS_Store
+src/Core/bin
+src/Core/obj
+src/Core/.DS_Store
+src/Networking.API/bin
+src/Networking.API/obj
+src/Networking.API/.DS_Store
+src/Store.PostgreSQL/bin
+src/Store.PostgreSQL/obj
+src/Store.PostgreSQL/.DS_Store
+src/ExpensesMS.API/bin
+src/ExpensesMS.API/obj
+src/ExpensesMS.API/.DS_Store
