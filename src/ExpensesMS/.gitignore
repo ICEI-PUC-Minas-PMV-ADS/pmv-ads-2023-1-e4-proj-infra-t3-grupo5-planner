@@ -1,3 +1,4 @@
+.vs
 .idea
 .DS_Store
 src/.DS_Store
@@ -10,6 +11,6 @@ src/Networking.API/.DS_Store
 src/Store.PostgreSQL/bin
 src/Store.PostgreSQL/obj
 src/Store.PostgreSQL/.DS_Store
-src/MoodMS.API/bin
-src/MoodMS.API/obj
-src/MoodMS.API/.DS_Store
+src/ExpensesMS.API/bin
+src/ExpensesMS.API/obj
+src/ExpensesMS.API/.DS_Store
