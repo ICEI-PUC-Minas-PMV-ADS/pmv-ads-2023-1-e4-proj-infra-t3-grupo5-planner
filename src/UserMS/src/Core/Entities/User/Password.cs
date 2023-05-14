@@ -1,11 +1,15 @@
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using Core.Exceptions;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace Core.Entities.User;
 
 public record Password
 {
-    public string HashedPassword { get; private set; }
+    public string Hash { get; private set; }
+    
+    public string Salt { get; private set; }
     
     private Password() {}
     
@@ -22,7 +26,14 @@ public record Password
                 "Sua senha deve conter ao menos um caractere especial, letras maiúsculas, minúsculas e números.");
         }
 
-        HashedPassword = password;
+        Salt = Convert.ToBase64String(RandomNumberGenerator.GetBytes(128 / 8));
+
+        Hash = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+            password: password,
+            salt: Convert.FromBase64String(Salt),
+            prf: KeyDerivationPrf.HMACSHA256,
+            iterationCount: 100000,
+            numBytesRequested: 256 / 8));
     }
 
 }

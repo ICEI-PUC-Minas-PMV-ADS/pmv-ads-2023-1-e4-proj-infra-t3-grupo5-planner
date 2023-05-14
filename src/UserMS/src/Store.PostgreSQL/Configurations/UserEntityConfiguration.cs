@@ -2,6 +2,7 @@ using Core.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Store.PostgreSQL.Conversions;
 
 namespace Store.PostgreSQL.Configurations;
 
@@ -13,30 +14,20 @@ public class UserEntityConfiguration : IEntityTypeConfiguration<User>
         
         builder.HasKey(u => u.Id);
 
-        builder.OwnsOne(u => u.Email)
-            .Property(e => e.Address)
-            .HasColumnName("Email")
+        builder.Property(u => u.Email)
             .HasConversion<EmailConverter>()
+            .HasColumnName("Email")
             .IsRequired();
         
-        builder.OwnsOne(u => u.BirthDate)
-            .Property(b => b.Date)
+        builder.Property(u => u.BirthDate)
+            .HasConversion<BirthDateConverter>()
             .HasColumnName("BirthDate")
             .IsRequired();
         
-        builder.OwnsOne(u => u.Password)
-            .Property(p => p.HashedPassword)
-            .HasColumnName("Password")
-            .IsRequired();
-    }
-    
-    private class EmailConverter : ValueConverter<Email, string>
-    {
-        public EmailConverter() 
-            : base(
-                email => email.Address,
-                address => new Email(address))
+        builder.OwnsOne(u => u.Password, up =>
         {
-        }
+            up.Property(p => p.Hash).HasColumnName("PasswordHash").IsRequired();
+            up.Property(p => p.Salt).HasColumnName("PasswordSalt").IsRequired();
+        });
     }
 }
