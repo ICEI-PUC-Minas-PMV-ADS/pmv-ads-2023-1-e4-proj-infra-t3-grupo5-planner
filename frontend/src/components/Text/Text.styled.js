@@ -54,6 +54,12 @@ const TextStyled = styled.p`
     color: #696767;
   }
 
+  &.title-container {
+    font-size: ${toRem(40)};
+    font-weight: 500;
+    color: #ffffff;
+  }
+
   &.button-black-text,
   &.button-white-text {
     font-size: ${toRem(16)};
@@ -65,7 +71,7 @@ const TextStyled = styled.p`
   }
 
   &.button-red-text {
-    color: #ED4B58;
+    color: #ed4b58;
   }
 
   &.text-input {
@@ -86,8 +92,8 @@ const TextStyled = styled.p`
 
   &.description-widget {
     font-size: ${toRem(16)};
-    font-weight: 700;   
-    line-height: 100%; 
+    font-weight: 700;
+    line-height: 100%;
   }
 `;
 export default TextStyled;
