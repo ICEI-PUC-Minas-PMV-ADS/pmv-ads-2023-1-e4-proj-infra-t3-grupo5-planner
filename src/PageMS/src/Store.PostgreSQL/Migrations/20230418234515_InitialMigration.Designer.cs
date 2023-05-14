@@ -12,13 +12,8 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-    [Migration("20230423153150_TemplatesMSMigration")]
-    partial class TemplatesMSMigration
-=======
     [Migration("20230418234515_InitialMigration")]
     partial class InitialMigration
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,11 +25,7 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-            modelBuilder.Entity("Core.Entities.Template", b =>
-=======
             modelBuilder.Entity("Core.Entities.Page", b =>
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,12 +37,6 @@ namespace Store.PostgreSQL.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-                    b.Property<DateTime?>("CreatedOn")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone");
-
-=======
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
@@ -59,17 +44,12 @@ namespace Store.PostgreSQL.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
 
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-                    b.Property<DateTime?>("UpdatedOn")
-=======
                     b.Property<DateTime>("UpdatedOn")
                         .ValueGeneratedOnAddOrUpdate()
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("UserId")
@@ -77,11 +57,7 @@ namespace Store.PostgreSQL.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-                    b.ToTable("Templates");
-=======
                     b.ToTable("Pages");
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                 });
 
             modelBuilder.Entity("Core.Entities.Widget", b =>
@@ -92,47 +68,6 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-<<<<<<< HEAD:src/TemplatesMS/src/Store.PostgreSQL/Migrations/20230423153150_TemplatesMSMigration.Designer.cs
-                    b.Property<int>("TemplateId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Widget");
-                });
-
-            modelBuilder.Entity("TemplateWidget", b =>
-                {
-                    b.Property<int>("TemplateId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("WidgetsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("TemplateId", "WidgetsId");
-
-                    b.HasIndex("WidgetsId");
-
-                    b.ToTable("TemplateWidgets", (string)null);
-                });
-
-            modelBuilder.Entity("TemplateWidget", b =>
-                {
-                    b.HasOne("Core.Entities.Template", null)
-                        .WithMany()
-                        .HasForeignKey("TemplateId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Core.Entities.Widget", null)
-                        .WithMany()
-                        .HasForeignKey("WidgetsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-=======
                     b.Property<int?>("PageId")
                         .HasColumnType("integer");
 
@@ -156,7 +91,6 @@ namespace Store.PostgreSQL.Migrations
             modelBuilder.Entity("Core.Entities.Page", b =>
                 {
                     b.Navigation("Widgets");
->>>>>>> a3cca7bbadd671b8811f2ff26e7d04999df126b6:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                 });
 #pragma warning restore 612, 618
         }
