@@ -1,4 +1,4 @@
-using Core.Entities;
+using Core.Entities.User;
 using Core.Exceptions;
 using Core.Requests;
 using Core.Stores;
@@ -23,10 +23,10 @@ public class UserController : ControllerBase
     {
         try
         {
-            var user = new User(request);
-            return await _userStore.GetUser();
+            return await _userStore.CreateUser(request);
         }
-        catch (WeakPasswordException e)
+        catch (Exception e)
+        when (e is WeakPasswordException or BadBirthDateException or BadEmailException)
         {
             return BadRequest(e.Message);
         }

@@ -1,5 +1,9 @@
+.vs
 .idea
 .DS_Store
+<<<<<<< HEAD
 /src/UserMS/.vs
 
 .fake
+=======
+>>>>>>> 6bb8b2c1fc9142f3b8758a760d01033f7eb7b5e1

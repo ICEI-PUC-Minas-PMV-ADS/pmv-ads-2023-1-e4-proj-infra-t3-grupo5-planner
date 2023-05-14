@@ -111,9 +111,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-010 | Permitir que um usuário crie, edite e hábitos dentro de um widget.               | ALTA       |
 | RF-011 | Permitir que um usuário escolha seu humor (smileys) dentro de um widget.         | BAIXA      |
 | RF-012 | Permitir que um usuário crie, edite e apague despesas dentro de um widget.       | ALTA       |
-| RF-013 | Permitir que um usuário escolha quantos copos d'água tomou dentro de um widget.  | BAIXA      |
-| RF-014 | Permitir que um usuário stickers disponíveis dentro de um widget.                | BAIXA      |
-| RF-015 | Permitir que um usuário edite os próprios dados cadastrais.                      | MÉDIA      |
+| RF-013 | Permitir que um usuário stickers disponíveis dentro de um widget.                | BAIXA      |
+| RF-014 | Permitir que um usuário edite os próprios dados cadastrais.                      | BAIXA      |
+
 
 
 ### Requisitos não Funcionais
