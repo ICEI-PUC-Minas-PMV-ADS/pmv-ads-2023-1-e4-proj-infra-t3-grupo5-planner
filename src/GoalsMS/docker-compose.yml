@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  goalsms:
+    image: goalsms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20007:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - goalsms-network
+    depends_on:
+      - "goalsmspgsql"
+
+  goalsmspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: goalsms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: goalsms
+    ports:
+      - "5407:5432"
+    networks:
+      - goalsms-network
+
+networks:
+  goalsms-network:
+    driver: bridge

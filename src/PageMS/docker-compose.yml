@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  pagems:
+    image: pagems
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20005:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - pagems-network
+    depends_on:
+      - "pagemspgsql"
+
+  pagemspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: pagems
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: pagems
+    ports:
+      - "5405:5432"
+    networks:
+      - pagems-network
+
+networks:
+  pagems-network:
+    driver: bridge
