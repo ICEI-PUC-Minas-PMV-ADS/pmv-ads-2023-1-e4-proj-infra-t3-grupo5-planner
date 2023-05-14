@@ -7,7 +7,6 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import {
   NewHabitContent,
-  PlusButtonContainer,
   ScrollBox,
   DownRow,
 } from "./WidgetHabits.styled";
