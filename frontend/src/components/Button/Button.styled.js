@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonStyled = styled.p`
+export const ButtonStyled = styled.p`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,6 +51,12 @@ const ButtonStyled = styled.p`
         border: 4px solid #000000;
     }
 
+    &.pink-button:hover{
+        background-color: #333333;
+        color: #ed4858;
+        border: 4px solid #ed4858;
+    }
+
     &.close-button{
         width: 16px;
         height: 16px;
@@ -67,4 +73,9 @@ const ButtonStyled = styled.p`
     }
 `;
 
-export default ButtonStyled;
+export const ArrowStyled = styled.p`
+    transform: ${props => props.isSelected ? 'rotate(90deg)' : 'rotate(0)'};
+    transition: 'transform 0.3s ease';
+    margin: 0;
+`
+

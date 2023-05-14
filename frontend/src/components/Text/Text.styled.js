@@ -15,20 +15,37 @@ const TextStyled = styled.p`
     font-weight: 600;
   }
 
+
   &.item-widget {
     font-size: ${toRem(18)};
     font-weight: 400;
   }
 
-  &.subtitle {
+  &.subtitle, &.subtitle-grey {
     font-size: ${toRem(26)};
     font-weight: 600;
+  }
+
+  &.subtitle-grey {
+    color: #696767;
   }
 
   &.title-widget {
     font-size: ${toRem(20)};
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  &.title-modal {
+    font-size: ${toRem(40)};
+    font-weight: 500;
+    color: #ffffff
+  }
+
+  &.text-container-content {
+    font-size: ${toRem(20)};
+    font-weight: 400;
+    color: #1a1a1a
   }
 
   &.label-styled {

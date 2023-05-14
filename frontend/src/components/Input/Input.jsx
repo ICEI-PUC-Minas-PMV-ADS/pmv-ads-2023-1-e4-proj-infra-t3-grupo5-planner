@@ -60,7 +60,16 @@ const Input = ({ id, type, placeholder, icon }) => {
               type={type}          
               placeholder={placeholder}
             ></InputStyled>
-          );            
+          );  
+          case "List":         
+          return (
+            <InputStyled
+              className={`${type}`}  
+              id={id}
+              type={type}          
+              placeholder={placeholder}
+            ></InputStyled>
+          );             
   }
 };
 
