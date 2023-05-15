@@ -16,8 +16,6 @@ flex-direction: column;
 align-items: center;
 gap: ${toRem(8)};
 padding:${toRem(64)} ${toRem(16)} ${toRem(16)} ${toRem(16)};
-grid-template-columns: 50% 50%;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 `;
 
 export const InfoContainer = styled.div`
@@ -30,11 +28,4 @@ export const ButtonContainer = styled.div`
 display:flex;
 margin-top:${toRem(40)};
 justify-content: center;
-`
-
-export const FormButton = styled.button`
-  background-color: #333333;
-        width: 228px;
-        height: 46px;
-        border-radius: 8px;
 `
