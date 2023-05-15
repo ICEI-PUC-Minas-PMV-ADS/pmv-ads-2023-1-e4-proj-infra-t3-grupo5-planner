@@ -67,9 +67,12 @@ export const ButtonStyled = styled.button`
         height: 56px;
     }
 
-    &.text-button {
-        width: 180px;
+    &.text-button {        
         height: 42px;
+        background-color:transparent;
+        border:none;
+        filter: none;
+       padding:8px;
     }
 `;
 
