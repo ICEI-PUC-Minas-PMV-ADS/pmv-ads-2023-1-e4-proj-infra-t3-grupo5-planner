@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.p`
+export const ButtonStyled = styled.button`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -67,9 +67,12 @@ export const ButtonStyled = styled.p`
         height: 56px;
     }
 
-    &.text-button {
-        width: 180px;
+    &.text-button {        
         height: 42px;
+        background-color:transparent;
+        border:none;
+        filter: none;
+       padding:8px;
     }
 `;
 
