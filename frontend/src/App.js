@@ -9,6 +9,7 @@ function App() {
       <header className="App-header">
         <Header />
       </header>
+      <PageHome />
     </div>
   );
 }
