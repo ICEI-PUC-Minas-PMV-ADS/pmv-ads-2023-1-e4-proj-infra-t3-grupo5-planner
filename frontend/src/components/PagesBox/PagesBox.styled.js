@@ -17,13 +17,18 @@ font-style: normal;
 font-weight: 500;
 font-size: 40px;
 color: #FFFFFF;
-
+&.Login{ 
+    width: ${toRem(480)} 
+}
 
 `;
 export const GrayBoxStyled = styled.div`
 width: ${toRem(720)};
-height: ${toRem(552)};
+height: ${toRem(472)};
 background: #D9D9D9;
 border: ${toRem(4)} solid #000000;
 border-radius: ${toRem(0)} ${toRem(0)} ${toRem(32)} ${toRem(32)};
+&.Login{ 
+    width: ${toRem(480)};   
+}
 `;
