@@ -27,7 +27,7 @@ export const Line = styled.div`
 `;
 export const ContainerLayout = styled.div`
   width: 100%;
-  height: ${toRem(800)};
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,7 @@ export const ContainerWidgets = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: ${toRem(16)};
   box-sizing: border-box;
   justify-content: space-between;
