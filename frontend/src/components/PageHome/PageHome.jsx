@@ -66,7 +66,7 @@ const PageHome = () => {
         <ContainerWidgets>
           <ContainerReminder></ContainerReminder>
           <ContainerChecklist></ContainerChecklist>
-          <ContainerReminder></ContainerReminder>
+          <ContainerGoal></ContainerGoal>
           <ContainerGoal></ContainerGoal>
           <ContainerFinance></ContainerFinance>
           <ContainerNote></ContainerNote>
