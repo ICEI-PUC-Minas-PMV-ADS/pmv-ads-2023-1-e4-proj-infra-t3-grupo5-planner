@@ -102,17 +102,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-001 | Permitir que um novo usuário se cadastre na plataforma.                          | ALTA       | 
 | RF-002 | Permitir que um usuário faça login na plataforma.                                | ALTA       |
 | RF-003 | Permitir que um usuário recupere sua senha.                                      | ALTA       |
-| RF-004 | Permitir que um usuário crie, edite e apague páginas de texto.                   | ALTA       |
-| RF-005 | Permitir que um usuário crie, edite e apague um template a partir de uma página. | MÉDIA      |
-| RF-006 | Permitir que um usuário anexe ou remova widgets de uma página.                   | ALTA       |
+| RF-004 | Permitir que um usuário anexe ou remova widgets de uma página.                   | ALTA       |
+| RF-005 | Permitir que um usuário personalize uma página organizando os widgets na tela.   | MÉDIA      |
+| RF-006 | Permitir que um usuário mantenha as informações criadas nos widget.              | ALTA       |
 | RF-007 | Permitir que um usuário crie, edite e apague um checklist dentro de um widget.   | ALTA       |
 | RF-008 | Permitir que um usuário crie, edite e apague lembretes dentro de um widget.      | ALTA       |
-| RF-009 | Permitir que um usuário crie, edite e apague metas dentro de um widget.          | MÉDIA      |
+| RF-009 | Permitir que um usuário crie, edite e apague metas dentro de um widget.          | AlTA       |
 | RF-010 | Permitir que um usuário crie, edite e hábitos dentro de um widget.               | ALTA       |
-| RF-011 | Permitir que um usuário escolha seu humor (smileys) dentro de um widget.         | BAIXA      |
+| RF-011 | Permitir que um usuário crie, edite e apague notas de texto dentro de widget.    | ALTA       |
 | RF-012 | Permitir que um usuário crie, edite e apague despesas dentro de um widget.       | ALTA       |
-| RF-013 | Permitir que um usuário stickers disponíveis dentro de um widget.                | BAIXA      |
-| RF-014 | Permitir que um usuário edite os próprios dados cadastrais.                      | BAIXA      |
+| RF-013 | Permitir que um usuário edite os próprios dados cadastrais.                      | BAIXA      |
+| RF-014 | Permitir que um usuário edite sua senha cadastrada                               | BAIXA      |
+| RF-015 | Permitir que um usuário acesse informações de ajuda sobre a plataforma           | BAIXA      |
+| RF-016 | Permitir que um usuário envie mensagem para contactar o suporte da plataforma    | BAIXA      |
 
 
 

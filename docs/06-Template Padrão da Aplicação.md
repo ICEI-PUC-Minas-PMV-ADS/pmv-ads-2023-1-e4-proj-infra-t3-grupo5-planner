@@ -1,12 +1,33 @@
 # Template Padrão da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+Para o Layout padrão da aplicação foi desenvolvido um Design System, cuja aplicação deve ser feita em todas as páginas do sistema, respeitando a identidade visual. Os elementos do Design System:
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+## Design System
+![Design System: Tipografia](img/DesignSystem-Tipografia.png)
+![Design System: Cores e Sombras](img/DesignSystem-CoresESombras.png)
+![Design System: Componetização](img/DesignSystem-Componetizacao.png)
+![Design System: Icones](img/DesignSystem-Icones.png)
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+## Template padrão
+A seguir as telas do sistema com a identidade visual aplicada a partir do Design System:
+
+### RF-001-Cadastro
+![Tela de Cadastro](img/TPA-Cadastro.png)
+
+### RF-002-Login
+![Tela de Login](img/TPA-Login.png)
+
+### RF-003-Recuperação de Senha
+![Tela de Recuperação de Senha](img/TPA-RecuperacaoDeSenha.png)
+![Tela de Recuperação de Senha - Email Recebido](img/TPA-RecuperacaoDeSenhaEmail.png)
+### RF-004 a 012 Landing Page e modais
+![Landing Page](img/TPA-Home.png)
+![Modal Controle Financeiro](img/TPA-Modal-Finan%C3%A7as.png)
+![Modal Habitos](img/TPA-Modal-H%C3%A1bitos.png)
+![Modal Metas](img/TPA-Modal-Metas.png)
+![Modal Lembretes](img/TPA-Modal-Lembrete.png)
+### RF-013-014 Edição de perfil e Senha
+![Tela de  Edição de perfil e Senha](img/TPA-EditarPerfil.png)
+### RF-015-016-Ajuda e Fale Conosco
+![Tela de Ajuda e Fale Conosco](img/TPA-Ajuda.png)
+

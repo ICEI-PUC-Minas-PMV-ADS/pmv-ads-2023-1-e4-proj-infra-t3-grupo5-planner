@@ -7,13 +7,12 @@ A nossa solução consiste em dois front-ends comunicando-se com o back-end por 
 ![Arquitetura Distribuída](img/arquitetura-distribuida.png)
 
 ## Diagrama de Classes
+![Diagrama de Classes - Moods](img/DC-Mood.png)
+![Diagrama de Classes - Reminder](img/DC-Reminder.PNG)
+![Diagrama de Classes - User](img/DC-User.png)
+![Diagrama de Classes  - Habits](img/DC-Habits.png)
+![Diagrama de Classes - Goals](img/DC-Goals.png)
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
-
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
 
 ## Modelo ER
 
