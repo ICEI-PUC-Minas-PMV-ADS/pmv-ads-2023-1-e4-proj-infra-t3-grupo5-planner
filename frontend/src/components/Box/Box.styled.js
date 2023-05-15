@@ -51,6 +51,7 @@ const Box = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: ${toRem(16)};
   }
 `;
 

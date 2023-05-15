@@ -22,6 +22,7 @@ export const ButtonStyled = styled.button`
         background-color: #333333;
         width: 191px;
         height: 48px;
+        border: 0;
         border-radius: 32px;
         justify-content: left;
     }
