@@ -1,36 +1,54 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
-
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+O diagrama que define o fluxo do nosso sistema é representado a seguir:
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
-
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+![Legenda](img/DF-Legenda.png)
+![Fluxo Geral](img/DF-Geral.png)
+![Fluxo de Cadastro](img/DF-Cadastro.png)
+![Fluxo de Autenticação](img/DF-Autenticacao.png)
+![Fluxo de Criação de Itens](img/DF-CriacaoDeItens.png)
+![Fluxo de Edição de Perfil](img/DF-EditarPerfil.png)
+![Fluxo de Redefinição de Senha](img/DF-EditarPerfil.png)
+![Fluxo de Validação de Formulários](img/DF-Validacao.png)
+![Fluxo de Ajuda](img/DF-Ajuda.png)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Foram desenvolvidos wireframes alta fidelidade na ferramenta Figma, para ajudar na definição da estrutura da solução web e para facilitar o entendimento da relação entre as possíveis páginas existentes no sistema. A seguir os wireframes todas as páginas do sistema.
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+### RF-001 - Tela de Cadastro
+A tela de cadastro é uma tela criada para o usuário que deseja utilizar a plataforma e salvar as criações feitas no seu planner. Nela é oferecido um formulário em que o usuário preenche suas informações pessoais e cria as credenciais de acesso ao sistema. 
+
+![Wireframe: Tela de Cadastro](img/RF-001-Cadastro.png)
+
+### RF-002 - Tela de Login
+Quando o usuário acessa o website e não está logado na plataforma, na barra de navegação, no topo da página, haverá um botão de acesso rápido ao login do sistema. A tela contém inputs em que o usuário deverá digitar suas credenciais de acesso. Há um botão para cadastro, no caso de o usuário ainda não ser cadastrado e um botão para recuperação da senha, se o usuário a tiver esquecido.
+
+![Wireframe: Tela de Login](img/RF-002-Login.png)
+
+### RF-003 - Telas de Recuperação de senha
+Caso o usuário esqueça seua senha ele pode acessar a tela de recuperação de senha onde haverá um formulário para preenchimento do email e recebimento de um link para 
+recuperação de senha. Ao clicar nesse link o usuário será redirecionado para a tela onde ele poderá cadastrar uma nova senha. 
+
+![Wireframe: Tela de Recuperação de senha - Confirmação de Email](img/RF-003-EsqueciASenha-TelaDeConfirmacaoDeEmail.png)
+![Wireframe: Tela de Recuperação de senha - Email Recebido](img/RF-003-EsqueciASenha-EmailRecebido.png)
+
+### RF-004 A 012- Landing Page
+Ao entrar no endereço do website, o usuário será direcionado para essa página. Nela contém um header com os links para retornar ao inicio e direcionar a página de ajuda, além de um dropbox que o permite acessar seus dados de perfil, editá-los e fazer o logout. Abaixo, há os botões de adições dos widgets que adicionam os widgets escolhidos pelo usuário ao worskpace abaixo. O usuário pode organizar os widgets na tela e utiliza-los para cadastrar lembretes, checklists, metas, habitos, humores, controle financeiros e anotações. Alguns dos widgets apresentam modais com formulários para cadastro dessas informações. É possível cadastrar vários em cada widget.
+![Wireframe: Landing Page](img/RF-004a012.png)
+![Wireframe: Modal Widget de Controle Financeiro](img/Modal-Financas.png)
+![Wireframe: Modal Widget de Habitos](img/Modal-Habitos.png)
+![Wireframe: Modal Widget de Metas](img/Modal-Metas.png)
+![Wireframe: Modal Widget de Lembretes](img/Modal-Lembrete.png)
+
+### RF-013 e 014 - Edição de Dados e senha
+A tela de edição de dados permite que o usuário visualize seus dados cadastros e edite sua senha, por meio de dois formulários.
+![Wireframe: Tela de Edição de dados e senha](img/RF-013-014-EdicaoDeDadosCadastrais.png)
+
+
+### RF-015-016 - Tela de Ajuda e Fale Conosco
+Nessa tela o usuário pode acessar informações importantes sobre o que é a plataforma e seu funcionamento. Caso deseje enviar uma mensagem para o suporte pode utilizar o formulário de fale conosco que enviará um email com a mensagem para o email da plataforma. 
+![Wireframe: Tela de ajuda e Fale Conosco](img/RF-015-016-Ajuda.png)

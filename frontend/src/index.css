@@ -1,0 +1,20 @@
+/* Global styles */
+  html,
+  body {
+    width: 100%;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+  
+  body {
+    background-color: #F2F2F2;
+  }
+
+
+  
+
+  
