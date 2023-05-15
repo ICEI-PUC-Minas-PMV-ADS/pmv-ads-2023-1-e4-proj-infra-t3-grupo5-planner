@@ -1,12 +1,12 @@
 import React from 'react'
 import {RedBoxStyled,GrayBoxStyled} from './PagesBox.styled'
 
-export const PagesBox = ({RedContent, GrayContent}) => {
+export const PagesBox = ({id, RedContent, GrayContent}) => {
   
   return (
     <>
-    <RedBoxStyled>{RedContent}</RedBoxStyled>
-    <GrayBoxStyled>{GrayContent}</GrayBoxStyled>
+    <RedBoxStyled id={id}  className={`${id}`}>{RedContent}</RedBoxStyled>
+    <GrayBoxStyled id={id}  className={`${id}`}>{GrayContent}</GrayBoxStyled>
     </>
   )
   }     
