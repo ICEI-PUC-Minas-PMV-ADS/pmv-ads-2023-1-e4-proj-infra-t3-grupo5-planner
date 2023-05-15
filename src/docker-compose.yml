@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  apigateway:
+    image: planner/gateway:${TAG:-latest}
+    build: ./ApiGateway
+    ports:
+      - "20000:80"
+    networks:
+      - planner-network
+    environment:
+        ASPNETCORE_ENVIRONMENT: Development
+  userms:
+    image: planner/userms:${TAG:-latest}
+    build: ./UserMS
+    networks:
+      - planner-network
+networks:
+  planner-network:
+    driver: bridge
