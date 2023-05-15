@@ -1,7 +1,7 @@
 import React from "react";
 import { InputStyled, SelectStyled} from "./Input.Styled";
 
-const Input = ({ id, type, placeholder, icon, value }) => {
+const Input = ({ id, type, placeholder, icon, value, register }) => {
   switch (type) {
 
     default:
@@ -10,6 +10,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
           id={id}    
           className={`${type}`}       
           placeholder={placeholder}
+          {...register}
         ></InputStyled>
       );
 
@@ -20,6 +21,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
           className={`${type}`}  
           type={type}   
           placeholder={placeholder}
+          {...register}
         ></InputStyled>
       );
 
@@ -30,6 +32,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
           className={`${type}`}  
           type={type}          
           placeholder={placeholder}
+          {...register}
         >{icon}</InputStyled>
       );
       
@@ -39,7 +42,8 @@ const Input = ({ id, type, placeholder, icon, value }) => {
             className={`${type}`}  
             id={id}
             placeholder={placeholder}
-            type={type}        
+            type={type}       
+            {...register}
           ></InputStyled>
         );
 
@@ -48,7 +52,8 @@ const Input = ({ id, type, placeholder, icon, value }) => {
               <InputStyled
                className={`${type}`}  
                 id={id}
-                type={type}           
+                type={type}   
+                {...register}      
               ></InputStyled>
             );
 
@@ -59,6 +64,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
               id={id}
               type={type}          
               placeholder={placeholder}
+              {...register}
             ></InputStyled>
           );  
           case "List":         
@@ -68,6 +74,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
               id={id}
               type={type}          
               placeholder={placeholder}
+              {...register}
             ></InputStyled>
           );
           case "Select":         
@@ -76,6 +83,7 @@ const Input = ({ id, type, placeholder, icon, value }) => {
               className={`${type}`}  
               id={id}               
               value={value}
+              {...register}
             ></SelectStyled>
           );                          
   }
