@@ -27,7 +27,12 @@ const Box = styled.div`
     height: ${toRem(80)};
     border-radius: ${toRem(32)} ${toRem(0)} ${toRem(0)} ${toRem(32)};
     background-color: #ed4b58;
-    border: 4px solid #333333;
+    // border: 4px solid #333333;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid #333333;
+    border-left: 4px solid #333333;
+
     justify-content: space-between;
     align-items: center;
     padding: 0 ${toRem(15)};
@@ -51,6 +56,7 @@ const Box = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 16px;
   }
 `;
 
