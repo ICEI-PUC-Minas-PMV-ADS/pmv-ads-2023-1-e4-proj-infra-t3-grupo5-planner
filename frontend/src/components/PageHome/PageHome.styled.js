@@ -14,6 +14,7 @@ export const LineButtons = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Line = styled.div`
