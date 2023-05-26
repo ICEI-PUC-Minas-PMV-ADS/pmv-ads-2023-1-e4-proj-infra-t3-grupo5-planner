@@ -23,9 +23,14 @@ export default function App() {
 
   return (
     <View style={AppStyled.container}>
-      <Button 
-        title="Entrar"
-      />
+      <Button title="Entrar" fontColor={"white"}/>
+      <Button title="Entrar" buttonStyled="smallStandard" fontColor={"white"}/>
+      <Button title="Cancelar" buttonStyled="transparentStandard" fontColor={"black"}/>
+      <Button title="Cancelar" buttonStyled="transparentStandard" fontColor={"#ED4B58"}/>
+      <Button buttonStyled="circleAddButton"/>
+      <Button buttonStyled="whiteRoundedButton" fontColor={"black"} title="Metas"/>
+      <Button buttonStyled="redRoundedButton" title="Lembretes"/>
+      <Button buttonStyled="blackRoundedButton" title="Hábitos"/>
     </View>
   );
 }
