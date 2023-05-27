@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import Button from './components/Buttons/Button';
-import ButtonStyled from './components/Buttons/Button.styled';
+import InputLabel from './components/Inputs/Input';
 import AppStyled from '../src/App.styled'
 
 import {
@@ -23,14 +23,13 @@ export default function App() {
 
   return (
     <View style={AppStyled.container}>
-      <Button title="Entrar" fontColor={"white"}/>
-      <Button title="Entrar" buttonStyled="smallStandard" fontColor={"white"}/>
-      <Button title="Cancelar" buttonStyled="transparentStandard" fontColor={"black"}/>
-      <Button title="Cancelar" buttonStyled="transparentStandard" fontColor={"#ED4B58"}/>
-      <Button buttonStyled="circleAddButton"/>
-      <Button buttonStyled="whiteRoundedButton" fontColor={"black"} title="Metas"/>
-      <Button buttonStyled="redRoundedButton" title="Lembretes"/>
-      <Button buttonStyled="blackRoundedButton" title="Hábitos"/>
+      {/* 
+      */}
+      <InputLabel labelText="Data" labelStyle="standard" icon="schedule" inputSize={154} placeholder='__/__/__' MaskedInput="date"/>
+      <InputLabel labelText="Valor" labelStyle="standard" placeholder='R$ 000,00' MaskedInput="expense"/>
+      <InputLabel labelText="Email" labelStyle="standard" errorMessage="Mensagem de erro"/>
+      <InputLabel labelText="Nome" labelStyle="standard" />
+      <InputLabel labelStyle="textArea" placeholder="TextArea"/>
     </View>
   );
 }
