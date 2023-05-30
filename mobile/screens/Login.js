@@ -1,8 +1,9 @@
-import {SafeAreaView, Text} from 'react-native';
+import {Button, SafeAreaView, Text} from 'react-native';
 
-const Login = () => (
+const Login = ({ navigation }) => (
     <SafeAreaView>
         <Text>Login</Text>
+        <Button title='Registro' onPress={() => navigation.navigate('Register')} />
     </SafeAreaView>
 );
 
