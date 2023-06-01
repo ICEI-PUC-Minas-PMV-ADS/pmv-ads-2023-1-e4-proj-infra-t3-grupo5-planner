@@ -1,12 +1,13 @@
 import React from 'react'
-import {Text, TouchableOpacity, StyleSheet} from 'react-native'
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import {Octicons} from '@expo/vector-icons'
 
 const Button = ({
     title,
     onPress,
     buttonType,
-    fontColor = 'white'
+    fontColor = 'white',
+    ...props
 }) => {
     const getButtonStyle = () => {
         switch (buttonType) {
@@ -27,15 +28,15 @@ const Button = ({
         }
     }
     return(
-        <TouchableOpacity onPress={onPress} style={getButtonStyle()}>
+        <TouchableOpacity onPress={onPress} style={[getButtonStyle(), props.style]}>
             {buttonType === 'circleAddButton' &&  
                 <View style={styles.styleIcon}>
-                <Octicons name="plus" size={44} color={fontColor}/>
+                    <Octicons name="plus" size={44} color={fontColor}/>
                 </View>
             }
             {buttonType && buttonType.includes('roundedButton') &&
                 <View style={styles.smallIconContainer}>
-                <Octicons name="plus" size={16} color={fontColor} />
+                    <Octicons name="plus" size={16} color={fontColor} />
                 </View>
             }
             <Text style={[styles.standardText, {color: fontColor}]}>{title}</Text>

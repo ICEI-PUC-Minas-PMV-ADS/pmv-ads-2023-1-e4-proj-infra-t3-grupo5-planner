@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import MaskInput, { Masks } from 'react-native-mask-input'
 
-const InputLabel = ({labelText, placeholder, inputSize = 280 , icon, errorMessage, labelStyle, MaskedInput}) => {
+const InputLabel = ({labelText, placeholder, inputSize = 280 , icon, errorMessage, labelStyle, MaskedInput, ...props}) => {
     
     const [masked, setMasked] = React.useState('');
 
@@ -39,7 +39,7 @@ const InputLabel = ({labelText, placeholder, inputSize = 280 , icon, errorMessag
     const textAreaStyled = labelStyle === 'textArea' ? {padding: 10} : {};
 
     return(
-        <View>
+        <View style={props.style}>
             {labelText && <Text style={styles.labelText}>{labelText}</Text>}
             <View style={styles.container}>
                 <MaskInput 
@@ -60,7 +60,11 @@ const InputLabel = ({labelText, placeholder, inputSize = 280 , icon, errorMessag
         </View>
     );
 }
+
 const styles = StyleSheet.create({
+
+    
+
     standard:{
         height:40,
         borderRadius:8,
@@ -73,10 +77,11 @@ const styles = StyleSheet.create({
     },
     textArea:{
         width:280,
-        height:408,
+        height:'200%',
         borderWidth:2,
         borderColor:'#333333',
         borderRadius:8,
+        backgroundColor:"white",
         /*fontFamily:"Quicksand_400Regular",*/
         fontStyle:"normal",
         padding: 10
