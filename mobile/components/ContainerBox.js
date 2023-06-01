@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import { Text } from 'react-native';
 
 const ContainerBox = ({
-  size,
-  mood
+  title, content
 }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.redBox} />
-      <View />
+      <View style={styles.redBox}><Text>{title}</Text></View>
+      <View style={styles.greyBox}><Text>{content}</Text></View>
     </View>
   )
 };
@@ -37,21 +37,17 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
-  // greyBox: {
-  //   position: 'absolute',
-  //   top: 53,
-  //   left: -2,
-  //   width: 312,
-  //   height: 468,
-  //   backgroundColor: '#F2F2F2',
-  //   borderWidth: 2,
-  //   borderColor: '#000',
-  //   borderBottomLeftRadius: 16,
-  //   borderBottomRightRadius: 16,
-  // },
-
+  greyBox: {
+    marginTop: 56,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 })
 
 export default ContainerBox;
