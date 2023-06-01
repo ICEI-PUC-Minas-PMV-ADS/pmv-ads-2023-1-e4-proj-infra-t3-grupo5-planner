@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Checklist from '../assets/Widgets/Checklist';
 import Finance from '../assets/Widgets/Finance';
 import Goals from '../assets/Widgets/Goals';
@@ -11,7 +11,7 @@ const WidgetContent = ({
     checklist, finance, goals, habits, notes, reminders
 }) => {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container}>
             <View style={styles.redBox} />
             <View style={styles.greyBox}>{
                 (checklist && <Checklist />) ||
@@ -21,7 +21,7 @@ const WidgetContent = ({
                 (notes && <Notes />) ||
                 (reminders && <Reminders />)}
             </View>
-        </View>
+        </TouchableOpacity>
     )
 };
 
