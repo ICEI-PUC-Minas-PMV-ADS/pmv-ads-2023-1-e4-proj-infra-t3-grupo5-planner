@@ -5,10 +5,10 @@ import Finance from '../assets/Widgets/Finance';
 import Goals from '../assets/Widgets/Goals';
 import Habits from '../assets/Widgets/Habits';
 import Notes from '../assets/Widgets/Notes';
-import Reminder from '../assets/Widgets/Reminder';
+import Reminders from '../assets/Widgets/Reminders';
 
 const WidgetContent = ({
-    checklist, finance, goals, habits, notes, reminder
+    checklist, finance, goals, habits, notes, reminders
 }) => {
     return (
         <View style={styles.container}>
@@ -19,7 +19,7 @@ const WidgetContent = ({
                 (goals && <Goals />) ||
                 (habits && <Habits />) ||
                 (notes && <Notes />) ||
-                (reminder && <Reminder />)}
+                (reminders && <Reminders />)}
             </View>
         </View>
     )
