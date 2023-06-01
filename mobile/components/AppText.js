@@ -24,6 +24,8 @@ const getTextStyle = (type) => {
       return styles.MediumTextBold;
     case "ErrorText":
       return styles.ErrorText;
+    case "Caption":
+      return styles.Caption;
     default:
       return {};
   }
@@ -77,6 +79,11 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontSize: 12,
     color: "#ED4B58",
+  },
+  Caption: {
+    fontFamily: "Quicksand_400Regular",
+    fontStyle: "normal",
+    fontSize: 12,
   },
 });
 
