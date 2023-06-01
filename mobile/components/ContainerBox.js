@@ -8,7 +8,7 @@ const ContainerBox = ({
   return (
     <View style={styles.container}>
       <View style={styles.redBox}><Text>{title}</Text></View>
-      <View style={styles.greyBox}><Text>{content}</Text></View>
+      <View style={styles.greyBox}><>{content}</></View>
     </View>
   )
 };
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
   },
 
   greyBox: {
-    marginTop: 56,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
