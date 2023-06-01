@@ -39,13 +39,6 @@ const Mood = ({
 };
 
 const styles = StyleSheet.create({
-    // default: {
-    //  flex: 1,
-    //  flexDirection: 'row',
-    //  justifyContent: 'center',
-    //  //opacity: ${props => props.isSelected ? 1 : 0.6},
-    // },
- 
    smallMood: {
      width: 30,
      height: 30,
