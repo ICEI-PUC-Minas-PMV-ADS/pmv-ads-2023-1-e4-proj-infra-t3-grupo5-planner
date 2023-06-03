@@ -7,7 +7,7 @@ import AppText from "./AppText";
 const InputLabel = ({
   labelText,
   placeholder,
-  inputSize = 280,
+  inputSize = "100%",
   icon,
   errorMessage,
   labelStyle,
@@ -86,6 +86,7 @@ const InputLabel = ({
 const styles = StyleSheet.create({
   standard: {
     height: 40,
+    width: "100%",
     borderRadius: 8,
     paddingVertical: 4,
     paddingHorizontal: 8,
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   },
   textArea: {
     width: 280,
-    height: "200%",
+    height: "100%",
     borderWidth: 2,
     borderColor: "#333333",
     borderRadius: 8,
@@ -106,7 +107,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 5,
   },
   icon: {
     position: "absolute",

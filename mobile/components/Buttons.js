@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   standard: {
     backgroundColor: "#333333",
     borderRadius: 8,
-    width: 280,
+    width: "100%",
     height: 48,
     justifyContent: "center",
     alignItems: "center",
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
     paddingTop: 3,
   },
   standardText: {
-    /*fontFamily: "Quicksand_700Bold",*/
     fontWeight: "bold",
     fontStyle: "normal",
     fontSize: 16,

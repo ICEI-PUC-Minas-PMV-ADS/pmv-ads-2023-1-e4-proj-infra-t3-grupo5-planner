@@ -18,7 +18,7 @@ const HelpDropdown = ({ text, helpText }) => {
           style={{ flexDirection: "row", alignItems: "center" }}
         >
           <View style={styles.dropdownContainer}>
-            <AppText type="Subtitle" color="#33333">
+            <AppText type="MediumTextBold" color="#33333">
               {text}
             </AppText>
           </View>
@@ -51,8 +51,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     paddingBottom: 8,
-    marginTop: 8,
-    marginBottom: 8,
   },
   dropdownContainer: { width: "95%" },
   dropdownContent: { paddingBottom: 8 },
