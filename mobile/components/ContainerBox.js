@@ -19,20 +19,13 @@ const ContainerBox = ({ title, content }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 312,
-    height: 524,
-    borderRadius: 16,
-    borderWidth: 2,
-    borderColor: "#000",
-    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    height: "auto",
     alignSelf: "center",
-    backgroundColor: "#F2F2F2",
   },
 
   redBox: {
-    position: "absolute",
-    top: -2,
-    left: -2,
     width: 312,
     height: 56,
     backgroundColor: "#ED4B58",
@@ -40,16 +33,24 @@ const styles = StyleSheet.create({
     borderColor: "#000",
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
-    flex: 1,
     justifyContent: "center",
     alignItems: "flex-start",
     paddingLeft: 24,
   },
 
   greyBox: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    padding: 16,
+    height: 458,
+    width: 312,
+    borderTopWidth: 0,
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
+    borderWidth: 2,
+    borderColor: "#000",
+    alignSelf: "center",
+    backgroundColor: "#F2F2F2",
   },
 });
 
