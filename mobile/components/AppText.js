@@ -1,9 +1,12 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
-const AppText = ({ type, children }) => {
+const AppText = ({ type, children, color }) => {
   const style = getTextStyle(type);
-  return <Text style={[styles.defaultStyle, style]}>{children}</Text>;
+  const textColor = { color };
+  return (
+    <Text style={[styles.defaultStyle, style, textColor]}>{children}</Text>
+  );
 };
 
 const getTextStyle = (type) => {
@@ -36,7 +39,6 @@ const styles = StyleSheet.create({
     fontFamily: "Quicksand_400Regular",
     fontSize: 16,
     fontStyle: "normal",
-    color: "#000000",
   },
   Title: {
     fontFamily: "Quicksand_700Bold",
