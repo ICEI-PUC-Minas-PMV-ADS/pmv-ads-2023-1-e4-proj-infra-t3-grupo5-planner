@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import AppText from "./AppText";
 
 const ContainerBox = ({ title, content }) => {
@@ -10,23 +10,24 @@ const ContainerBox = ({ title, content }) => {
           {title}
         </AppText>
       </View>
-      <View style={styles.greyBox}>
-        <>{content}</>
-      </View>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        <View style={styles.contentPadding}>{content}</View>
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    flexDirection: "column",
-    height: "auto",
+    width: 312,
+    borderRadius: 16,
+    borderWidth: 2,
+    borderColor: "#000",
     alignSelf: "center",
+    backgroundColor: "#F2F2F2",
   },
 
   redBox: {
-    width: 312,
     height: 56,
     backgroundColor: "#ED4B58",
     borderWidth: 2,
@@ -34,23 +35,16 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     justifyContent: "center",
-    alignItems: "flex-start",
     paddingLeft: 24,
   },
 
-  greyBox: {
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 16,
-    height: 458,
-    width: 312,
-    borderTopWidth: 0,
-    borderBottomLeftRadius: 16,
-    borderBottomRightRadius: 16,
-    borderWidth: 2,
-    borderColor: "#000",
-    alignSelf: "center",
-    backgroundColor: "#F2F2F2",
+  contentContainer: {
+    flexGrow: 1,
+  },
+
+  contentPadding: {
+    flex: 1,
+    padding: 16, 
   },
 });
 

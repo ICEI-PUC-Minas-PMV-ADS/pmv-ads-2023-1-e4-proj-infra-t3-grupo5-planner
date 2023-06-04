@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import AppText from "./AppText";
 
-const ContainerBox = ({ title, content }) => {
+const ModalContainer = ({ title, content }) => {
   return (
     <View style={styles.container}>
       <View style={styles.redBox}>
@@ -10,23 +10,22 @@ const ContainerBox = ({ title, content }) => {
           {title}
         </AppText>
       </View>
-      <View style={styles.greyBox}>
-        <>{content}</>
-      </View>
+      <View style={styles.greyBox}>{content}</View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    flexDirection: "column",
-    height: "auto",
-    alignSelf: "center",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    width: "100%",
+    flex: 1,
   },
 
   redBox: {
-    width: 312,
+    width: "100%",
     height: 56,
     backgroundColor: "#ED4B58",
     borderWidth: 2,
@@ -42,16 +41,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: 458,
-    width: 312,
+    width: "100%",
     borderTopWidth: 0,
     borderBottomLeftRadius: 16,
     borderBottomRightRadius: 16,
     borderWidth: 2,
     borderColor: "#000",
-    alignSelf: "center",
     backgroundColor: "#F2F2F2",
   },
 });
 
-export default ContainerBox;
+export default ModalContainer;
