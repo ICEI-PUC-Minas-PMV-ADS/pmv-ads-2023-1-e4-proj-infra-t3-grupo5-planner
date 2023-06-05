@@ -1,22 +1,59 @@
-import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, Modal, View } from "react-native";
-import Button from "../components/Buttons";
-import InputLabel from "../components/Inputs";
-import ContainerBox from "../components/ContainerBox";
-import Header from "../components/Header";
-import MyModal from '../components/ModalReminder';
+import React, { useState } from "react";
+import { StyleSheet } from 'react-native';
+import * as Yup from 'yup';
+import { Formik } from 'formik';
+import {useAuth} from '../providers/auth';
 
-const Login = ({ navigation }) => (
-    <SafeAreaView style={styles.container}>
-        <MyModal></MyModal>
-    </SafeAreaView>
-);
+import Button from '../components/Buttons'
+import InputLabel from '../components/Inputs';
+import ItemSeparator from '../components/ItemSeparator';
+import ScreenWrapper from '../components/ScreenWrapper';
+import Logo from '../components/Logo';
+import AppText from '../components/AppText';
+
+const loginSchema = Yup.object().shape({
+    email: Yup.string().email('Email inválido').required('Campo obrigatório'),
+    password: Yup.string().required('Campo obrigatório'),
+});
+
+const Login = ({ navigation }) => {
+    const {handleSignIn} = useAuth();
+
+    const handleLogin = async () => {
+        await handleSignIn('token');
+    };
+    
+    return (
+        <Formik
+            initialValues={{ email: '', password: '' }}
+            validationSchema={loginSchema}
+            onSubmit={handleLogin}
+        >
+            {({ handleSubmit, values, errors, handleChange}) => (
+                <ScreenWrapper style={styles.loginContainer}>
+                    <Logo blackLogo size='m' />
+                    <ItemSeparator size={24} />
+                    <InputLabel labelText="Email" labelStyle="standard" errorMessage={errors.email} value={values.email} onChangeText={handleChange('email')}/>
+                    <ItemSeparator size={8} />
+                    <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password" errorMessage={errors.password} value={values.password} onChangeText={handleChange('password')}/>
+                    <ItemSeparator size={48} />
+                    <Button title="Entrar" fontColor='white' onPress={handleSubmit} />
+                    <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} />
+                    <ItemSeparator size={24} />
+                    <AppText type='MediumTextBold'> Não tem registro? </AppText>
+                    <Button title="Registrar" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('Register')} />
+                </ScreenWrapper>
+            )}
+        </Formik>
+    );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 150,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    loginContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+    },
 });
+
 export default Login;

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import AppText from "./AppText";
 
-const ModalContainer = ({ title, content}) => {
+const ModalContainer = ({ title, content }) => {
   return (
     <View style={styles.container}>
       <View style={styles.redBox}>
@@ -17,7 +17,7 @@ const ModalContainer = ({ title, content}) => {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "flex-end",
+    position: "absolute",
     bottom: 0,
     left: 0,
     width: "100%",

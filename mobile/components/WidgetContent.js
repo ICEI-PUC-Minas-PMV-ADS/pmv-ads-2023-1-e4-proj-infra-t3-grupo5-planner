@@ -6,14 +6,15 @@ import Goals from '../assets/Widgets/Goals';
 import Habits from '../assets/Widgets/Habits';
 import Notes from '../assets/Widgets/Notes';
 import Reminders from '../assets/Widgets/Reminders';
+import {sizing} from '../styles/sizing';
 
 const WidgetContent = ({
     checklist, finance, goals, habits, notes, reminders
 }) => {
     return (
         <TouchableOpacity style={styles.container}>
-            <View style={styles.redBox} />
-            <View style={styles.greyBox}>{
+            <View style={[styles.box, styles.redBox]} />
+            <View style={[styles.box, styles.greyBox]}>{
                 (checklist && <Checklist />) ||
                 (finance && <Finance />) ||
                 (goals && <Goals />) ||
@@ -26,35 +27,28 @@ const WidgetContent = ({
 };
 
 const styles = StyleSheet.create({
-
     container: {
-        width: 136,
-        height: 128,
-        borderRadius: 16,
-        borderWidth: 2,
-        borderColor: '#000',
-        position: 'relative',
-        alignSelf: 'center',
+        flex: 1,
         backgroundColor: '#F2F2F2',
     },
-
-    redBox: {
-        position: 'absolute',
-        top: -2,
-        left: -2,
-        width: 136,
-        height: 24,
-        backgroundColor: '#ED4B58',
+    box: {
         borderWidth: 2,
         borderColor: '#000',
-        borderTopLeftRadius: 16,
-        borderTopRightRadius: 16,
+        borderRadius: sizing.m,
     },
-
+    redBox: {
+        height: 24,
+        backgroundColor: '#ED4B58',
+        borderBottomWidth: 0,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+    },
     greyBox: {
-        flex: 1,
+        height: 104,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
     }
 })
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  SafeAreaView,
   View,
   StyleSheet,
   Platform,
@@ -9,23 +10,29 @@ import {
 } from "react-native";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import Logo from "../components/Logo";
-
-const { width, height } = Dimensions.get("screen");
+import {useAuth} from '../providers/auth';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const PROFILE_OPTION = 1;
+  const HELP_OPTION = 2;
+  const LOGOUT_OPTION = 3;
+
+  const {handleSignOut} = useAuth();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleMenuOptionPress = (option) => {
-    console.warn("Opção selecionada:", option);
+  const handleMenuOptionPress = async (option) => {
+    if (option === LOGOUT_OPTION) {
+      await handleSignOut();
+    }
     setIsOpen(false);
   };
 
   return (
-    <View style={styles.header}>
+    <SafeAreaView style={styles.header}>
       <View style={styles.container}>
         <View style={styles.buttonsGroup}>
           <TouchableOpacity style={styles.userButton} onPress={toggleDropdown}>
@@ -44,39 +51,38 @@ const Header = () => {
           <View style={styles.dropdownContainer}>
             <TouchableOpacity
               style={styles.dropItens}
-              onPress={() => handleMenuOptionPress("Perfil")}
+              onPress={() => handleMenuOptionPress(PROFILE_OPTION)}
             >
               <Text>Perfil</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.dropItens}
-              onPress={() => handleMenuOptionPress("Ajuda")}
+              onPress={() => handleMenuOptionPress(HELP_OPTION)}
             >
               <Text>Ajuda</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.dropItens}
-              onPress={() => handleMenuOptionPress("Sair")}
+              onPress={() => handleMenuOptionPress(LOGOUT_OPTION)}
             >
               <Text>Sair</Text>
             </TouchableOpacity>
           </View>
         )}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   header: {
+    flex: 1,
+    width: '100%',
     position: "absolute",
-    paddingTop: Platform.OS === "android" ? 10 : 0,
     top: 0,
     backgroundColor: "#333333",
-    height: height / 10,
-    width: width,
   },
   notificationButton: {
     width: 24,
@@ -94,7 +100,7 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: 30,
+    paddingVertical: 10,
     paddingHorizontal: 20,
   },
   title: {
@@ -104,9 +110,7 @@ const styles = StyleSheet.create({
   },
   dropdownContainer: {
     backgroundColor: "white",
-    width: width / 4,
-    height: height * 0.1,
-    marginTop: 40,
+    marginTop: 20,
     position: "absolute",
     top: "100%",
     left: 0,
@@ -122,6 +126,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   dropItens: {
+    flex: 1,
     marginVertical: 4,
   },
   userButton: {

@@ -7,45 +7,48 @@ import AppText from "./AppText";
 const InputLabel = ({
   labelText,
   placeholder,
-  inputSize = "100%",
+  inputSize = 280,
   icon,
   errorMessage,
   labelStyle,
   MaskedInput,
+  value,
+  onChangeText,
   ...props
 }) => {
-  const [masked, setMasked] = React.useState("");
+    const [masked, setMasked] = React.useState("");
+    const [innerValue, setInnerValue] = React.useState("");
 
-  const getInputStyle = () => {
-    switch (labelStyle) {
-      case "textArea":
-        return styles.textArea;
-      default:
-        return styles.standard;
-    }
-  };
-  const getIcon = () => {
-    switch (icon) {
-      case "schedule":
-        return "calendar-month";
-      case "clock":
-        return "clock-outline";
-      case "checkbox":
-        return "checkbox-outline";
-    }
-  };
-  const getMask = () => {
-    switch (MaskedInput) {
-      case "date":
-        return Masks.DATE_DDMMYYYY;
-      case "hour":
-        return [/\d/, /\d/, ":", /\d/, /\d/];
-      case "expense":
-        return Masks.BRL_CURRENCY;
-    }
-  };
+    const getInputStyle = () => {
+      switch (labelStyle) {
+        case "textArea":
+          return styles.textArea;
+        default:
+          return styles.standard;
+      }
+    };
+    const getIcon = () => {
+      switch (icon) {
+        case "schedule":
+          return "calendar-month";
+        case "clock":
+          return "clock-outline";
+        case "checkbox":
+          return "checkbox-outline";
+      }
+    };
+    const getMask = () => {
+      switch (MaskedInput) {
+        case "date":
+          return Masks.DATE_DDMMYYYY;
+        case "hour":
+          return [/\d/, /\d/, ":", /\d/, /\d/];
+        case "expense":
+          return Masks.BRL_CURRENCY;
+      }
+    };
 
-  const textAreaStyled = labelStyle === "textArea" ? { padding: 10 } : {};
+    const textAreaStyled = labelStyle === "textArea" ? { padding: 10 } : {};
 
   return (
     <View style={props.style}>
@@ -53,9 +56,13 @@ const InputLabel = ({
       <View style={styles.container}>
         <MaskInput
           value={masked}
-          onChangeText={(mask) => setMasked(mask)}
+          onChangeText={(mask, unmasked) => {
+            setMasked(mask);
+            setInnerValue(unmasked);
+            onChangeText(unmasked);
+          }}
           mask={getMask()}
-          secureTextEntry={MaskedInput === "password" ? true : false}
+          secureTextEntry={MaskedInput === "password"}
           style={[getInputStyle(), { width: inputSize }, textAreaStyled]}
           inputMode={
             MaskedInput === "date" || MaskedInput === "hour"
@@ -63,7 +70,7 @@ const InputLabel = ({
               : "none"
           }
           placeholder={placeholder}
-          multiline={labelStyle === "textArea" ? true : false}
+          multiline={labelStyle === "textArea"}
           numberOfLines={labelStyle === "textArea" ? 10 : null}
           textAlignVertical={labelStyle === "textArea" ? "top" : null}
         />
@@ -84,35 +91,36 @@ const InputLabel = ({
 };
 
 const styles = StyleSheet.create({
-  standard: {
-    height: 40,
-    width: "100%",
-    borderRadius: 8,
-    paddingVertical: 4,
-    paddingHorizontal: 8,
-    borderWidth: 2,
-    borderColor: "#333333",
-    fontStyle: "normal",
-  },
-  textArea: {
-    width: 280,
-    height: "100%",
-    borderWidth: 2,
-    borderColor: "#333333",
-    borderRadius: 8,
-    backgroundColor: "white",
-    fontStyle: "normal",
-    padding: 10,
-  },
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  icon: {
-    position: "absolute",
-    top: 10,
-    right: 10,
-    zIndex: 1,
-  },
+    standard: {
+      maxWidth:"100%",
+      height: 40,
+      borderRadius: 8,
+      paddingVertical: 4,
+      paddingHorizontal: 8,
+      borderWidth: 2,
+      borderColor: "#333333",
+      fontStyle: "normal",
+    },
+    textArea: {
+      width: 280,
+      height: "200%",
+      borderWidth: 2,
+      borderColor: "#333333",
+      borderRadius: 8,
+      backgroundColor: "white",
+      fontStyle: "normal",
+      padding: 10,
+    },
+    container: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginBottom: 5,
+    },
+    icon: {
+      position: "absolute",
+      top: 10,
+      right: 10,
+      zIndex: 1,
+    },
 });
 export default InputLabel;

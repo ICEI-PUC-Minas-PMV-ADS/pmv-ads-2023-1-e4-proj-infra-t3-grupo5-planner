@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { Octicons } from "@expo/vector-icons";
 import AppText from "./AppText";
 
@@ -32,9 +32,9 @@ const Button = ({ title, onPress, buttonType, fontColor, ...props }) => {
           <Octicons name="plus" size={44} color={fontColor} />
         </View>
       )}
-      {buttonType && buttonType.includes("roundedButton") && (
+      {buttonType && buttonType.includes("RoundedButton") && (
         <View style={styles.smallIconContainer}>
-          <Octicons name="plus" size={16} color={fontColor} />
+          <Octicons name="plus" size={24} color={fontColor} />
         </View>
       )}
       <AppText type="MediumTextBold" color={fontColor}>

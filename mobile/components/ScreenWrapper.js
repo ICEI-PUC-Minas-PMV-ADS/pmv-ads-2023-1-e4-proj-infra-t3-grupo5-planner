@@ -10,7 +10,7 @@ const ScreenWrapper = props => {
     const ViewComponent = props.scroll ? ScrollView : View;
     return (
         <SafeAreaView style={{flex: 1}}>
-            <ViewComponent style={[styles.screenContainer, customStyle]}>
+            <ViewComponent style={[styles.screenContainer, customStyle, {paddingTop: props.header ? 82 : 0}]}>
                 {props.children}
             </ViewComponent>
         </SafeAreaView>
