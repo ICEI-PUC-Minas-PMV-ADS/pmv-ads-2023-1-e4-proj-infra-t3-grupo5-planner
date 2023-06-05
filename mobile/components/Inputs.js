@@ -90,6 +90,7 @@ const InputLabel = ({
 
 const styles = StyleSheet.create({
     standard: {
+      maxWidth:"100%",
       height: 40,
       borderRadius: 8,
       paddingVertical: 4,
