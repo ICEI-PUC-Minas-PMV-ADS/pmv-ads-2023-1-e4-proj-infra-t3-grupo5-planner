@@ -119,6 +119,34 @@ const WidgetContentCard = ({
           </View>
         </View>
       );
+    case "ChecklistContent":
+      return (
+        <View style={styles.container}>
+          <View style={styles.leftSideWithIcon}>
+            <MaterialCommunityIcons name={habitsIcon} size={24} />
+            <ItemSeparator size="s" />
+            <AppText type="SmallTextBold">{textDescription}</AppText>
+          </View>
+
+          <View style={styles.rightSide}>
+            <ItemSeparator size="s" />
+            <TouchableOpacity onPress={changeHabitIcon}>
+              {habitCheck ? (
+                <MaterialCommunityIcons
+                  name="checkbox-blank-outline"
+                  size={24}
+                />
+              ) : (
+                <MaterialCommunityIcons
+                  name="checkbox-marked"
+                  size={24}
+                  color="#ED4B58"
+                ></MaterialCommunityIcons>
+              )}
+            </TouchableOpacity>
+          </View>
+        </View>
+      );
   }
 };
 

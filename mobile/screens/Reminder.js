@@ -13,27 +13,27 @@ const Reminder = () => (
         content={
           <View style={styles.reminderView}>
             <View>
-            <AppText type="SmallTextBold" color="#333333">
-              Hoje
-            </AppText>
-            <WidgetContentCard             
-              type="ReminderContent"
-              textDescription="Tomar remédio"
-              reminderDate="04/06/2023"
-              reminderHour="10:00"
-            />
+              <AppText type="SmallTextBold" color="#333333">
+                Hoje
+              </AppText>
+              <WidgetContentCard
+                type="ReminderContent"
+                textDescription="Tomar remédio"
+                reminderDate="04/06/2023"
+                reminderHour="10:00"
+              />
             </View>
             <ItemSeparator size="m" />
             <View>
               <AppText type="SmallTextBold" color="#333333">
                 Próximos
               </AppText>
-              <WidgetContentCard             
-              type="ReminderContent"
-              textDescription="Tomar remédio"
-              reminderDate="04/06/2023"
-              reminderHour="10:00"
-            />
+              <WidgetContentCard
+                type="ReminderContent"
+                textDescription="Tomar remédio"
+                reminderDate="04/06/2023"
+                reminderHour="10:00"
+              />
             </View>
           </View>
         }
