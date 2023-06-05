@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
+import {useAuth} from '../providers/auth';
 
 import Button from '../components/Buttons'
 import InputLabel from '../components/Inputs';
@@ -16,21 +17,10 @@ const loginSchema = Yup.object().shape({
 });
 
 const Login = ({ navigation }) => {
-    
-    const [errorMessage, setErrorMessage] = useState('');
+    const {handleSignIn} = useAuth();
 
-    const handleLogin = (values) => {
-        if (!values.email) {
-            setErrorMessage('Por favor, preencha o campo de email');
-            return;
-        }
-        if (!values.password) {
-            setErrorMessage('Por favor, preencha o campo de senha');
-            return;
-        }
-        
-        // Lógica de login
-        
+    const handleLogin = async () => {
+        await handleSignIn('token');
     };
     
     return (
@@ -39,15 +29,15 @@ const Login = ({ navigation }) => {
             validationSchema={loginSchema}
             onSubmit={handleLogin}
         >
-            {({ handleSubmit, values, handleChange }) => (
+            {({ handleSubmit, values, errors, handleChange}) => (
                 <ScreenWrapper style={styles.loginContainer}>
                     <Logo blackLogo size='m' />
                     <ItemSeparator size={24} />
-                    <InputLabel labelText="Email" labelStyle="standard" errorMessage={errorMessage}/>
+                    <InputLabel labelText="Email" labelStyle="standard" errorMessage={errors.email} value={values.email} onChangeText={handleChange('email')}/>
                     <ItemSeparator size={8} />
-                    <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password" errorMessage={errorMessage}/>
+                    <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password" errorMessage={errors.password} value={values.password} onChangeText={handleChange('password')}/>
                     <ItemSeparator size={48} />
-                    <Button title="Entrar" fontColor='white' onPress={() => handleSubmit()} />
+                    <Button title="Entrar" fontColor='white' onPress={handleSubmit} />
                     <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} />
                     <ItemSeparator size={24} />
                     <AppText type='MediumTextBold'> Não tem registro? </AppText>

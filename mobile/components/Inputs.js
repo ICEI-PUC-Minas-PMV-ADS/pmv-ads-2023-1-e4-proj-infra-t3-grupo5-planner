@@ -13,6 +13,7 @@ const InputLabel = ({
   labelStyle,
   MaskedInput,
   value,
+  onChangeText,
   ...props
 }) => {
     const [masked, setMasked] = React.useState("");
@@ -58,9 +59,10 @@ const InputLabel = ({
           onChangeText={(mask, unmasked) => {
             setMasked(mask);
             setInnerValue(unmasked);
+            onChangeText(unmasked);
           }}
           mask={getMask()}
-          secureTextEntry={MaskedInput === "password" ? true : false}
+          secureTextEntry={MaskedInput === "password"}
           style={[getInputStyle(), { width: inputSize }, textAreaStyled]}
           inputMode={
             MaskedInput === "date" || MaskedInput === "hour"
@@ -68,7 +70,7 @@ const InputLabel = ({
               : "none"
           }
           placeholder={placeholder}
-          multiline={labelStyle === "textArea" ? true : false}
+          multiline={labelStyle === "textArea"}
           numberOfLines={labelStyle === "textArea" ? 10 : null}
           textAlignVertical={labelStyle === "textArea" ? "top" : null}
         />
