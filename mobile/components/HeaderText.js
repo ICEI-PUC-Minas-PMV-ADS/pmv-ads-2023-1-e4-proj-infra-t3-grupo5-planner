@@ -6,7 +6,6 @@ import AppText from './AppText';
 import {sizing} from '../styles/sizing';
 
 const HeaderText = ({screenName}) => {
-	console.log(screenName);
 	const navigation = useNavigation();
 	return (
 		<SafeAreaView style={styles.container}>

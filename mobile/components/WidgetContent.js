@@ -7,12 +7,34 @@ import Habits from '../assets/Widgets/Habits';
 import Notes from '../assets/Widgets/Notes';
 import Reminders from '../assets/Widgets/Reminders';
 import {sizing} from '../styles/sizing';
+import {useNavigation} from '@react-navigation/native';
 
 const WidgetContent = ({
     checklist, finance, goals, habits, notes, reminders
 }) => {
+    const navigation = useNavigation();
+    const onWidgetPress = () => {
+        if (checklist) {
+            navigation.navigate('Checklist');
+        }
+        if (finance) {
+            navigation.navigate('Expenses');
+        }
+        if (goals) {
+            navigation.navigate('Goals');
+        }
+        if (habits) {
+            navigation.navigate('Habits');
+        }
+        if (notes) {
+            navigation.navigate('Notes');
+        }
+        if (reminders) {
+            navigation.navigate('Reminder');
+        }
+    };
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={onWidgetPress}>
             <View style={[styles.box, styles.redBox]} />
             <View style={[styles.box, styles.greyBox]}>{
                 (checklist && <Checklist />) ||
