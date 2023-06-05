@@ -3339,7 +3339,7 @@ expo-status-bar@~1.4.4:
 
 expo@^48.0.19:
   version "48.0.19"
-  resolved "https://registry.npmjs.org/expo/-/expo-48.0.19.tgz"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-48.0.19.tgz#0f13be65d3cac99922666e5939388fc22b147e6a"
   integrity sha512-Pmz2HEwcDdjWPq5fM3vF++je0hjZIBX9aTZEkm6sBv09Vfhe4+CuiuKDq3iE+N6G9l2+eFYoRCApDwLqcRMiPA==
   dependencies:
     "@babel/runtime" "^7.20.0"
