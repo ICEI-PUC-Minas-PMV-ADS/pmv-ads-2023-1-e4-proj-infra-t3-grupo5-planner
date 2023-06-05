@@ -72,7 +72,7 @@ const InputLabel = ({
             name={getIcon()}
             size={24}
             color="black"
-            style={styles.icon}
+            style={[styles.icon, props.styleIcon]}
           />
         )}
       </View>

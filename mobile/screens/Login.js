@@ -1,20 +1,15 @@
-import { StyleSheet, SafeAreaView } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, SafeAreaView, Modal, View } from "react-native";
 import Button from "../components/Buttons";
 import InputLabel from "../components/Inputs";
 import ContainerBox from "../components/ContainerBox";
 import Header from "../components/Header";
+import MyModal from '../components/ModalReminder';
 
 const Login = ({ navigation }) => (
-  <SafeAreaView style={styles.container}>
-    {/*
-            <Text>Login</Text>
-            <InputLabel labelText="Email" labelStyle="standard" />
-            <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password"/>
-            <Button title="Entrar" />
-            <Button title="Registrar" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('Register')}/>
-        */}
-    <Header />
-  </SafeAreaView>
+    <SafeAreaView style={styles.container}>
+        <MyModal></MyModal>
+    </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
