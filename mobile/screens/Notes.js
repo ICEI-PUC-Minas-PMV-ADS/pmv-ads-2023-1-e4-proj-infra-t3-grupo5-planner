@@ -1,5 +1,7 @@
-import {SafeAreaView, Text} from 'react-native';
-import {ContainerBox} from '../components/ContainerBox'
+import {SafeAreaView} from 'react-native';
+import ContainerBox from '../components/ContainerBox'
+import InputLabel from '../components/Inputs';
+import Button from '../components/Buttons';
 
 const Notes = () => (
     <SafeAreaView>
