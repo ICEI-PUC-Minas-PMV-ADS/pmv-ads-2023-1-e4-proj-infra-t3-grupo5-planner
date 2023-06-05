@@ -4,28 +4,28 @@ import ContainerBox from "./ContainerBox";
 import InputLabel from "./Inputs";
 import Button from "./Buttons";
 import ModalContainer from "./ModalContainer";
+import ItemSeparator from "./ItemSeparator";
 
 const ModalExpenses = () => {
   return (
     <View style={styles.container}>
       <ModalContainer
-        title="Defina uma meta"
+        title="Defina uma finança"
         content={
           <View style={styles.content}>
             <View style={styles.inputRow}>
-              <View style={[styles.inputContainer, { flex: 8 }]}>
+              <View style={[{ flex: 3 }]}>
                 <InputLabel labelText="Meta" placeholder="Descreva sua meta" />
               </View>
-              <View style={[styles.inputContainer, { flex: 2 }]}>
-                <InputLabel labelText="Ícone" placeholder="Ícone" icon="icon" />
+              <ItemSeparator size="s" />
+              <View style={[{ flex: 2 }]}>
+                <InputLabel labelText="Tipo" placeholder="Ícone" icon="icon" />
               </View>
             </View>
+
             <View style={styles.inputRow}>
-              <View style={[styles.inputContainer, { flex: 5 }]}>
-                <InputLabel labelText="Objetivo" placeholder="10" />
-              </View>
-              <View style={[styles.inputContainer, { flex: 5 }]}>
-                <InputLabel labelText="Progresso" placeholder="0" />
+              <View style={[[styles.inputContainer], { flex: 10 }]}>
+                <InputLabel labelText="Valor" placeholder="R$ 000,00" />
               </View>
             </View>
             <View style={styles.buttonContainer}>
@@ -56,18 +56,15 @@ const styles = StyleSheet.create({
     height: "42%",
   },
   content: {
-    padding: 16,
     justifyContent: "center",
     alignItems: "center",
   },
   inputRow: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 16,
   },
-  inputContainer: {
-    marginRight: 16,
-  },
+  inputContainer: { width: "100%" },
+
   buttonContainer: {
     alignItems: "center",
     width: "100%",
