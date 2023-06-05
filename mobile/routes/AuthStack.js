@@ -12,11 +12,12 @@ import Notes from '../screens/Notes';
 import Reminder from '../screens/Reminder';
 import Error from '../screens/Error';
 import Header from '../components/Header';
+import HeaderText from '../components/HeaderText';
 
 const Stack = createNativeStackNavigator();
 
 const AuthStack = () => (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{header: ({route}) => <HeaderText screenName={route.name} />}}>
         <Stack.Screen name='Home' component={Home} options={{header: () => <Header/>}} />
         <Stack.Screen name='Help' component={Help} />
         <Stack.Screen name='Profile' component={Profile} />
