@@ -1,47 +1,53 @@
-import { SafeAreaView, View, StyleSheet } from "react-native";
+import { StyleSheet, ScrollView, View } from "react-native";
 import Button from "../components/Buttons";
-import ItemSeparator from "../components/ItemSeparator";
-import RegisterContainerBox from "../components/RegisterContainerBox";
-import WidgetContentCard from "../components/WidgetContentCard";
 import AppText from "../components/AppText";
+import ScreenWrapper from "../components/ScreenWrapper";
+import ItemSeparator from "../components/ItemSeparator";
+import InputLabel from "../components/Inputs";
+import ContainerBox from "../components/ContainerBox";
+import WidgetContentCard from "../components/WidgetContentCard";
 
 const Reminder = () => (
-  <SafeAreaView style={styles.container}>
-    <View style={styles.container}>
-      <RegisterContainerBox
-        title="Lembretes"
-        content={
-          <View style={styles.reminderView}>
-            <View>
-              <AppText type="SmallTextBold" color="#333333">
-                Hoje
-              </AppText>
+  <ScreenWrapper style={styles.container}>
+    <ContainerBox
+      title="Lembretes"
+      content={
+        <View style={styles.reminderView}>
+          <AppText type="SmallTextBold" color="#333333">
+            Hoje
+          </AppText>
+          <ItemSeparator size="s" />
+          <View style={styles.scrollViewWrapperToday}>
+            <ScrollView contentContainerStyle={styles.scrollViewContent}>
               <WidgetContentCard
                 type="ReminderContent"
                 textDescription="Tomar remédio"
                 reminderDate="04/06/2023"
                 reminderHour="10:00"
               />
-            </View>
-            <ItemSeparator size="m" />
-            <View>
-              <AppText type="SmallTextBold" color="#333333">
-                Próximos
-              </AppText>
-              <WidgetContentCard
-                type="ReminderContent"
-                textDescription="Tomar remédio"
-                reminderDate="04/06/2023"
-                reminderHour="10:00"
-              />
-            </View>
+            </ScrollView>
           </View>
-        }
-      />
-      <ItemSeparator size="m" />
-      <Button buttonType="circleAddButton" fontColor="#fff" />
-    </View>
-  </SafeAreaView>
+
+          <AppText type="SmallTextBold" color="#333333">
+            Próximos
+          </AppText>
+          <ItemSeparator size="s" />
+          <View style={styles.scrollViewWrapperUpcoming}>
+            <ScrollView contentContainerStyle={styles.scrollViewContent}>
+              <WidgetContentCard
+                type="ReminderContent"
+                textDescription="Tomar remédio"
+                reminderDate="04/06/2023"
+                reminderHour="10:00"
+              />
+            </ScrollView>
+          </View>
+        </View>
+      }
+    ></ContainerBox>
+    <ItemSeparator size="m" />
+    <Button buttonType="circleAddButton" fontColor="#fff"></Button>
+  </ScreenWrapper>
 );
 
 const styles = StyleSheet.create({
@@ -70,8 +76,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F2F2",
   },
   reminderView: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
     flex: 1,
     overflow: "hidden",
   },
