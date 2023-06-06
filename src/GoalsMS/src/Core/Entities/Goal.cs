@@ -5,7 +5,7 @@ using Core.Requests;
 
 namespace Core.Entities
 {
-    public class Goal : ITrackable
+    public class Goal //: ITrackable
     {
         public int Id { get; set; }
         public int UserId { get; set; }
@@ -18,10 +18,6 @@ namespace Core.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime? CreatedOn { get; private set; }
         
-        
-        
-
-
         // Tech debt: wee need an empty constructor for EF.
         private Goal() { }
 

@@ -5,16 +5,16 @@ using Core.Requests;
 
 namespace Core.Entities;
 
-public class Habit : ITrackable
+public class Habit //: ITrackable
 {
     public int Id { get; private set; }
     public int UserId { get; private set; }
     public string Icon { get; private set; }
     public string Title { get; private set; }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    
     public DateTime? CreatedOn { get; private set; }
-    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    
     public DateTime? UpdatedOn { get; private set; }
 
 

@@ -12,13 +12,8 @@ using Store.PostgreSQL.Database;
 namespace Store.PostgreSQL.Migrations
 {
     [DbContext(typeof(Context))]
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
-    [Migration("20230422235407_Migration2")]
-    partial class Migration2
-=======
-    [Migration("20230418234515_InitialMigration")]
-    partial class InitialMigration
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
+    [Migration("20230606172339_ChecklistMS")]
+    partial class ChecklistMS
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,11 +25,22 @@ namespace Store.PostgreSQL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
+                {
+                    b.Property<int>("ChecklistId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TaskCheckboxId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ChecklistId", "TaskCheckboxId");
+
+                    b.HasIndex("TaskCheckboxId");
+
+                    b.ToTable("ChecklistTaskCheckbox");
+                });
+
             modelBuilder.Entity("Core.Entities.Checklist", b =>
-=======
-            modelBuilder.Entity("Core.Entities.Page", b =>
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,13 +48,6 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
-=======
-                    b.Property<string>("Body")
-                        .IsRequired()
-                        .HasColumnType("text");
-
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
@@ -61,9 +60,7 @@ namespace Store.PostgreSQL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone");
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
 
                     b.HasKey("Id");
 
@@ -71,18 +68,6 @@ namespace Store.PostgreSQL.Migrations
                 });
 
             modelBuilder.Entity("Core.Entities.TaskCheckbox", b =>
-=======
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Pages");
-                });
-
-            modelBuilder.Entity("Core.Entities.Widget", b =>
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,7 +75,6 @@ namespace Store.PostgreSQL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
                     b.Property<DateTime>("CompletionDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -110,35 +94,28 @@ namespace Store.PostgreSQL.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
-=======
-                    b.Property<int?>("PageId")
-                        .HasColumnType("integer");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("integer");
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PageId");
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
-
-                    b.ToTable("Widget");
-                });
-
-            modelBuilder.Entity("Core.Entities.Widget", b =>
-                {
-                    b.HasOne("Core.Entities.Page", null)
-                        .WithMany("Widgets")
-                        .HasForeignKey("PageId");
-                });
-
-<<<<<<< HEAD:src/ChecklistMS/src/Store.PostgreSQL/Migrations/20230422235407_Migration2.Designer.cs
                     b.ToTable("TaskCheckbox");
-=======
-            modelBuilder.Entity("Core.Entities.Page", b =>
+                });
+
+            modelBuilder.Entity("ChecklistTaskCheckbox", b =>
                 {
-                    b.Navigation("Widgets");
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/PageMS/src/Store.PostgreSQL/Migrations/20230418234515_InitialMigration.Designer.cs
+                    b.HasOne("Core.Entities.Checklist", null)
+                        .WithMany()
+                        .HasForeignKey("ChecklistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.TaskCheckbox", null)
+                        .WithMany()
+                        .HasForeignKey("TaskCheckboxId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

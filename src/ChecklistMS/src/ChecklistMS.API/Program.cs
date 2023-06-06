@@ -13,7 +13,8 @@ var api = new ApiBootstrap(args, options =>
         var contextFactory = sp.GetRequiredService<IDbContextFactory<Context>>();
         return contextFactory.CreateDbContext();
     });
-    options.AddScoped<IUserStore, UserRepository>();
+    options.AddScoped<IChecklistStore, ChecklistRepository>();
+    options.AddScoped<ITaskCheckboxStore, TaskCheckboxRepository>();
 });
 
 await api.RunAsync();

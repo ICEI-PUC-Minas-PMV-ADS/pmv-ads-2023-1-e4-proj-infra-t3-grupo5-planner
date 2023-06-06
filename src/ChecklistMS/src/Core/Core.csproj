@@ -7,15 +7,8 @@
         <RootNamespace>Core</RootNamespace>
     </PropertyGroup>
 
-<<<<<<< HEAD:src/ChecklistMS/src/Core/Core.csproj
-
-    <ItemGroup>
-      <Folder Include="Exceptions\" />
-      <Folder Include="System\Threading\" />
-=======
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="8.0.0-preview.3.23177.8" />
->>>>>>> fe76b3b05c9eee7f385bfdd55136067771180f3f:src/UserMS/src/Core/Core.csproj
     </ItemGroup>
 
 </Project>
