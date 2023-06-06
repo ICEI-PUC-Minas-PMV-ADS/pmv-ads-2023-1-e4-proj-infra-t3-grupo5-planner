@@ -84,7 +84,7 @@ const TextStyled = styled.p`
 
   &.message-error {
     font-size: ${toRem(12)};
-    font-weight: 400;
+    font-weight: 600;
     color: #ed4b58;
   }
 

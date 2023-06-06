@@ -21,7 +21,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
           className={`${type}`}  
           type={type}   
           placeholder={placeholder}
-          {...register}
+        {...register}
         ></InputStyled>
       );
 
@@ -32,7 +32,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
           className={`${type}`}  
           type={type}          
           placeholder={placeholder}
-          {...register}
+        {...register}
         >{icon}</InputStyled>
       );
       
@@ -43,7 +43,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
             id={id}
             placeholder={placeholder}
             type={type}       
-            {...register}
+          {...register}
           ></InputStyled>
         );
 
@@ -53,7 +53,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
                className={`${type}`}  
                 id={id}
                 type={type}   
-                {...register}      
+              {...register}
               ></InputStyled>
             );
 
@@ -64,7 +64,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
               id={id}
               type={type}          
               placeholder={placeholder}
-              {...register}
+   
             ></InputStyled>
           );  
           case "List":         
@@ -74,7 +74,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
               id={id}
               type={type}          
               placeholder={placeholder}
-              {...register}
+            {...register}
             ></InputStyled>
           );
           case "Select":         
@@ -83,7 +83,7 @@ const Input = ({ id, type, placeholder, icon, value, register }) => {
               className={`${type}`}  
               id={id}               
               value={value}
-              {...register}
+            {...register}
             ></SelectStyled>
           );                          
   }
