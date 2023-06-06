@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  templatesms:
+    image: templatesms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20008:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - templatesms-network
+    depends_on:
+      - "templatesmspgsql"
+
+  templatesmspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: templatesms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: templatesms
+    ports:
+      - "5408:5432"
+    networks:
+      - templatesms-network
+
+networks:
+  templatesms-network:
+    driver: bridge

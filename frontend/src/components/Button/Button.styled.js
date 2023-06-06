@@ -6,6 +6,7 @@ export const ButtonStyled = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 0;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     &.header-button {
@@ -65,6 +66,7 @@ export const ButtonStyled = styled.button`
     &.profile-picture {
         width: 56px;
         height: 56px;
+        background: transparent;
     }
 
     &.text-button {        

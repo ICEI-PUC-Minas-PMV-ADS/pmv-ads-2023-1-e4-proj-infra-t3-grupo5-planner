@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  reminderms:
+    image: reminderms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20003:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - reminderms-network
+    depends_on:
+      - "remindermspgsql"
+
+  remindermspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: reminderms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: reminderms
+    ports:
+      - "5403:5432"
+    networks:
+      - reminderms-network
+
+networks:
+  reminderms-network:
+    driver: bridge
+

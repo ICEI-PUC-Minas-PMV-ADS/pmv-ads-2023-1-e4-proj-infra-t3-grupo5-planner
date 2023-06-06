@@ -10,7 +10,7 @@ import Worried from '../../assets/Moods/Worried'
 const Mood = ({ id, mood, isSelected }) => {
     return (
         <MoodStyled className={`${id}`} id={`${id}`} isSelected={isSelected}>{
-            (mood === "angry" && <Angry className={id}  />) || 
+            (mood === "angry" && <Angry className={id} />) || 
             (mood === "sad" && <Sad />) || 
             (mood === "happy" && <Happy />) ||
             (mood === "playful" && <Playful />) ||

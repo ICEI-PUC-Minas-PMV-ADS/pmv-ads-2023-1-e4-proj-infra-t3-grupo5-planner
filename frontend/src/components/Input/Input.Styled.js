@@ -41,4 +41,4 @@ export const SelectStyled = styled.select`
   font-weight: 400;
   font-size: ${toRem(16)};
   color: #333333;
-  `;
+`;

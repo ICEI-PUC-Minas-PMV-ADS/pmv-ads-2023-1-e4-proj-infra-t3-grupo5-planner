@@ -9,9 +9,9 @@ import Arrow from '../../assets/Button/Arrow'
 const Button = ({ id, textId, text, plusIcon, plusButton, closeIcon, profileIcon, arrow, isSelected, onClick, type }) => {
     return (
         <ButtonStyled className={`${id}`} id={id} onClick={onClick} type={type}>
-            {plusIcon && <GoPlus color={`${plusIcon}`} style={ { marginLeft: 32, marginRight: 16, fontSize: 20} }/>}
-            {plusButton && <GoPlus color={`${plusButton}`} style={ { fontSize: 20} }/>}
-            {closeIcon && <GrClose color={`${closeIcon}`} style={ { fontSize: 20} }/>}
+            {plusIcon && <GoPlus color={`${plusIcon}`} style={ { marginLeft: 32, marginRight: 16, width: 20, height: 20} }/>}
+            {plusButton && <GoPlus color={`${plusButton}`} style={ { width: 20, height: 20 } }/>}
+            {closeIcon && <GrClose color={`${closeIcon}`} style={ { fwidth: 20, height: 20 } }/>}
             {profileIcon && <Avatar/>}
             {arrow && <ArrowStyled isSelected={isSelected}><Arrow/></ArrowStyled>}
             <Text id={`${textId}`} text={`${text}`} />

@@ -14,13 +14,10 @@ const Header = () => {
                 <Logo whiteLogo heightImage={48}/>
                 <NavMenu>
                     <Anchor href="Home">
-                        <Button herf="Home" id="header-button" textId="button-red-text" text="Início"/>
-                    </Anchor>
-                    <Anchor href="Agenda">
-                        <Button id="header-button" textId="button-red-text" text="Agenda"/>
+                        <Button herf="Home" id="text-button" textId="button-red-text" text="Início"/>
                     </Anchor>
                     <Anchor href="Ajuda">
-                       <Button id="header-button" textId="button-red-text" text="Ajuda"/>
+                       <Button id="text-button" textId="button-red-text" text="Ajuda"/>
                     </Anchor>
                     
                 </NavMenu>

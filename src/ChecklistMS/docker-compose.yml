@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  checklistms:
+    image: checklistms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "20002:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Staging
+    networks:
+      - checklistms-network
+    depends_on:
+      - "checklistmspgsql"
+
+  checklistmspgsql:
+    platform: linux/x86_64
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: checklistms
+      POSTGRES_PASSWORD: planner
+      POSTGRES_DB: checklistms
+    ports:
+      - "5402:5432"
+    networks:
+      - checklistms-network
+
+networks:
+  checklistms-network:
+    driver: bridge

@@ -1,0 +1,6 @@
+.vs
+.idea
+.DS_Store
+src/.DS_Store
+src/ApiGateway/bin
+src/ApiGateway/obj
