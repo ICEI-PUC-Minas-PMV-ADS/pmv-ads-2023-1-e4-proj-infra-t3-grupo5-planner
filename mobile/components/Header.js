@@ -32,47 +32,47 @@ const Header = () => {
   };
 
   return (
-    <SafeAreaView style={styles.header}>
-      <View style={styles.container}>
-        <View style={styles.buttonsGroup}>
-          <TouchableOpacity style={styles.userButton} onPress={toggleDropdown}>
-            <FontAwesome name="user" size={30} color="black" />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.notificationButton}>
-            <MaterialIcons
-              name="notifications-active"
-              size={24}
-              color="white"
-            />
-          </TouchableOpacity>
-        </View>
-        <Logo size="s" whiteLogo />
-        {isOpen && (
-          <View style={styles.dropdownContainer}>
-            <TouchableOpacity
-              style={styles.dropItens}
-              onPress={() => handleMenuOptionPress(PROFILE_OPTION)}
-            >
-              <Text>Perfil</Text>
+      <SafeAreaView style={styles.header}>
+        <View style={styles.container}>
+          <View style={styles.buttonsGroup}>
+            <TouchableOpacity style={styles.userButton} onPress={toggleDropdown}>
+              <FontAwesome name="user" size={30} color="black" />
             </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.dropItens}
-              onPress={() => handleMenuOptionPress(HELP_OPTION)}
-            >
-              <Text>Ajuda</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.dropItens}
-              onPress={() => handleMenuOptionPress(LOGOUT_OPTION)}
-            >
-              <Text>Sair</Text>
+            <TouchableOpacity style={styles.notificationButton}>
+              <MaterialIcons
+                name="notifications-active"
+                size={24}
+                color="white"
+              />
             </TouchableOpacity>
           </View>
-        )}
-      </View>
-    </SafeAreaView>
+          <Logo size="s" whiteLogo />
+          {isOpen && (
+            <View style={styles.dropdownContainer}>
+              <TouchableOpacity
+                style={styles.dropItens}
+                onPress={() => handleMenuOptionPress(PROFILE_OPTION)}
+              >
+                <Text>Perfil</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.dropItens}
+                onPress={() => handleMenuOptionPress(HELP_OPTION)}
+              >
+                <Text>Ajuda</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.dropItens}
+                onPress={() => handleMenuOptionPress(LOGOUT_OPTION)}
+              >
+                <Text>Sair</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+      </SafeAreaView>
   );
 };
 
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     width: '100%',
     position: "absolute",
     top: 0,
+    paddingTop: Platform.OS === 'android' ? 40 : 0,
     backgroundColor: "#333333",
   },
   notificationButton: {
@@ -124,6 +125,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 8,
     flex: 1,
     alignItems: "center",
+    width:'40%'
   },
   dropItens: {
     flex: 1,

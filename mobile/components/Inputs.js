@@ -63,7 +63,7 @@ const InputLabel = ({
           }}
           mask={getMask()}
           secureTextEntry={MaskedInput === "password"}
-          style={[getInputStyle(), { width: inputSize }, textAreaStyled]}
+          style={[getInputStyle(), { width: inputSize }, textAreaStyled, props.style]}
           inputMode={
             MaskedInput === "date" || MaskedInput === "hour"
               ? "numeric"
