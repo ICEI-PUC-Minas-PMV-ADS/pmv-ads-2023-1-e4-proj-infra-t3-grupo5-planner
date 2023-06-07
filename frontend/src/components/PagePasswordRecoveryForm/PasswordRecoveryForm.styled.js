@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PasswordRecoveryStyled = styled.p`
+export const PasswordRecoveryStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,14 @@ export const ImageStyled = styled.img`
   width: 525px;
 `;
 
-export const LabelSize = styled.p`
+export const Form = styled.form`
     width: 656px;
 `;
+
+export const ButtonContainer = styled.div`
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+`
 
