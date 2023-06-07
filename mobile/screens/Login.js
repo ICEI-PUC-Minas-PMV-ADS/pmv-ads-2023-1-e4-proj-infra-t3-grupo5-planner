@@ -38,7 +38,7 @@ const Login = ({ navigation }) => {
                     <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password" errorMessage={errors.password} value={values.password} onChangeText={handleChange('password')}/>
                     <ItemSeparator size='xl' />
                     <Button title="Entrar" fontColor='white' onPress={handleSubmit} style={{width:'80%'}}/>
-                    <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} />
+                    <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('ForgotPassword')}/>
                     <ItemSeparator size='l' />
                     <AppText type='MediumTextBold'> Não tem registro? </AppText>
                     <Button title="Registrar" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('Register')} />
