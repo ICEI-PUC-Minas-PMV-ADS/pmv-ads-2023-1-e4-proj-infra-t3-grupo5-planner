@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     },
     box: {
         borderWidth: 2,
-        borderColor: '#000',
+        borderColor: '#333333',
         borderRadius: sizing.m,
     },
     redBox: {
         height: 24,
         backgroundColor: '#ED4B58',
-        borderBottomWidth: 0,
+        borderBottomWidth: 0.1,
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
     },

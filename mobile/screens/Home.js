@@ -8,7 +8,7 @@ import Mood from '../components/Mood';
 import Button from '../components/Buttons';
 
 const Home = ({navigation}) => (
-    <ScreenWrapper header>
+    <ScreenWrapper header style={{paddingBottom:50}}>
         <View style={styles.headerContainer}>
             <View style={{flex: 1}}>
                 <AppText type='SmallTextBold' color='#ED4B58'>Olá, Usuário</AppText>
