@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
-const AppText = ({ type, children, color }) => {
+const AppText = ({ type, children, color, textAlign }) => {
   const style = getTextStyle(type);
   const textColor = { color };
   return (
-    <Text style={[styles.defaultStyle, style, textColor]}>{children}</Text>
+    <Text style={[styles.defaultStyle, style, textColor, textAlign]}>{children}</Text>
   );
 };
 
