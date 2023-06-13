@@ -15,13 +15,13 @@ const TextStyled = styled.p`
     font-weight: 600;
   }
 
-
   &.item-widget {
     font-size: ${toRem(18)};
     font-weight: 400;
   }
 
-  &.subtitle, &.subtitle-grey {
+  &.subtitle,
+  &.subtitle-grey {
     font-size: ${toRem(26)};
     font-weight: 600;
   }
@@ -39,13 +39,13 @@ const TextStyled = styled.p`
   &.title-modal {
     font-size: ${toRem(40)};
     font-weight: 500;
-    color: #ffffff
+    color: #ffffff;
   }
 
   &.text-container-content {
     font-size: ${toRem(20)};
     font-weight: 400;
-    color: #1a1a1a
+    color: #1a1a1a;
   }
 
   &.label-styled {
@@ -74,7 +74,6 @@ const TextStyled = styled.p`
     color: #ed4b58;
     font-weight: 700;
     font-size: ${toRem(14)};
-    
   }
 
   &.text-input {

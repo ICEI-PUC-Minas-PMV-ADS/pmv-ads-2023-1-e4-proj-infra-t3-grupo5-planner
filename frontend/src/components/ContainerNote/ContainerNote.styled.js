@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const BoxSize = styled.div`
-  position: relative;
   width: 392px;
   height: 248px;
 `;
