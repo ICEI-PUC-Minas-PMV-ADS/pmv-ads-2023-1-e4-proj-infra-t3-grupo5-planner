@@ -3,13 +3,26 @@ import Input from "../Input/Input";
 import Text from "../Text/Text";
 import FormContentStyled from "./FormContent.styled";
 
-const FormContent = ({ label, type, error, placeholder, value, register }) => {
+const FormContent = ({
+  onChange,
+  label,
+  type,
+  error,
+  placeholder,
+  value,
+  register,
+}) => {
   switch (type) {
     default:
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label} />
-          <Input id="Text" type={type} placeholder={placeholder} register={register} />
+          <Input
+            id="Text"
+            type={type}
+            placeholder={placeholder}
+            register={register}
+          />
           <Text id="message-error" text={error} />
         </FormContentStyled>
       );
@@ -17,7 +30,14 @@ const FormContent = ({ label, type, error, placeholder, value, register }) => {
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label} />
-          <Input id="Text" type={type} placeholder={placeholder} register={register} />
+          <Input
+            id="Text"
+            type={type}
+            placeholder={placeholder}
+            register={register}
+            value={value}
+            onChange={onChange}
+          />
           <Text id="message-error" text={error} />
         </FormContentStyled>
       );
@@ -33,7 +53,12 @@ const FormContent = ({ label, type, error, placeholder, value, register }) => {
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label} />
-          <Input id="Text" type={type} register={register} />
+          <Input
+            id="Text"
+            type={type}
+            register={register}
+            onChange={onChange}
+          />
           <Text id="message-error" text={error} />
         </FormContentStyled>
       );
@@ -41,7 +66,12 @@ const FormContent = ({ label, type, error, placeholder, value, register }) => {
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label} />
-          <Input id="Text" type={type} register={register} />
+          <Input
+            id="Text"
+            type={type}
+            register={register}
+            onChange={onChange}
+          />
           <Text id="message-error" text={error} />
         </FormContentStyled>
       );
@@ -49,7 +79,13 @@ const FormContent = ({ label, type, error, placeholder, value, register }) => {
       return (
         <FormContentStyled>
           <Text id="label-styled" text={label} />
-          <Input id="Select" type={type} value={value} register={register} />
+          <Input
+            id="Select"
+            type={type}
+            value={value}
+            register={register}
+            onChange={onChange}
+          />
           <Text id="message-error" text={error} />
         </FormContentStyled>
       );
