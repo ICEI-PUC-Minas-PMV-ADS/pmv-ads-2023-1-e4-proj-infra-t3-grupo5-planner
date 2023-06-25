@@ -13,6 +13,8 @@ const Reminder = ({ closeModal, onSaveReminder }) => {
   const [date, setDate] = useState("");
   const [hour, setHour] = useState("");
 
+  //falta integrar com api
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
