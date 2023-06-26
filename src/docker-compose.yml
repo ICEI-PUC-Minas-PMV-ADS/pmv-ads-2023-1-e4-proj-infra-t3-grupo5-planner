@@ -15,6 +15,41 @@ services:
     build: ./UserMS
     networks:
       - planner-network
+  checklistms:
+    image: planner/checklistms:${TAG:-latest}
+    build: ./ChecklistMS
+    networks:
+      - planner-network
+  reminderms:
+    image: planner/reminderms:${TAG:-latest}
+    build: ./ReminderMS
+    networks:
+      - planner-network
+  notesms:
+    image: planner/notesms:${TAG:-latest}
+    build: ./NotesMS
+    networks:
+      - planner-network
+  moodms:
+    image: planner/moodms:${TAG:-latest}
+    build: ./MoodMS
+    networks:
+      - planner-network
+  expensesms:
+    image: planner/expensesms:${TAG:-latest}
+    build: ./ExpensesMS
+    networks:
+      - planner-network
+  goalsms:
+    image: planner/goalsms:${TAG:-latest}
+    build: ./GoalsMS
+    networks:
+      - planner-network
+  habitsms:
+    image: planner/habitsms:${TAG:-latest}
+    build: ./HabitsMS
+    networks:
+      - planner-network
 networks:
   planner-network:
     driver: bridge
