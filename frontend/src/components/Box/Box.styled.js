@@ -44,8 +44,16 @@ const Box = styled.div`
     box-sizing: border-box;
   }
   &.ModalBox {
-    filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
     flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    filter: drop-shadow(${toRem(8)} ${toRem(8)} ${toRem(0)} #333333);
   }
   &.WidgetBox {
     display: flex;

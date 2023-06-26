@@ -25,6 +25,8 @@ export const Label = styled.div`
 
   &.label-text {
     width: 85%;
+    &[contentEditable="true"] {
+    }
   }
 `;
 export const ScrollBox = styled.div`

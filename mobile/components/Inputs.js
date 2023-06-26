@@ -14,6 +14,7 @@ const InputLabel = ({
   MaskedInput,
   value,
   onChangeText,
+  register,
   ...props
 }) => {
     const [masked, setMasked] = React.useState("");
@@ -63,7 +64,7 @@ const InputLabel = ({
           }}
           mask={getMask()}
           secureTextEntry={MaskedInput === "password"}
-          style={[getInputStyle(), { width: inputSize }, textAreaStyled]}
+          style={[getInputStyle(), { width: inputSize }, textAreaStyled, props.style]}
           inputMode={
             MaskedInput === "date" || MaskedInput === "hour"
               ? "numeric"
@@ -73,6 +74,7 @@ const InputLabel = ({
           multiline={labelStyle === "textArea"}
           numberOfLines={labelStyle === "textArea" ? 10 : null}
           textAlignVertical={labelStyle === "textArea" ? "top" : null}
+          register={register}
         />
         {icon && (
           <MaterialCommunityIcons

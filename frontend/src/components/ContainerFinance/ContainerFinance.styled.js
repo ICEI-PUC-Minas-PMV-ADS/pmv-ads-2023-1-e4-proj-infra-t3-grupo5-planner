@@ -30,6 +30,10 @@ export const BalanceValue = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: start;
+  font-family: "Quicksand";
+  font-size: ${toRem(20)};
+  font-weight: 400;
+  color: ${(props) => (props.isNegative ? "red" : "green")};
 `;
 
 export const Label = styled.div`

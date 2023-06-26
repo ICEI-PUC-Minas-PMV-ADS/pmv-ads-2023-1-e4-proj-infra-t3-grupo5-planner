@@ -32,14 +32,14 @@ const Login = ({ navigation }) => {
             {({ handleSubmit, values, errors, handleChange}) => (
                 <ScreenWrapper style={styles.loginContainer}>
                     <Logo blackLogo size='m' />
-                    <ItemSeparator size={24} />
+                    <ItemSeparator size='l' />
                     <InputLabel labelText="Email" labelStyle="standard" errorMessage={errors.email} value={values.email} onChangeText={handleChange('email')}/>
-                    <ItemSeparator size={8} />
+                    <ItemSeparator size='s' />
                     <InputLabel labelText="Senha" labelStyle="standard" MaskedInput="password" errorMessage={errors.password} value={values.password} onChangeText={handleChange('password')}/>
-                    <ItemSeparator size={48} />
-                    <Button title="Entrar" fontColor='white' onPress={handleSubmit} />
-                    <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} />
-                    <ItemSeparator size={24} />
+                    <ItemSeparator size='xl' />
+                    <Button title="Entrar" fontColor='white' onPress={handleSubmit} style={{width:'80%'}}/>
+                    <Button title="Esqueci a senha" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('ForgotPassword')}/>
+                    <ItemSeparator size='l' />
                     <AppText type='MediumTextBold'> Não tem registro? </AppText>
                     <Button title="Registrar" buttonType="transparentStandard" fontColor={"black"} onPress={() => navigation.navigate('Register')} />
                 </ScreenWrapper>
